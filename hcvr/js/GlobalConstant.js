@@ -1,0 +1,1 @@
+var IF_NET = false;

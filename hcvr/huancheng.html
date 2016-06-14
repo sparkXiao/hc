@@ -390,7 +390,7 @@
 					ajaxRequest(false, "get", "picklotus", '', function(result) {
 					
 					
-								if (!result.data) {
+								if (result.code != 10000) {
 									
 									
 									Lobibox.alert(
@@ -470,7 +470,7 @@
 					ajaxRequest(false, "get", "getvruser", '', function(result) {
 					
 					
-								if (!result.data) {
+								if (result.code != 10000) {
 									
 									
 									Lobibox.alert(

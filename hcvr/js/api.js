@@ -48,6 +48,9 @@ function getMobileOperatingSystem() {
 
 var reqObj = {
 	
+//	appTestAddress:'http://*.weibo.cn/hc/aj/',
+	
+	//appTestAddress:'/hc/aj/',
 	appTestAddress:'/hc/aj/',
 	
 //	activityTestAddress:'http://h5.api.test.miaomore.com:801/v1/'
@@ -84,13 +87,13 @@ function ajaxRequest(ifacv, reqType, reqName, arg, succCallback, errorCallback) 
     	
     } else {
     	
-    	requrl = reqObj.appTestAddress+reqName;
+    	requrl = reqObj.appTestAddress+reqName
     	
     }
     
-   	console.log('requrl  '+requrl);
+   	console.log('requrl  '+requrl)
    
-
+   	console.log("reqData:"+reqData);
    
     $.ajax({
     	
@@ -105,7 +108,7 @@ function ajaxRequest(ifacv, reqType, reqName, arg, succCallback, errorCallback) 
             withCredentials: true
         },
         success: function(result){
-            console.log("reqData:"+result);
+        	
         	succCallback(result);
         	
             /*if(result.status == 10008){

@@ -103,21 +103,21 @@
 	</action>
 
 	
-	<scene name="scene_____________2-ok" title="冰国宫殿" onstart="" thumburl="panos/tiles2/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_____________2-ok" title="冰国宫殿" onstart="" thumburl="panos/____________2-ok.tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/tiles2/preview.jpg" />
+		<preview url="panos/____________2-ok.tiles/preview.jpg" />
 
 		<image type="CUBE" multires="true" tilesize="512">
 			<level tiledimagewidth="2560" tiledimageheight="2560">
-				<cube url="panos/tiles2/%s/l3/%v/l3_%s_%v_%h.jpg" />
+				<cube url="panos/____________2-ok.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="1280" tiledimageheight="1280">
-				<cube url="panos/tiles2/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				<cube url="panos/____________2-ok.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="640" tiledimageheight="640">
-				<cube url="panos/tiles2/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				<cube url="panos/____________2-ok.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
 			</level>
 		</image>
 
@@ -132,21 +132,21 @@
 	</scene>
 	
 	
-	<scene name="scene_____________03_-_______-ok" title="人间" onstart="" thumburl="panos/tiles2/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_____________03_-_______-ok" title="人间" onstart="" thumburl="panos/____________03_-_______-ok.tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/tiles2/preview.jpg" />
+		<preview url="panos/____________03_-_______-ok.tiles/preview.jpg" />
 
 		<image type="CUBE" multires="true" tilesize="512">
 			<level tiledimagewidth="2560" tiledimageheight="2560">
-				<cube url="panos/tiles2/%s/l3/%v/l3_%s_%v_%h.jpg" />
+				<cube url="panos/____________03_-_______-ok.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="1280" tiledimageheight="1280">
-				<cube url="panos/tiles2/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				<cube url="panos/____________03_-_______-ok.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="640" tiledimageheight="640">
-				<cube url="panos/tiles2/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				<cube url="panos/____________03_-_______-ok.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
 			</level>
 		</image>
 

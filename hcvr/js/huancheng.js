@@ -390,6 +390,12 @@ function krpanoReady(krpanObj)
 							        msg:result.msg
 							    }
 							);
+							
+							respondTxt = ' OMG! 您的采摘次数已经没有了，'+'\n'+'邀请好友参与游戏，'+'\n'+'就可获得新的采摘次数哦！';
+				
+							$('#gobtn').text('邀请好友');
+							
+							showTxt(true);
 						
 						
 						} else {

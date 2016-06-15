@@ -20,9 +20,15 @@
 }
 
 .friendsP {
-	display: none;
-	position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto;
-	
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    text-align: left; background-color: white; color: black; 
+	border-radius: 7px 7px 7px 7px; 
+	-moz-border-radius: 7px 7px 7px 7px; 
+	-webkit-border-radius: 7px 7px 7px 7px; 
+	border: 2px outset #800000;
 }
 
 .friendP {
@@ -36,7 +42,7 @@
     padding-left: 1rem;
 }
 
-#gobtn {
+.gobtn {
 	
 	border-radius: 15px 2px 15px 2px; 
 	-moz-border-radius: 15px 2px 15px 2px; 

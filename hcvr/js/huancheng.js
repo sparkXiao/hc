@@ -11,7 +11,7 @@ function getClickLotus (prizeName) {
 				
 				respondTxt = ' OMG! 您的采摘次数已经没有了，'+'\n'+'邀请好友参与游戏，'+'\n'+'就可获得新的采摘次数哦！';
 				
-				$('.gobtn').text('邀请好友');
+				$('#gobtn').text('邀请好友');
 				
 				showTxt(true);
 				
@@ -45,7 +45,7 @@ function getClickLotus (prizeName) {
 				
 				respondTxt = ' OMG! 您的采摘次数已经没有了，'+'\n'+'邀请好友参与游戏，'+'\n'+'就可获得新的采摘次数哦！';
 				
-				$('.gobtn').text('邀请好友');
+				$('#gobtn').text('邀请好友');
 				
 				showTxt(true);
 				
@@ -57,7 +57,7 @@ function getClickLotus (prizeName) {
 				
 				respondTxt = '这一轮的采摘已经结束，您可以再玩一次！';
 				
-				$('.gobtn').text('再玩一次');
+				$('#gobtn').text('再玩一次');
 				
 				showTxt(true);
 				
@@ -188,11 +188,11 @@ function showTxt (ifTriggerInvite) {
 	
 	if (!ifTriggerInvite) {
 		
-		$('.gobtn').css('display','none');
+		$('#gobtn').css('display','none');
 		
 	} else {
 		
-		$('.gobtn').css('display','inline-block');
+		$('#gobtn').css('display','inline-block');
 		
 	}
 	
@@ -210,7 +210,7 @@ function showTxt (ifTriggerInvite) {
 	var showHeight = $("#clickShow").height() / 2;
 	
 	
-	console.log('gobtn display  '+$('.gobtn').css('display'))
+	console.log('gobtn display  '+$('#gobtn').css('display'))
 	
 	console.log('showWidth  '+showWidth +'  showHeight  '+showHeight);
 	
@@ -285,10 +285,10 @@ function krpanoReady(krpanObj)
 	krpano = krpanObj;
 	
 	
-	$('.gobtn').on('click', function(e) {
+	$('#gobtn').on('click', function(e) {
 		
 		
-		console.log('gobtn txt  '+$('.gobtn').text() );
+		console.log('gobtn txt  '+$('#gobtn').text() );
 		
 		
 		$('#clickShow').css('width','auto');
@@ -307,7 +307,7 @@ function krpanoReady(krpanObj)
 		$('#clickShow').css('display','none');
 		
 		
-		if ( $('.gobtn').text() == '再玩一次' ) {
+		if ( $('#gobtn').text() == '再玩一次' ) {
 			
 			$('#overlay').hide();
 		
@@ -316,7 +316,7 @@ function krpanoReady(krpanObj)
 			krpano.call("loadscene('scene_____________03_-_______-ok');");
 			
 			
-		} else if ( $('.gobtn').text() == '邀请好友' ) {
+		} else if ( $('#gobtn').text() == '邀请好友' ) {
 			
 			if (IF_NET) {
 					
@@ -353,7 +353,7 @@ function krpanoReady(krpanObj)
 										$('.friendsP').append(content);
 									}
 									
-									$('.gobtn').text('一键邀请');
+									$('#gobtn').text('一键邀请');
 									
 									$('.friendsP').css('display','inline-block');
 									
@@ -366,38 +366,7 @@ function krpanoReady(krpanObj)
 			
 		} else {
 			
-			if (IF_NET) {
-					
-					ajaxRequest(false, "post", 'invitefriend', '', function(result) {
-					
-					
-								if (result.code != 10000) {
-									
-									
-									Lobibox.alert(
-									    'error', // Any of the following
-									    {
-									        msg:result.msg
-									    }
-									);
-								
-								
-								} else {
-									
-									
-									Lobibox.alert(
-									    'success', // Any of the following
-									    {
-									        msg:'调取 发送邀请 接口 成功  '
-									    }
-									);
-									
-								}
-								
-						
-							}, errorReturn);
-					
-				}
+			
 			
 		}
 		
@@ -429,7 +398,7 @@ function krpanoReady(krpanObj)
 							
 							respondTxt = ' OMG! 您的采摘次数已经没有了，'+'\n'+'邀请好友参与游戏，'+'\n'+'就可获得新的采摘次数哦！';
 				
-							$('.gobtn').text('邀请好友');
+							$('#gobtn').text('邀请好友');
 							
 							showTxt(true);
 						

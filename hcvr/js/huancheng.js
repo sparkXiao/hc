@@ -315,6 +315,44 @@ function krpanoReady(krpanObj)
 			
 			krpano.call("loadscene('scene_____________03_-_______-ok');");
 			
+			
+		} else {
+			
+			if (IF_NET) {
+					
+					ajaxRequest(false, "get", 'getfriend', '', function(result) {
+					
+					
+								if (result.code != 10000) {
+									
+									
+									Lobibox.alert(
+									    'error', // Any of the following
+									    {
+									        msg:result.msg
+									    }
+									);
+								
+								
+								} else {
+									
+									
+									Lobibox.alert(
+									    'success', // Any of the following
+									    {
+									        msg:'调取 获取随机邀请好友 接口 成功  '
+									    }
+									);
+									
+									
+									
+								}
+								
+						
+							}, errorReturn);
+					
+				}
+			
 		}
 		
 	

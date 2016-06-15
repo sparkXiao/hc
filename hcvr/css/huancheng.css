@@ -31,7 +31,9 @@
 }
 
 .friendImg {
-	max-width: 15rem; height: auto;
+    max-width: 5rem;
+    height: auto;
+    padding-left: 1rem;
 }
 
 #gobtn {

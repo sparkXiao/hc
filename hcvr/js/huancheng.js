@@ -344,7 +344,17 @@ function krpanoReady(krpanObj)
 									    }
 									);
 									
+									for (var i = 0; i < result.data.user.length; i++) {
+							
+										var content = '<div style="top: '+ ( 16 + i*16 ) + '%'  +';" class="friendP"><p style="font-size: 200%; padding-top: .5rem; margin-left: 1rem; margin-top: .5rem;">'+ result.data.user[i].screen_name
+										  +'</p><p style="font-size: 200%; position:absolute; right: 1rem; top: 0rem; margin-top: .5rem;">'+ result.data.user[i].uid
+										  +'</p><img src="'+ result.data.user[i].avatar_large +'" class="friendImg" /></div>'
+										
+									}
 									
+									$('.friendsP').append(content);
+									
+									$('.friendsP').css('display','inline-block');
 									
 								}
 								

@@ -19,6 +19,21 @@
     display: none;
 }
 
+.friendsP {
+	display: none;
+	position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto;
+	
+}
+
+.friendP {
+	display: inline-block;
+	
+}
+
+.friendImg {
+	max-width: 15rem; height: auto;
+}
+
 #gobtn {
 	
 	border-radius: 15px 2px 15px 2px; 

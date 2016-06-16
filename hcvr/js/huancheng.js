@@ -284,51 +284,6 @@ function krpanoReady(krpanObj)
 	
 	krpano = krpanObj;
 	
-	$('#gobtn2').on('click', function(e) {
-		
-		if (IF_NET) {
-			
-					var postData = {
-						
-						uid: uidString,
-						token: fritoken 
-						
-					}
-					
-					ajaxRequest(false, "post", 'invitefriend', postData, function(result) {
-					
-					
-								if (result.code != 10000) {
-									
-									
-									Lobibox.alert(
-									    'error', // Any of the following
-									    {
-									        msg:result.msg
-									    }
-									);
-								
-								
-								} else {
-									
-									
-									Lobibox.alert(
-									    'success', // Any of the following
-									    {
-									        msg:'调取 发送邀请好友 接口 成功  '
-									    }
-									);
-									
-									
-								}
-								
-						
-							}, errorReturn);
-					
-				}
-		
-	});
-	
 	
 	$('#gobtn').on('click', function(e) {
 		
@@ -413,6 +368,51 @@ function krpanoReady(krpanObj)
 									$('.friendsP').append('<div id="gobtn2"></div>');
 									
 									$('#gobtn2').text('一键邀请');
+									
+									$('#gobtn2').on('click', function(e) {
+		
+										if (IF_NET) {
+											
+													var postData = {
+														
+														uid: uidString,
+														token: fritoken 
+														
+													}
+													
+													ajaxRequest(false, "post", 'invitefriend', postData, function(result) {
+													
+													
+																if (result.code != 10000) {
+																	
+																	
+																	Lobibox.alert(
+																	    'error', // Any of the following
+																	    {
+																	        msg:result.msg
+																	    }
+																	);
+																
+																
+																} else {
+																	
+																	
+																	Lobibox.alert(
+																	    'success', // Any of the following
+																	    {
+																	        msg:'调取 发送邀请好友 接口 成功  '
+																	    }
+																	);
+																	
+																	
+																}
+																
+														
+															}, errorReturn);
+													
+												}
+										
+									});
 									
 									$('.friendsP').css('display','inline-block');
 									

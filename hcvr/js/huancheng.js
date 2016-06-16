@@ -1,4 +1,4 @@
-var krpano; fritoken = ''; uidString; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetPrize = false; 
+var krpano; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetPrize = false; 
 
 
 function getClickLotus (prizeName) {

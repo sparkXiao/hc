@@ -355,7 +355,7 @@ function krpanoReady(krpanObj)
 									
 									$('.friendsP').append('<div id="gobtn2"></div>');
 									
-									$('#gobtn').text('一键邀请');
+									$('#gobtn2').text('一键邀请');
 									
 									$('.friendsP').css('display','inline-block');
 									

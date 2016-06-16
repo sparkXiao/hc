@@ -1,4 +1,4 @@
-var krpano; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetPrize = false; 
+var krpano; uidString = ''; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetPrize = false; 
 
 
 function getClickLotus (prizeName) {
@@ -284,6 +284,42 @@ function krpanoReady(krpanObj)
 	
 	krpano = krpanObj;
 	
+	$('#gobtn2').on('click', function(e) {
+		
+		if (IF_NET) {
+					
+					ajaxRequest(false, "post", 'invitefriend', '', function(result) {
+					
+					
+								if (result.code != 10000) {
+									
+									
+									Lobibox.alert(
+									    'error', // Any of the following
+									    {
+									        msg:result.msg
+									    }
+									);
+								
+								
+								} else {
+									
+									
+									Lobibox.alert(
+									    'success', // Any of the following
+									    {
+									        msg:'调取 获取随机邀请好友 接口 成功  '
+									    }
+									);
+									
+									
+								}
+								
+						
+							}, errorReturn);
+					
+				}
+	}
 	
 	$('#gobtn').on('click', function(e) {
 		
@@ -344,14 +380,22 @@ function krpanoReady(krpanObj)
 									    }
 									);
 									
+									uidString = '';
+									
 									for (var i = 0; i < result.data.user.length; i++) {
-							
+										
+										uidString += result.data.user[i].uid+',';
+										
 										var content = '<div style="top: '+ ( 16 + i*16 ) + '%'  +';" class="friendP"><p style="font-size: 120%; padding-top: .5rem; margin-left: 1rem; margin-top: .5rem;">'+ result.data.user[i].screen_name
 										  +'</p><p style="font-size: 100%; padding-left: 1rem; margin-top: -1rem;">'+ result.data.user[i].uid
 										  +'</p><img src="'+ result.data.user[i].avatar_large +'" class="friendImg" /></div>'
 										
 										$('.friendsP').append(content);
 									}
+									
+									uidString.substr(0,uidString.length-1);
+									
+									console.log('uidString  '+uidString)
 									
 									$('.friendsP').append('<div id="gobtn2"></div>');
 									

@@ -1,4 +1,4 @@
-var krpano; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetPrize = false; 
+var krpano; fritoken = ''; uidString; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetPrize = false; 
 
 
 function getClickLotus (prizeName) {
@@ -366,6 +366,8 @@ function krpanoReady(krpanObj)
 									console.log('uidString.length  '+uidString.length)
 
 									uidString.substring(0, uidString.length - 1);
+									
+									uidString.slice(1, - 1);
 									
 									console.log('substring  uidString  '+uidString);
 									

@@ -363,7 +363,9 @@ function krpanoReady(krpanObj)
 									
 									console.log('uidString  '+uidString);
 									
-									uidString.substr(0, uidString.length-2); 
+									uidString.substring(0, uidString.length-1); 
+									
+									console.log('substring  uidString  '+uidString);
 									
 									
 									$('.friendsP').append('<div id="gobtn2"></div>');

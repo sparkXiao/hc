@@ -326,7 +326,9 @@ function krpanoReady(krpanObj)
 							}, errorReturn);
 					
 				}
-	}
+		
+	});
+	
 	
 	$('#gobtn').on('click', function(e) {
 		

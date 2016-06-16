@@ -391,7 +391,7 @@ function krpanoReady(krpanObj)
 									
 									uidString = '';
 									
-									fritoken = result.token;
+									fritoken = result.data.token;
 									
 									console.log('fritoken  '+fritoken);
 									
@@ -406,9 +406,9 @@ function krpanoReady(krpanObj)
 										$('.friendsP').append(content);
 									}
 									
-									uidString.substr(0,uidString.length-1);
+									uidString.slice(0,-1);
 									
-									console.log('uidString  '+uidString)
+									console.log('uidString  '+uidString);
 									
 									$('.friendsP').append('<div id="gobtn2"></div>');
 									

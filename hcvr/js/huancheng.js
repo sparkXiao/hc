@@ -363,8 +363,9 @@ function krpanoReady(krpanObj)
 									
 									console.log('if uidString is string '+ typeof uidString);
 									
-									
-									uidString.substring(0, uidString.length - 1); 
+									console.log('uidString.length  '+uidString.length)
+
+									uidString.substring(0, uidString.length - 1);
 									
 									console.log('substring  uidString  '+uidString);
 									
@@ -384,7 +385,6 @@ function krpanoReady(krpanObj)
 														
 													}
 													
-													postData.uid.substring(0, postData.uid.length - 1);
 													
 													ajaxRequest(false, "post", 'invitefriend', postData, function(result) {
 													

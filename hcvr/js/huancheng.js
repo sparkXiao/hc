@@ -1,4 +1,4 @@
-var krpano; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetPrize = false; 
+var krpano; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetPrize = false; 
 
 
 function getClickLotus (prizeName) {
@@ -352,7 +352,9 @@ function krpanoReady(krpanObj)
 									
 									for (var i = 0; i < result.data.user.length; i++) {
 										
-										uidString += String(result.data.user[i].uid)+',';
+										uidArr.push(String(result.data.user[i].uid))
+										
+//										uidString += String(result.data.user[i].uid)+',';
 										
 										var content = '<div style="top: '+ ( 16 + i*16 ) + '%'  +';" class="friendP"><p style="font-size: 120%; padding-top: .5rem; margin-left: 1rem; margin-top: .5rem;">'+ result.data.user[i].screen_name
 										  +'</p><p style="font-size: 100%; padding-left: 1rem; margin-top: -1rem;">'+ result.data.user[i].uid
@@ -361,15 +363,18 @@ function krpanoReady(krpanObj)
 										$('.friendsP').append(content);
 									}
 									
+									
+									uidString = uidArr[0]+','+uidArr[1]+','+uidArr[2];
+									
 									console.log('if uidString is string '+ typeof uidString);
 									
 									console.log('uidString.length  '+uidString.length)
 
-									uidString.substring(0, uidString.length - 1);
+//									uidString.substring(0, uidString.length - 1);
+//									
+//									uidString.slice(1, - 1);
 									
-									uidString.slice(1, - 1);
-									
-									console.log('substring  uidString  '+uidString);
+									console.log('uidString  '+uidString);
 									
 									
 									$('.friendsP').append('<div id="gobtn2"></div>');

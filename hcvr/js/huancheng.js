@@ -384,6 +384,8 @@ function krpanoReady(krpanObj)
 														
 													}
 													
+													postData.uid.substring(0, postData.uid.length - 1);
+													
 													ajaxRequest(false, "post", 'invitefriend', postData, function(result) {
 													
 													

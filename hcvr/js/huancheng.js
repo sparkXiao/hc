@@ -361,9 +361,10 @@ function krpanoReady(krpanObj)
 										$('.friendsP').append(content);
 									}
 									
-									console.log('uidString  '+uidString);
+									console.log('if uidString is string '+ typeof uidString);
 									
-									uidString.substring(0, uidString.length-1); 
+									
+									uidString.substring(0, uidString.length - 1); 
 									
 									console.log('substring  uidString  '+uidString);
 									

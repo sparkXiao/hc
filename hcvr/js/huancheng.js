@@ -1,4 +1,4 @@
-var krpano; uidString = ''; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetPrize = false; 
+var krpano; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetPrize = false; 
 
 
 function getClickLotus (prizeName) {
@@ -287,8 +287,15 @@ function krpanoReady(krpanObj)
 	$('#gobtn2').on('click', function(e) {
 		
 		if (IF_NET) {
+			
+					var postData = {
+						
+						uid: uidString,
+						token: fritoken 
+						
+					}
 					
-					ajaxRequest(false, "post", 'invitefriend', '', function(result) {
+					ajaxRequest(false, "post", 'invitefriend', postData, function(result) {
 					
 					
 								if (result.code != 10000) {
@@ -308,7 +315,7 @@ function krpanoReady(krpanObj)
 									Lobibox.alert(
 									    'success', // Any of the following
 									    {
-									        msg:'调取 获取随机邀请好友 接口 成功  '
+									        msg:'调取 发送邀请好友 接口 成功  '
 									    }
 									);
 									
@@ -349,7 +356,7 @@ function krpanoReady(krpanObj)
 		
 			$('#overlay').fadeOut('fast');
 			
-			krpano.call("loadscene('scene_____________03_-_______-ok');");
+			krpano.call("loadscene('scenetiles');");
 			
 			
 		} else if ( $('#gobtn').text() == '邀请好友' ) {
@@ -381,6 +388,10 @@ function krpanoReady(krpanObj)
 									);
 									
 									uidString = '';
+									
+									fritoken = result.token;
+									
+									console.log('fritoken  '+fritoken);
 									
 									for (var i = 0; i < result.data.user.length; i++) {
 										

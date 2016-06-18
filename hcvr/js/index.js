@@ -109,7 +109,7 @@ function fakeMessage() {
 							 
 							for (var i = 0; i < result.data.length; i++) {
 								
-							    $('<div class="message new"><figure class="avatar"><img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80_4.jpg" /></figure>' + result.data[i].msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
+							    $('<div class="message new"><figure class="avatar"><img src="'+ result.data[i].avatar_large +'" /></figure>' + result.data[i].msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
 							    setDate();
 							    updateScrollbar();
 								

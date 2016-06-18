@@ -80,6 +80,6 @@ function fakeMessage() {
     setDate();
     updateScrollbar();
     i++;
-  }, 1000 + (Math.random() * 20) * 100);
+  }, 1000 );
 
 }

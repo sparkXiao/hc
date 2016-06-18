@@ -2,13 +2,13 @@ var $messages = $('.messages-content'),
     d, h, m,
     i = 0;
 
-$(window).load(function() {
+/*$(window).load(function() {
   $messages.mCustomScrollbar();
   setTimeout(function() {
     fakeMessage();
   }, 100);
 });
-
+*/
 function updateScrollbar() {
   $messages.mCustomScrollbar("update").mCustomScrollbar('scrollTo', 'bottom', {
     scrollInertia: 10,

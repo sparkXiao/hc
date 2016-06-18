@@ -284,7 +284,13 @@ function krpanoReady(krpanObj)
 	
 	krpano = krpanObj;
 	
+	$('.chat').show();
 	
+	$messages.mCustomScrollbar();
+  		setTimeout(function() {
+    	fakeMessage();
+  	}, 100);
+  
 	$('#gobtn').on('click', function(e) {
 		
 		

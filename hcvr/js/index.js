@@ -67,19 +67,61 @@ var Fake = [
   ':)'
 ]
 
+// 调取 获取留言接口
 function fakeMessage() {
-  if ($('.message-input').val() != '') {
-    return false;
-  }
-  $('<div class="message loading new"><figure class="avatar"><img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80_4.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
-  updateScrollbar();
-
-  setTimeout(function() {
-    $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80_4.jpg" /></figure>' + Fake[i] + '</div>').appendTo($('.mCSB_container')).addClass('new');
-    setDate();
-    updateScrollbar();
-    i++;
-  }, 1000 );
-
+	
+	$('<div class="message loading new"><figure class="avatar"><img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80_4.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+							  
+  	updateScrollbar();
+							
+  	if (IF_NET) {
+											
+			
+			ajaxRequest(false, "get", 'getmsg', '', function(result) {
+			
+			
+						if (result.code != 10000) {
+							
+							
+							Lobibox.alert(
+							    'error', // Any of the following
+							    {
+							        msg:result.msg
+							    }
+							);
+						
+						
+						} else {
+							
+							
+							Lobibox.alert(
+							    'success', // Any of the following
+							    {
+							        msg:'调取 获取留言 接口 成功  '
+							    }
+							);
+							
+							  /*if ($('.message-input').val() != '') {
+							    return false;
+							  }*/
+							 
+						    $('.message.loading').remove();
+							 
+							for (var i = 0; i < result.data.length; i++) {
+								
+							    $('<div class="message new"><figure class="avatar"><img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80_4.jpg" /></figure>' + result.data[i].msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
+							    setDate();
+							    updateScrollbar();
+								
+							} 
+						    
+							  
+						}
+						
+				
+					}, errorReturn);
+			
+		}	
+	
+  
 }

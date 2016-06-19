@@ -25,17 +25,61 @@ function setDate(){
 }
 
 function insertMessage() {
+	
   msg = $('.message-input').val();
+  
   if ($.trim(msg) == '') {
     return false;
   }
-  $('<div class="message message-personal">' + msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
-  setDate();
-  $('.message-input').val(null);
-  updateScrollbar();
-  setTimeout(function() {
-    fakeMessage();
-  }, 1000 + (Math.random() * 20) * 100);
+  
+  console.log('insertMessage  msg  '+msg);
+  
+  if (IF_NET) {
+											
+			
+			ajaxRequest(false, "POST", 'sendmsg', msg, function(result) {
+			
+			
+						if (result.code != 10000) {
+							
+							
+							Lobibox.alert(
+							    'error', // Any of the following
+							    {
+							        msg:result.msg
+							    }
+							);
+						
+						
+						} else {
+							
+							
+							Lobibox.alert(
+							    'success', // Any of the following
+							    {
+							        msg:'调取 发表留言 接口 成功  '
+							    }
+							);
+							
+							 
+						  $('<div class="message message-personal">' + msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
+						  
+						  setDate();
+						  
+						  $('.message-input').val(null);
+						  
+						  updateScrollbar();
+						  
+						  fakeMessage();
+						    
+							  
+						}
+						
+				
+					}, errorReturn);
+			
+		}	
+  
 }
 
 $('.message-submit').click(function() {

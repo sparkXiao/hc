@@ -35,9 +35,14 @@ function insertMessage() {
   console.log('insertMessage  msg  '+msg);
   
   if (IF_NET) {
+  	
+  			var msgObj = {
+  				
+  				msg: msg
+  			}
 											
 			
-			ajaxRequest(false, "POST", 'sendmsg', msg, function(result) {
+			ajaxRequest(false, "POST", 'sendmsg', msgObj, function(result) {
 			
 			
 						if (result.code != 10000) {

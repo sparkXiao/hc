@@ -285,7 +285,7 @@ function krpanoReady(krpanObj)
 	krpano = krpanObj;
 	
 	
-	console.log('hlookat  '+krpano.get('hlookat'));
+	console.log('hlookat  '+krpano.get('view.hlookat'));
 	
 	
 	$('.chat').show();

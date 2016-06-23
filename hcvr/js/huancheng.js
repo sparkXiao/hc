@@ -284,8 +284,12 @@ function krpanoReady(krpanObj)
 	
 	krpano = krpanObj;
 	
+	krpano.call("lookto(-90,0,6,smooth())");
+	
 	
 	console.log('hlookat  '+krpano.get('view.hlookat'));
+	
+	console.log('vlookat  '+krpano.get('view.vlookat'));
 	
 	
 	$('.chat').show();

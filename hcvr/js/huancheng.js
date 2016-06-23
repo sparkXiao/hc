@@ -284,12 +284,17 @@ function krpanoReady(krpanObj)
 	
 	krpano = krpanObj;
 	
+	
+	console.log('hlookat  '+krpano.get('hlookat'));
+	
+	
 	$('.chat').show();
 	
 	$messages.mCustomScrollbar();
   		setTimeout(function() {
     	fakeMessage();
   	}, 100);
+  
   
 	$('#gobtn').on('click', function(e) {
 		

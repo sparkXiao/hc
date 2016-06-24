@@ -1,4 +1,4 @@
-var krpano; screen_nameStr = ''; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false; 
+var krpano; screen_nameStr = ''; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 17; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false; 
 
 
 function getClickLotus (prizeName) {
@@ -179,6 +179,8 @@ function getClickLotus (prizeName) {
 				var yinLWidth = $(".yinL").width() / 2;
 				
 				var yinLHeight = $(".yinL").height() / 2;
+				
+				console.log('yinLWidth   '+yinLWidth + '  yinLHeight  '+yinLHeight)
 				
 				
 				$('.yinL').css('display','block');

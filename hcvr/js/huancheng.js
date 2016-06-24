@@ -78,7 +78,7 @@ function getClickLotus (prizeName) {
 			
 				getFLowerCount ++;
 				
-				$('.yinLNum').css('src','url(../img/yinlianPlus.png)');
+				$('.yinLNum').attr('src','../img/yinlianPlus.png');
 				
 				respondTxt = '太好了，采到隐莲了！';
 			
@@ -88,7 +88,7 @@ function getClickLotus (prizeName) {
 				
 				getFLowerCount --;
 				
-				$('.yinLNum').css('src','url(../img/yinlianSub.png)');
+				$('.yinLNum').attr('src','../img/yinlianSub.png');
 				
 				respondTxt = '倒霉！不小心 采到毒药了！';
 				
@@ -187,10 +187,12 @@ function getClickLotus (prizeName) {
 				
 				$('.yinL').css('opacity','100');					
 				
+				
 				/*$('.yinL').css('top', ( krpano.get('mouse.stagey') - yinLHeight )+'px');
 				
 				$('.yinL').css('left', ( krpano.get('mouse.stagex') - yinLWidth )+'px');
 				*/
+				
 				
 				$('.yinL').css('top', '50%');
 				

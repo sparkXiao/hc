@@ -273,7 +273,7 @@ function showTxt (ifTriggerInvite) {
 	if (!ifTriggerInvite) {
 		
 		
-		$('#clickShow').css('top', ( krpano.get('mouse.stagey') + 25 ) +'px');
+		$('#clickShow').css('top', ( krpano.get('mouse.stagey') + 45 ) +'px');
 		
 		$('#clickShow').css('left', krpano.get('mouse.stagex') +'px');
 		

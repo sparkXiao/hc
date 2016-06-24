@@ -284,7 +284,7 @@ function krpanoReady(krpanObj)
 	
 	krpano = krpanObj;
 	
-	krpano.call("moveto(-90,0,smooth())");
+//	krpano.call("moveto(-90,0,smooth())");
 	
 	
 	console.log('hlookat  '+krpano.get('view.hlookat'));

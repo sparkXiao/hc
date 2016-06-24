@@ -188,15 +188,15 @@ function getClickLotus (prizeName) {
 				$('.yinL').css('opacity','100');					
 				
 				
-				/*$('.yinL').css('top', ( krpano.get('mouse.stagey') - yinLHeight )+'px');
+				$('.yinL').css('top', ( krpano.get('mouse.stagey') - yinLHeight )+'px');
 				
 				$('.yinL').css('left', ( krpano.get('mouse.stagex') - yinLWidth )+'px');
-				*/
 				
 				
-				$('.yinL').css('top', '50%');
 				
-				$('.yinL').css('left', '50%');
+				/*$('.yinL').css('top', '50%');
+				
+				$('.yinL').css('left', '50%');*/
 				
 				
 				setTimeout(function () {

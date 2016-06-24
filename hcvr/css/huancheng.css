@@ -20,6 +20,7 @@
 }
 
 .yinL {
+	z-index: 99;
 	display: none;
 	width: 60vw; height: 30vh;
 	background-size:100% 100%;

@@ -22,7 +22,7 @@
 .yinL {
 	position: absolute;
 	display: none;
-	width: 60vw; height: 30vh;
+	width: 20vw; height: 20vh;
 	background-size:100% 100%;
 	background-image: url(../skin/yinlian.png); no-repeat;
 }

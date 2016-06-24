@@ -1,4 +1,4 @@
-var krpano; screen_nameStr = ''; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetPrize = false; 
+var krpano; screen_nameStr = ''; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 10; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false; 
 
 
 function getClickLotus (prizeName) {
@@ -78,6 +78,8 @@ function getClickLotus (prizeName) {
 			
 				getFLowerCount ++;
 				
+				$('.yinLNum').css('src','url(../img/yinlianPlus.png)');
+				
 				respondTxt = '太好了，采到隐莲了！';
 			
 				break;
@@ -86,11 +88,15 @@ function getClickLotus (prizeName) {
 				
 				getFLowerCount --;
 				
+				$('.yinLNum').css('src','url(../img/yinlianSub.png)');
+				
 				respondTxt = '倒霉！不小心 采到毒药了！';
 				
 				break;
 				
 			case 3:
+			
+				ifGetNull = true;
 			
 				respondTxt = '这个好像什么都没采到';
 			
@@ -163,34 +169,42 @@ function getClickLotus (prizeName) {
 			
 		} else {
 			
-			
-			var yinLWidth = $(".yinL").width() / 2;
-			
-			var yinLHeight = $(".yinL").height() / 2;
-			
-			
-			$('.yinL').css('display','block');
-			
-			$('.yinL').css('opacity','100');					
-			
-			$('.yinL').css('top', ( krpano.get('mouse.stagey') - yinLHeight )+'px');
-			
-			$('.yinL').css('left', ( krpano.get('mouse.stagex') - yinLWidth )+'px');
-			
-			
-			setTimeout(function () {
+			if (ifGetNull) {
+				
+				ifGetNull = false;
+				
+			} else {
 				
 				
-				$('.yinL').animate({'top':'0','opacity':'0'},500,function() {
-			
-				    // Animation complete.
-				    
-					$('.yinL').css('display','none');
+				var yinLWidth = $(".yinL").width() / 2;
+				
+				var yinLHeight = $(".yinL").height() / 2;
+				
+				
+				$('.yinL').css('display','block');
+				
+				$('.yinL').css('opacity','100');					
+				
+				$('.yinL').css('top', ( krpano.get('mouse.stagey') - yinLHeight )+'px');
+				
+				$('.yinL').css('left', ( krpano.get('mouse.stagex') - yinLWidth )+'px');
+				
+				
+				setTimeout(function () {
 					
-				    
-				  });
+					
+					$('.yinL').animate({'top':'0','opacity':'0'},500,function() {
 				
-			}, 700);
+					    // Animation complete.
+					    
+						$('.yinL').css('display','none');
+						
+					    
+					  });
+					
+				}, 700);
+				
+			}
 			
 			
 			$('#yinlianNum').children('p').text(String(getFLowerCount));

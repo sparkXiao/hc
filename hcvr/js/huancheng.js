@@ -550,12 +550,12 @@ function krpanoReady(krpanObj)
 						} else {
 							
 							
-							Lobibox.alert(
+							/*Lobibox.alert(
 							    'success', // Any of the following
 							    {
 							        msg:'调取 采隐莲接口 成功  '
 							    }
-							);
+							);*/
 							
 							
 							simulateClickResult = result.data.type;

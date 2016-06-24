@@ -67,35 +67,9 @@
 
 #gobtn {
 	
-	border-radius: 15px 2px 15px 2px; 
-	-moz-border-radius: 15px 2px 15px 2px; 
-	-webkit-border-radius: 15px 2px 15px 2px; 
-	border: 2px solid #E3A617;
-	
-	padding-left: 3px; padding-right: 3px; padding-top: 2px; padding-bottom: 2px;
-	
-	display: inline-block;
-	
-	position: relative; bottom: .5rem; top: 0; left: 0; right: 0; margin: auto;
-	
-	/* IE10+ */ 
-	background-image: -ms-linear-gradient(top, #f3e2c7 0%, #C19E67 50%, #e9d4b3 100%);
-	
-	/* Mozilla Firefox */ 
-	background-image: -moz-linear-gradient(top, #f3e2c7 0%, #C19E67 50%, #e9d4b3 100%);
-	
-	/* Opera */ 
-	background-image: -o-linear-gradient(top, #f3e2c7 0%, #C19E67 50%, #e9d4b3 100%);
-	
-	/* Webkit (Safari/Chrome 10) */ 
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f3e2c7), color-stop(50, #C19E67), color-stop(100, #e9d4b3));
-	
-	/* Webkit (Chrome 11+) */ 
-	background-image: -webkit-linear-gradient(top, #f3e2c7 0%, #C19E67 50%, #e9d4b3 100%);
-	
-	/* W3C Markup */ 
-	background-image: linear-gradient(to bottom, #f3e2c7 0%, #C19E67 50%, #e9d4b3 100%);
-		
+	width: 8rem; height: 3rem;
+	background-size:100% 100%;
+	background-image: url(../img/btnbg.png); no-repeat;
 }
 
 #gobtn2 {

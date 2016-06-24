@@ -20,7 +20,7 @@
 }
 
 .yinL {
-	z-index: 99;
+	position: absolute;
 	display: none;
 	width: 60vw; height: 30vh;
 	background-size:100% 100%;
@@ -28,8 +28,8 @@
 }
 
 .titbg {
-	position: relative; bottom: .015rem;
-	width: 100%; height: .17rem;
+	position: absolute; bottom: .015rem;
+	width: 100%; height: 2rem;
 	background-size:100% 100%;
 	background-image: url(../img/yinlianbg.png); no-repeat;
 }

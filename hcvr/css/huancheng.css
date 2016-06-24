@@ -67,9 +67,12 @@
 
 #gobtn {
 	
-	width: 8rem; height: 3rem;
-	background-size:100% 100%;
-	background-image: url(../img/btnbg.png); no-repeat;
+	padding-top: 5px;
+    color: white;
+    width: 8rem;
+    height: 2rem;
+    background-size: 100% 100%;
+    background-image: url(../img/btnbg.png);
 }
 
 #gobtn2 {

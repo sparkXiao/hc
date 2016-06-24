@@ -19,6 +19,26 @@
     display: none;
 }
 
+.yinL {
+	display: none;
+	width: 60vw; height: 30vh;
+	background-size:100% 100%;
+	background-image: url(../skin/yinlian.png); no-repeat;
+}
+
+.titbg {
+	position: relative; bottom: .015rem;
+	width: 100%; height: .3rem;
+	background-size:100% 100%;
+	background-image: url(../img/yinlianbg.png); no-repeat;
+}
+
+.yinLNum {
+	position: fixed;
+	max-height: inherit; width: auto;
+	
+}
+
 .friendsP {
     display: none;
     position: absolute;

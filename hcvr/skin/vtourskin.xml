@@ -239,6 +239,11 @@
 		trace('doneClick');
 	</action>
 
+	<action name="hideChat">
+		jscall('var event = new Event("hideChat"); document.dispatchEvent(new Event("hideChat")); console.log(" hideChat  ");');
+		trace('hideChat');
+	</action>
+	
 	
 	<!-- skin styles -->
 
@@ -275,7 +280,7 @@
 	<style name="skin_menstyle" url="men.png" scale="0.15" edge="top" distorted="true"
 	       tooltip="采集隐莲
 	       	        传说中的隐莲圣地"
-	       onclick="if(linkedscene, set(enabled,false); skin_hidetooltips(); tween(depth|alpha|oy|rx, 4000|0.0|-50|-60, 0.5, default, loadscene(get(linkedscene),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend)); skin_updatescroll(); ); );"
+	       onclick="hideChat();if(linkedscene, set(enabled,false); skin_hidetooltips(); tween(depth|alpha|oy|rx, 4000|0.0|-50|-60, 0.5, default, loadscene(get(linkedscene),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend)); skin_updatescroll(); ); );"
 	       onover="tween(scale,0.2);copy(layer[skin_tooltip].html, tooltip);
 	                     set(layer[skin_tooltip].visible, true);
 	                     tween(layer[skin_tooltip].alpha, 1.0, 0.1);

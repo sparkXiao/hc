@@ -164,6 +164,35 @@ function getClickLotus (prizeName) {
 		} else {
 			
 			
+			var yinLWidth = $(".yinL").width() / 2;
+			
+			var yinLHeight = $(".yinL").height() / 2;
+			
+			
+			$('.yinL').css('display','block');
+			
+			$('.yinL').css('opacity','100');					
+			
+			$('.yinL').css('top', ( krpano.get('mouse.stagey') - yinLHeight )+'px');
+			
+			$('.yinL').css('left', ( krpano.get('mouse.stagex') - yinLWidth )+'px');
+			
+			
+			setTimeout(function () {
+				
+				
+				$('.yinL').animate({'top':'0','opacity':'0'},500,function() {
+			
+				    // Animation complete.
+				    
+					$('.yinL').css('display','none');
+					
+				    
+				  });
+				
+			}, 700);
+			
+			
 			$('#yinlianNum').children('p').text(String(getFLowerCount));
 		
 		}
@@ -470,6 +499,13 @@ function krpanoReady(krpanObj)
 	
 	
 	var krpanoDiv = document.getElementById('krpanoSWFObject');
+	
+	
+	document.addEventListener("hideChat", function (event) {
+		
+		$('.chat').hide();
+		
+	});
 	
 	
 	document.addEventListener("updateClick", function (event) {

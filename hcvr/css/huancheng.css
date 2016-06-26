@@ -45,22 +45,34 @@
 	max-height: 50%; width: auto;
 }
 
-.friendsP {
-    display: none;
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    text-align: left; background-color: white; color: black; 
-	border-radius: 7px 7px 7px 7px; 
-	-moz-border-radius: 7px 7px 7px 7px; 
-	-webkit-border-radius: 7px 7px 7px 7px; 
-	border: 2px outset #800000;
+.friTit {
+	
+	position: absolute; top: .5rem;
 }
 
+.friendsP {
+	
+    display: none;
+    position: absolute; margin: auto; top: 0; left: 0; bottom: 0; right: 0;
+    background-size:100% 100%;
+	background-image: url(../img/dialogbg.png); no-repeat;
+    text-align: center; color: white;
+     
+	/*border-radius: 7px 7px 7px 7px; 
+	-moz-border-radius: 7px 7px 7px 7px; 
+	-webkit-border-radius: 7px 7px 7px 7px; 
+	border: 2px outset #800000;*/
+}
+
+
 .friendP {
-	display: inline-block;
+	
+	overflow: hidden;
+	background-size:100% 100%;
+	background-image: url(../img/friPic.png); no-repeat;
 	
 }
+
 
 .friendImg {
     max-width: 5rem;

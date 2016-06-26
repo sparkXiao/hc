@@ -267,7 +267,7 @@ function showTxt (ifTriggerInvite) {
 	console.log('showWidth  '+showWidth +'  showHeight  '+showHeight);
 	
 	
-	console.log('ifTriggerInvite  '+ifTriggerInvite)
+	console.log('ifTriggerInvite  '+ifTriggerInvite);
 	
 	
 	if (!ifTriggerInvite) {

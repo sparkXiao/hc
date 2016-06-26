@@ -427,7 +427,7 @@ function krpanoReady(krpanObj)
 										
 										var content = '<div class="friendP"><img src="'+ result.data.user[i].avatar_large +'" class="clip-circle" /></div>'
 										
-										$('.friendsP').append(content);
+										$('.picCon').append(content);
 									}
 									
 									

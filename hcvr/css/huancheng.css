@@ -74,11 +74,20 @@
     background-size:100% 100%;
 	background-image: url(../img/dialogbg.png); no-repeat;
     text-align: center; color: white;
-     
+    width: 70%;
+    height: 50%; 
 	/*border-radius: 7px 7px 7px 7px; 
 	-moz-border-radius: 7px 7px 7px 7px; 
 	-webkit-border-radius: 7px 7px 7px 7px; 
 	border: 2px outset #800000;*/
+}
+
+
+.picCon {
+	
+	width: 50%; height: auto;
+	position: absolute; top: 30%; left: 30%;
+	align-content: center;  
 }
 
 

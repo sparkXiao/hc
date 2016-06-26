@@ -48,6 +48,8 @@
 .friTit {
 	
 	position: absolute; top: .5rem;
+	background-size:100% 100%;
+	background-image: url(../img/friTit.png); no-repeat;
 }
 
 .friendsP {
@@ -79,6 +81,26 @@
     height: auto;
     padding-left: 1rem;
 }
+
+
+.btnCon {
+	position: absolute; bottom: .7rem;
+}
+
+
+#changeFir {
+
+	float: left;
+	src: url(../img/changeF.png);	
+}
+
+
+#invite {
+	
+	float: right;
+	src: url(../img/confirmF.png);
+}
+
 
 #gobtn {
 	

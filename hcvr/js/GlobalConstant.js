@@ -1,1 +1,1 @@
-var IF_NET = false;
+var IF_NET = true;

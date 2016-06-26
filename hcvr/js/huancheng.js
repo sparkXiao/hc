@@ -425,9 +425,7 @@ function krpanoReady(krpanObj)
 										
 //										uidString += String(result.data.user[i].uid)+',';
 										
-										var content = '<div style="top: '+ ( 16 + i*16 ) + '%'  +';" class="friendP"><p style="font-size: 120%; padding-top: .5rem; margin-left: 1rem; margin-top: .5rem;">'+ result.data.user[i].screen_name
-										  +'</p><p style="font-size: 100%; padding-left: 1rem; margin-top: -1rem;">'+ result.data.user[i].uid
-										  +'</p><img src="'+ result.data.user[i].avatar_large +'" /></div>'
+										var content = '<div class="friendP"><img src="'+ result.data.user[i].avatar_large +'" class="clip-circle" /></div>'
 										
 										$('.friendsP').append(content);
 									}

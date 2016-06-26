@@ -47,10 +47,25 @@
 
 .friTit {
 	
-	position: absolute; top: .5rem;
+	position: relative;
+    top: 3rem;
+    left: 20%;
+    
 	background-size:100% 100%;
 	background-image: url(../img/friTit.png); no-repeat;
+	width: 50%;
+    height: 20%;
 }
+
+
+.clip-circle {
+	
+	-webkit-clip-path: circle(60px at center);
+	-moz-clip-path: circle(60px at center);
+	-o-clip-path: circle(60px at center);
+	clip-path: circle(60px at center);
+}
+
 
 .friendsP {
 	
@@ -69,6 +84,7 @@
 
 .friendP {
 	
+	display: inline-block;
 	overflow: hidden;
 	background-size:100% 100%;
 	background-image: url(../img/friPic.png); no-repeat;
@@ -84,7 +100,7 @@
 
 
 .btnCon {
-	position: absolute; bottom: .7rem;
+	position: absolute; bottom: 2rem; left: 20%;
 }
 
 

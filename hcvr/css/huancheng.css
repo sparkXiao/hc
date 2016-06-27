@@ -195,7 +195,7 @@ html {
 .packageInfo {
 	background-color: #FFFFFF;
 	width: 6rem; height: 2rem;
-	position: absolute; top: 2rem; left: 2rem;
+	position: absolute; top: 2rem; right: 2rem;
 	border-radius: 7px 7px 20px 7px; 
 	-moz-border-radius: 7px 7px 20px 7px; 
 	-webkit-border-radius: 7px 7px 20px 7px; 
@@ -214,5 +214,5 @@ html {
 }
 
 .packageInfo.trea {
-	left: 10rem;
+	right: 10rem;
 }

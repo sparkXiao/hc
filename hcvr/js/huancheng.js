@@ -6,13 +6,13 @@ function door() {
 	$("html").css("fontSize", sreen / 32);
 }
 
-
+/*
 door();
 
 
 window.onresize = function() {
 	door();
-}
+}*/
 
 
 function getClickLotus (prizeName) {

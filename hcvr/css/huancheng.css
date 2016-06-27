@@ -92,7 +92,7 @@ html {
 	background-image: url(../img/dialogbg.png); no-repeat;
     text-align: center; color: white;
     width: 80%;	
-    height: 35%;
+    height: 30%;
     
 	/*border-radius: 7px 7px 7px 7px; 
 	-moz-border-radius: 7px 7px 7px 7px; 
@@ -241,4 +241,10 @@ html {
     background-size: 100% 100%;
     background-image: url(../img/friPic.png); no-repeat;
     margin-right: .7rem;
+}
+
+.userName {
+	
+	margin-top: 0;
+	
 }

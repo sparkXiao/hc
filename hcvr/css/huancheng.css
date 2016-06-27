@@ -199,7 +199,8 @@ html {
 
 .packageInfo {
 	background-color: #FFFFFF;
-	width: 6rem; height: 2rem;
+    width: 20vw;
+    height: 5vh;
 	position: absolute; top: 2rem; right: 2rem;
 	border-radius: 7px 7px 20px 7px; 
 	-moz-border-radius: 7px 7px 20px 7px; 
@@ -219,15 +220,15 @@ html {
 }
 
 .packageInfo.trea {
-	right: 10rem;
+	right: 30vw;
 }
 
 .userInfo {
 	
-	position: absolute; top: 2rem; left: 2rem;
+	position: absolute; top: 3%; left: 3%;
 	color: white;
-    width: 9rem;
-    height: 3rem;
+    width: 30vw;
+    height: 5vh;
     background-size: 100% 100%;
     background-image: url(../img/titile.png); no-repeat;
 }

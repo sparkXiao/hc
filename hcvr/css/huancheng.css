@@ -76,6 +76,13 @@ html {
 	clip-path: circle(2.7rem at center);
 }
 
+.clip-circle.user {
+	-webkit-clip-path: circle(1.3rem at center);
+	-moz-clip-path: circle(1.3rem at center);
+	-o-clip-path: circle(1.3rem at center);
+	clip-path: circle(1.3rem at center);
+}
+
 
 .friendsP {
 	

@@ -32,7 +32,7 @@ html {
 .yinL {
 	position: absolute;
 	display: none;
-	width: 17vw; height: 17vh;
+	width: 7rem; height: 7rem;
 	background-size:100% 100%;
 	background-image: url(../skin/yinlian.png); no-repeat;
 }

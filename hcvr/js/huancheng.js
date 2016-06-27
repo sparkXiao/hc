@@ -92,7 +92,9 @@ function getClickLotus (prizeName) {
 			
 				getFLowerCount ++;
 				
-				$('.yinLNum').attr('src','http://hcvr.github.io/hc/hcvr/img/yinlianPlus.png');
+				$('.titbg').html('隐莲+1');
+				
+//				$('.yinLNum').attr('src','http://hcvr.github.io/hc/hcvr/img/yinlianPlus.png');
 				
 				respondTxt = '太好了，采到隐莲了！';
 			
@@ -102,7 +104,9 @@ function getClickLotus (prizeName) {
 				
 				getFLowerCount --;
 				
-				$('.yinLNum').attr('src','http://hcvr.github.io/hc/hcvr/img/yinlianSub.png');
+				$('.titbg').html('隐莲-1');
+				
+//				$('.yinLNum').attr('src','http://hcvr.github.io/hc/hcvr/img/yinlianSub.png');
 				
 				respondTxt = '倒霉！不小心 采到毒药了！';
 				

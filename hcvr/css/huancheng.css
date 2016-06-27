@@ -61,7 +61,7 @@ html {
     width: 45%;
     height: 20%;
     background-size: 100% 100%;
-    background-image: url(../img/friTit.png);
+    background-image: url(../img/friTit.png); no-repeat;
 }
 
 
@@ -112,7 +112,7 @@ html {
     height: 50%;
     display: inline-block;
     background-size: 100% 100%;
-    background-image: url(../img/friPic.png);
+    background-image: url(../img/friPic.png); no-repeat;
 	margin-right: .7rem;
 }
 
@@ -151,7 +151,7 @@ html {
     width: 8rem;
     height: 2rem;
     background-size: 100% 100%;
-    background-image: url(../img/btnbg.png);
+    background-image: url(../img/btnbg.png); no-repeat;
 }
 
 #gobtn2 {
@@ -221,10 +221,10 @@ html {
 	
 	position: absolute; top: 2rem; left: 2rem;
 	color: white;
-    width: 8rem;
-    height: 2rem;
+    width: 9rem;
+    height: 3rem;
     background-size: 100% 100%;
-    background-image: url(../img/titile.png);
+    background-image: url(../img/titile.png); no-repeat;
 }
 
 .userPic {
@@ -233,6 +233,6 @@ html {
     height: 50%;
     display: inline-block;
     background-size: 100% 100%;
-    background-image: url(../img/friPic.png);
+    background-image: url(../img/friPic.png); no-repeat;
     margin-right: .7rem;
 }

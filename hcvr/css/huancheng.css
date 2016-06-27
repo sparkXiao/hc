@@ -216,3 +216,23 @@ html {
 .packageInfo.trea {
 	right: 10rem;
 }
+
+.userInfo {
+	
+	position: absolute; top: 2rem; left: 2rem;
+	color: white;
+    width: 8rem;
+    height: 2rem;
+    background-size: 100% 100%;
+    background-image: url(../img/titile.png);
+}
+
+.userPic {
+	
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    background-size: 100% 100%;
+    background-image: url(../img/friPic.png);
+    margin-right: .7rem;
+}

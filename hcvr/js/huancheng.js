@@ -654,6 +654,9 @@ function krpanoReady(krpanObj)
 						
 						} else {
 							
+							$('#userImg').attr('src',result.data.avatar_large);
+							
+							$('.userInfo').children('p').text(result.data.screen_name);
 							
 							totalCount = result.data.tickets;
 							

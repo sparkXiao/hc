@@ -1,7 +1,11 @@
+html {
+  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+}
+
 #clickShow {
 	
 	display: none;
-	text-align: center; color: white; font-size: 20px; position: absolute; margin: auto; 
+	text-align: center; color: white; font-size: 2rem; position: absolute; margin: auto; 
 	background-size:100% 100%;
 	background-image: url(../img/dialogbg.png); no-repeat;
     padding-left: .5rem;
@@ -79,8 +83,9 @@
     background-size:100% 100%;
 	background-image: url(../img/dialogbg.png); no-repeat;
     text-align: center; color: white;
-    width: 70%;
-    height: 50%; 
+    width: 80%;	
+    height: 35%;
+    
 	/*border-radius: 7px 7px 7px 7px; 
 	-moz-border-radius: 7px 7px 7px 7px; 
 	-webkit-border-radius: 7px 7px 7px 7px; 
@@ -94,7 +99,7 @@
     width: 50%;
     position: relative;
     margin: auto;
-    left: -10%;
+    left: -15%;
     padding-top: 1.5rem;
 }
 
@@ -107,7 +112,7 @@
     display: inline-block;
     background-size: 100% 100%;
     background-image: url(../img/friPic.png);
-	
+	margin-right: .7rem;
 }
 
 

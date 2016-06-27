@@ -1,9 +1,23 @@
 var krpano; screen_nameStr = ''; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false; 
 
+//字体图片随窗体缩放
+function door() {
+	var sreen = $(window).width();
+	$("html").css("fontSize", sreen / 32);
+}
+
+
+door();
+
+
+window.onresize = function() {
+	door();
+}
+
 
 function getClickLotus (prizeName) {
 	
-		console.log('总 采摘次数  totalCount  '+totalCount)
+		console.log('总 采摘次数  totalCount  '+totalCount);
 	
 		if (totalCount < 5) {
 			

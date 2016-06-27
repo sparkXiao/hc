@@ -70,10 +70,10 @@ html {
 	max-width: 100%;
     max-height: 100%;
     
-	-webkit-clip-path: circle(2.7rem at center);
-	-moz-clip-path: circle(2.7rem at center);
-	-o-clip-path: circle(2.7rem at center);
-	clip-path: circle(2.7rem at center);
+	-webkit-clip-path: circle(2.3rem at center);
+	-moz-clip-path: circle(2.3rem at center);
+	-o-clip-path: circle(2.3rem at center);
+	clip-path: circle(2.3rem at center);
 }
 
 .clip-circle.user {
@@ -103,24 +103,22 @@ html {
 
 .picCon {
 	
-	display: -webkit-inline-box;
-    width: 50%;
+    display: inline-block;
     position: relative;
     margin: auto;
-    left: -15%;
     padding-top: 1.5rem;
 }
 
 
 .friendP {
 	
-    float: left;
-    width: 50%;
-    height: 50%;
+    width: 5rem;
+    height: 5rem;
     display: inline-block;
     background-size: 100% 100%;
-    background-image: url(../img/friPic.png); no-repeat;
-	margin-right: .7rem;
+    background-image: url(../img/friPic.png);
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 
@@ -237,8 +235,8 @@ html {
 .userPic {
 	
 	float: left;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     display: inline-block;
     background-size: 100% 100%;
     background-image: url(../img/friPic.png); no-repeat;

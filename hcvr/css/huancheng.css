@@ -1,9 +1,12 @@
 #clickShow {
+	
 	display: none;
 	text-align: center; color: white; font-size: 20px; position: absolute; margin: auto; 
 	background-size:100% 100%;
 	background-image: url(../img/dialogbg.png); no-repeat;
-	
+    padding-left: .5rem;
+    padding-right: .5rem;
+    
 	/*border-radius: 7px 7px 7px 7px; 
 	-moz-border-radius: 7px 7px 7px 7px; 
 	-webkit-border-radius: 7px 7px 7px 7px; 
@@ -47,23 +50,25 @@
 
 .friTit {
 	
-	position: relative;
-    top: 3rem;
-    left: 20%;
-    
-	background-size:100% 100%;
-	background-image: url(../img/friTit.png); no-repeat;
-	width: 50%;
+    position: relative;
+    top: 1rem;
+    margin: auto
+    width: 45%;
     height: 20%;
+    background-size: 100% 100%;
+    background-image: url(../img/friTit.png);
 }
 
 
 .clip-circle {
 	
-	-webkit-clip-path: circle(60px at center);
-	-moz-clip-path: circle(60px at center);
-	-o-clip-path: circle(60px at center);
-	clip-path: circle(60px at center);
+	max-width: 100%;
+    max-height: 100%;
+    
+	-webkit-clip-path: circle(2.7rem at center);
+	-moz-clip-path: circle(2.7rem at center);
+	-o-clip-path: circle(2.7rem at center);
+	clip-path: circle(2.7rem at center);
 }
 
 
@@ -85,18 +90,23 @@
 
 .picCon {
 	
-	width: 50%; height: auto;
-	position: absolute; top: 30%; left: 30%;
-	align-content: center;  
+	display: -webkit-inline-box;
+    width: 50%;
+    position: relative;
+    margin: auto;
+    left: -10%;
+    padding-top: 1.5rem;
 }
 
 
 .friendP {
 	
-	display: inline-block;
-	overflow: hidden;
-	background-size:100% 100%;
-	background-image: url(../img/friPic.png); no-repeat;
+    float: left;
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    background-size: 100% 100%;
+    background-image: url(../img/friPic.png);
 	
 }
 
@@ -109,21 +119,22 @@
 
 
 .btnCon {
-	position: absolute; bottom: 2rem; left: 20%;
+	
+    margin: auto;
+    position: relative;
+    top: 1rem;
 }
 
 
 #changeFir {
 
-	float: left;
-	src: url(../img/changeF.png);	
+    width: 35%;
 }
 
 
 #invite {
 	
-	float: right;
-	src: url(../img/confirmF.png);
+    width: 35%;
 }
 
 

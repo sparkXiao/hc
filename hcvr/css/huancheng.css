@@ -229,8 +229,9 @@ html {
 
 .userPic {
 	
-    width: 50%;
-    height: 50%;
+	float: left;
+    width: 4rem;
+    height: 4rem;
     display: inline-block;
     background-size: 100% 100%;
     background-image: url(../img/friPic.png); no-repeat;

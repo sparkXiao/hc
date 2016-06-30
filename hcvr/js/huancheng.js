@@ -1,4 +1,4 @@
-var krpano, chatCanvas; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false; 
+var krpano, imgageData, chatCanvas; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false; 
 
 //字体图片随窗体缩放
 function door() {
@@ -647,7 +647,7 @@ function krpanoReady(krpanObj)
 	         	
 	                chatCanvas = canvas;
 	                
-	                var imgageData = chatCanvas.toDataURL("image/png");
+	                imgageData = chatCanvas.toDataURL("image/png");
 	                
 	                console.log('imgageData  '+imgageData);
 	                
@@ -656,10 +656,11 @@ function krpanoReady(krpanObj)
 	                console.log('newData  '+newData);
 	                
 	             }
-         });
+         	});
 		    
-		    krpano.call("");
+		    krpano.call("addlayer(chatPng);set(layer[chatPng].url,"+ imgageData +");set(layer[chatPng].x,300);set(layer[chatPng].y,300);set(layer[chatPng].onhover,showtext('hovering the new chatPng'));set(layer[chatPng].onclick, removelayer(chatPng) );");
 		    
+		    console.log('render chatPng')
 		  }
 	})
 	

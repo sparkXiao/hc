@@ -1,4 +1,4 @@
-var krpano, imgageData, chatCanvas; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false; 
+var krpano, chatData, chatCanvas; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false; 
 
 //字体图片随窗体缩放
 function door() {
@@ -647,7 +647,9 @@ function krpanoReady(krpanObj)
 	         	
 	                chatCanvas = canvas;
 	                
-	                imgageData = chatCanvas.toDataURL("image/png");
+	                var imgageData = chatCanvas.toDataURL("image/png");
+	                
+	                chatData = imgageData;
 	                
 	                console.log('imgageData  '+imgageData);
 	                
@@ -658,7 +660,7 @@ function krpanoReady(krpanObj)
 	             }
          	});
 		    
-		    krpano.call("addlayer(chatPng);set(hotspot[chatPng].url,"+ imgageData +");set(hotspot[chatPng].ath,300);set(hotspot[chatPng].atv,300);set(hotspot[chatPng].onhover,showtext('hovering the new chatPng'));set(hotspot[newspot].zoom,true);set(hotspot[chatPng].onclick, removelayer(chatPng) );");
+		    krpano.call("addlayer(chatPng);set(hotspot[chatPng].url,"+ chatData +");set(hotspot[chatPng].ath,300);set(hotspot[chatPng].atv,300);set(hotspot[chatPng].onhover,showtext('hovering the new chatPng'));set(hotspot[newspot].zoom,true);set(hotspot[chatPng].onclick, removelayer(chatPng) );");
 		    
 		    console.log('render chatPng');
 		  }

@@ -45,6 +45,7 @@ function autoSizeText (ele) {
       
       while (el.scrollHeight > el.offsetHeight) {
         _results1.push(resizeText());
+        console.log('while circling')
       }
       
       return _results1;

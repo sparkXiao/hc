@@ -10,13 +10,17 @@ function door() {
 }
 
 
-function autoSizeText (ele) {
+
+/*
+ * Too bad code
+ * 
+ * function autoSizeText (ele) {
   
   var el, elements, _i, _len, _results;
   
   elements = ele;
   
-  console.log(elements);
+  console.log('elements  '+ elements);
   
   if (elements.length < 0) {
     return;
@@ -28,7 +32,7 @@ function autoSizeText (ele) {
   	
     el = elements[_i];
     
-    _results.push((function(el) {
+    _results.push( (function(el) {
     	
       var resizeText, _results1;
       
@@ -44,13 +48,19 @@ function autoSizeText (ele) {
       _results1 = [];
       
       while (el.scrollHeight > el.offsetHeight) {
+      	
         _results1.push(resizeText());
-        console.log('while circling')
+        
+        console.log('el  '+ el);
+        
+        console.log('el  parent  '+ el.parent);
+        
+        console.log('while circling');
       }
       
       return _results1;
       
-    })(el));
+    })(el) );
     
   }
   
@@ -58,7 +68,7 @@ function autoSizeText (ele) {
   
 };
 
-autoSizeText($('.userInfo'));
+autoSizeText($('.userInfo'));*/
 
 /*
 door();

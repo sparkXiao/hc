@@ -470,9 +470,123 @@ function krpanoReady(krpanObj)
 			
 		} else if ( $('#gobtn').text() == '邀请好友' ) {
 			
-			if (IF_NET) {
+			getFri();
+			
+			
+		} else {
+			
+			
+			
+		}
+		
+	
+	});
+	
+	
+	$('#changeFir').on('click', getFri () );
+	
+	
+	function getFri () {
+		
+		if (IF_NET) {
 					
-					ajaxRequest(false, "get", 'getfriend', '', function(result) {
+			ajaxRequest(false, "get", 'getfriend', '', function(result) {
+			
+			
+						if (result.code != 10000) {
+							
+							
+							Lobibox.alert(
+							    'error', // Any of the following
+							    {
+							        msg:result.msg
+							    }
+							);
+						
+						
+						} else {
+							
+							
+							Lobibox.alert(
+							    'success', // Any of the following
+							    {
+							        msg:'调取 获取随机邀请好友 接口 成功  '
+							    }
+							);
+							
+							uidString = '';
+							
+							uidArr = [];
+							
+							screen_nameArr = [];
+							
+							fritoken = result.data.token;
+							
+							$('.picCon').remove();
+							
+							console.log('fritoken  '+fritoken);
+							
+							for (var i = 0; i < result.data.user.length; i++) {
+								
+								uidArr.push(String(result.data.user[i].uid))
+								
+								screen_nameArr.push(String(result.data.user[i].screen_name))
+								
+//										uidString += String(result.data.user[i].uid)+',';
+								
+								var content = '<div class="friendP"><img src="'+ result.data.user[i].avatar_large +'" class="clip-circle" /></div>'
+								
+								$('.picCon').append(content);
+							}
+							
+							
+							uidString = uidArr[0]+','+uidArr[1]+','+uidArr[2];
+							
+							screen_nameStr = screen_nameArr[0]+','+screen_nameArr[1]+','+screen_nameArr[2];
+							
+							console.log('if uidString is string '+ typeof uidString);
+							
+							console.log('uidString.length  '+uidString.length)
+
+//									uidString.substring(0, uidString.length - 1);
+//									
+//									uidString.slice(1, - 1);
+							
+							console.log('uidString  '+uidString);
+							
+							console.log('screen_nameStr  '+screen_nameStr);
+							
+							
+//									$('.friendsP').append('<div id="gobtn2"></div>');
+							
+//									$('#gobtn2').text('一键邀请');
+
+							
+							$('.friendsP').css('display','inline-block');
+							
+						}
+						
+				
+					}, errorReturn);
+			
+		}
+	}
+	
+	
+	$('#invite').on('click', function(e) {
+		
+		if (IF_NET) {
+			
+					var postData = {
+						
+						uid: uidString,
+						screen_name: screen_nameStr,
+						token: fritoken 
+						
+					}
+					
+					
+					ajaxRequest(false, "post", 'invitefriend', postData, function(result) {
 					
 					
 								if (result.code != 10000) {
@@ -492,99 +606,10 @@ function krpanoReady(krpanObj)
 									Lobibox.alert(
 									    'success', // Any of the following
 									    {
-									        msg:'调取 获取随机邀请好友 接口 成功  '
+									        msg:'调取 发送邀请好友 接口 成功  '
 									    }
 									);
 									
-									uidString = '';
-									
-									fritoken = result.data.token;
-									
-									console.log('fritoken  '+fritoken);
-									
-									for (var i = 0; i < result.data.user.length; i++) {
-										
-										uidArr.push(String(result.data.user[i].uid))
-										
-										screen_nameArr.push(String(result.data.user[i].screen_name))
-										
-//										uidString += String(result.data.user[i].uid)+',';
-										
-										var content = '<div class="friendP"><img src="'+ result.data.user[i].avatar_large +'" class="clip-circle" /></div>'
-										
-										$('.picCon').append(content);
-									}
-									
-									
-									uidString = uidArr[0]+','+uidArr[1]+','+uidArr[2];
-									
-									screen_nameStr = screen_nameArr[0]+','+screen_nameArr[1]+','+screen_nameArr[2];
-									
-									console.log('if uidString is string '+ typeof uidString);
-									
-									console.log('uidString.length  '+uidString.length)
-
-//									uidString.substring(0, uidString.length - 1);
-//									
-//									uidString.slice(1, - 1);
-									
-									console.log('uidString  '+uidString);
-									
-									console.log('screen_nameStr  '+screen_nameStr);
-									
-									
-//									$('.friendsP').append('<div id="gobtn2"></div>');
-									
-									$('#gobtn2').text('一键邀请');
-									
-									$('#gobtn2').on('click', function(e) {
-		
-										if (IF_NET) {
-											
-													var postData = {
-														
-														uid: uidString,
-														screen_name: screen_nameStr,
-														token: fritoken 
-														
-													}
-													
-													
-													ajaxRequest(false, "post", 'invitefriend', postData, function(result) {
-													
-													
-																if (result.code != 10000) {
-																	
-																	
-																	Lobibox.alert(
-																	    'error', // Any of the following
-																	    {
-																	        msg:result.msg
-																	    }
-																	);
-																
-																
-																} else {
-																	
-																	
-																	Lobibox.alert(
-																	    'success', // Any of the following
-																	    {
-																	        msg:'调取 发送邀请好友 接口 成功  '
-																	    }
-																	);
-																	
-																	
-																}
-																
-														
-															}, errorReturn);
-													
-												}
-										
-									});
-									
-									$('.friendsP').css('display','inline-block');
 									
 								}
 								
@@ -592,15 +617,8 @@ function krpanoReady(krpanObj)
 							}, errorReturn);
 					
 				}
-			
-		} else {
-			
-			
-			
-		}
 		
-	
-	})
+	});
 
 	
 	

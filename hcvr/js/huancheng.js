@@ -465,7 +465,7 @@ function krpanoReady(krpanObj)
 		
 			$('#overlay').fadeOut('fast');
 			
-			krpano.call("loadscene('scenetiles');");
+			krpano.call("loadscene('scene__________');");
 			
 			
 		} else if ( $('#gobtn').text() == '邀请好友' ) {
@@ -609,6 +609,8 @@ function krpanoReady(krpanObj)
 									        msg:'调取 发送邀请好友 接口 成功  '
 									    }
 									);
+									
+									krpano.call("loadscene('scene__________');");
 									
 									
 								}

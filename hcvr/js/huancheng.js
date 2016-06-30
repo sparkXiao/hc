@@ -78,6 +78,8 @@ window.onresize = function() {
 	door();
 }*/
 
+$(".userInfo").textfill();
+
 
 function getClickLotus (prizeName) {
 	

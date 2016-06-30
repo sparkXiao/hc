@@ -265,7 +265,7 @@
 	<!-- skin_hotspotstyle - style for the hotspots -->
 	<style name="skin_hotspotstyle" url="vtourskin_hotspot.png" scale="0.5" edge="top" distorted="true"
 	       tooltip=""
-	       onclick=""
+	       onclick="if(linkedscene, set(enabled,false); skin_hidetooltips(); tween(depth|alpha|oy|rx, 4000|0.0|-50|-60, 0.5, default, loadscene(get(linkedscene),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend)); skin_updatescroll(); ); );"
 	       onover="tween(scale,0.55);"
 	       onout="tween(scale,0.5);"
 	       onloaded="if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"
@@ -280,7 +280,7 @@
 	<style name="skin_menstyle" url="men.png" scale="0.5" edge="top" distorted="true"
 	       tooltip="采集隐莲
 	       	        传说中的隐莲圣地"
-	       onclick="hideChat();if(linkedscene, set(enabled,false); skin_hidetooltips(); tween(depth|alpha|oy|rx, 4000|0.0|-50|-60, 0.5, default, loadscene(get(linkedscene),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend)); skin_updatescroll(); ); );"
+	       onclick=""
 	       onover="tween(scale,0.55);copy(layer[skin_tooltip].html, tooltip);
 	                     set(layer[skin_tooltip].visible, true);
 	                     tween(layer[skin_tooltip].alpha, 1.0, 0.1);

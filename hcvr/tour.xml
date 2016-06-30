@@ -142,16 +142,19 @@
 		<!-- place your scene hotspots here -->
 		<hotspot name="spot1" style="skin_yinlianstyle" ath="90.070" atv="15.687"  linkedscene = "www" />
 		<hotspot name="spot2" style="skin_yinlianstyle" ath="125.002" atv="23.456" linkedscene = "www" />
-		<hotspot name="spot3" style="skin_yinlianstyle" ath="-103.807" atv="21.519" linkedscene = "www" />
+		<hotspot name="spot3" style="skin_yinlianstyle" ath="-101.320" atv="7.184" linkedscene = "www" />
 		
-		<hotspot name="spot4" style="skin_yinlianstyle" ath="-62.652" atv="23.586" linkedscene="www" />
-		<hotspot name="spot5" style="skin_yinlianstyle" ath="-141.266" atv="18.301" linkedscene="www" />
-		<hotspot name="spot6" style="skin_yinlianstyle" ath="178.658" atv="19.481" linkedscene="www" />
+		<hotspot name="spot4" style="skin_yinlianstyle" ath="-53.847" atv="14.230" linkedscene="www" />
+		<hotspot name="spot5" style="skin_yinlianstyle" ath="-125.858" atv="11.256" linkedscene="www" />
+		<hotspot name="spot6" style="skin_yinlianstyle" ath="177.590" atv="19.866" linkedscene="www" />
+		
 		<hotspot name="spot7" style="skin_yinlianstyle" ath="163.622" atv="5.638" linkedscene="www" />
-		<hotspot name="spot8" style="skin_yinlianstyle" ath="131.381" atv="5.695" linkedscene="www" />
-		<hotspot name="spot9" style="skin_yinlianstyle" ath="71.675" atv="5.684" linkedscene="www" />
-		<hotspot name="spot10" style="skin_yinlianstyle" ath="0.790" atv="13.302" linkedscene="www" />
+		<hotspot name="spot8" style="skin_yinlianstyle" ath="-161.381" atv="7.666" linkedscene="www" />
+		<hotspot name="spot9" style="skin_yinlianstyle" ath="70.323" atv="9.365" linkedscene="www" />
+		
+		<hotspot name="spot10" style="skin_yinlianstyle" ath="-12.519" atv="13.931" linkedscene="www" />
 		<hotspot name="spot11" style="skin_yinlianstyle" ath="107.829" atv="1.183" linkedscene="www" />
+		<hotspot name="spot12" style="skin_yinlianstyle" ath="-67.268" atv="4.752" linkedscene="www" />
 
 	</scene>
 

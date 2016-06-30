@@ -99,9 +99,9 @@
 		<!-- place your scene hotspots here -->
 		
 
-		<hotspot name="spot4" tooltip="暂未开放" style="skin_menstyle" ath="-39.508" atv="0.183" linkedscene="www" />
+		<hotspot name="spot4" tooltip="暂未开放" style="skin_menstyle" ath="-39.968" atv="-0.158" linkedscene="www" />
 		
-		<hotspot name="spot5" style="skin_menstyle" ath="0.162" atv="-3.0" linkedscene="scene__________" />
+		<hotspot name="spot5" style="skin_menstyle" ath="2.331" atv="-3.858" linkedscene="scene__________" />
 		
 		
 		<!-- 

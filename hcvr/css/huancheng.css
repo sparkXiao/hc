@@ -241,7 +241,7 @@ html {
 }
 
 .userPic {
-	
+	margin-top: -5%;
 	float: left;
     width: 12vw;
     height: 12vw;

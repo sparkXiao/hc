@@ -610,7 +610,7 @@ function krpanoReady(krpanObj)
 									    }
 									);
 									
-									krpano.call("loadscene('scene__________');");
+									krpano.call("loadscene('scene_____________2-ok');");
 									
 									
 								}

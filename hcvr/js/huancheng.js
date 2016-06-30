@@ -639,9 +639,9 @@ function krpanoReady(krpanObj)
 		    
 		    var chatTxt = $('.chatTxtVal').val();
 		    
-		    var element = '<div class="chatUI">'+ chatTxt +'</div>';
+		    $('.chatUI').html(chatTxt);
 		    
-		    html2canvas( element, {
+		    html2canvas( $('.chatUI'), {
 		    	
 	         onrendered: function (canvas) {
 	         	

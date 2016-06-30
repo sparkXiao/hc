@@ -657,6 +657,8 @@ function krpanoReady(krpanObj)
 	                
 	                console.log('newData  '+newData);
 	                
+	                console.log('chatData  '+chatData);
+	                
 	             }
          	});
 		    

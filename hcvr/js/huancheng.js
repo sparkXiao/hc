@@ -483,7 +483,7 @@ function krpanoReady(krpanObj)
 	});
 	
 	
-	$('#changeFir').on('click', getFri () );
+	$('#changeFir').on('click', getFri);
 	
 	
 	function getFri () {

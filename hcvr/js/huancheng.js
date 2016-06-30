@@ -428,13 +428,13 @@ function krpanoReady(krpanObj)
 	
 	console.log('vlookat  '+krpano.get('view.vlookat'));
 	
-	
+	/*
 	$('.chat').show();
 	
 	$messages.mCustomScrollbar();
   		setTimeout(function() {
     	fakeMessage();
-  	}, 100);
+  	}, 100);*/
   
   
 	$('#gobtn').on('click', function(e) {

@@ -637,11 +637,11 @@ function krpanoReady(krpanObj)
 	var krpanoDiv = document.getElementById('krpanoSWFObject');
 	
 	
-	document.addEventListener("hideChat", function (event) {
+	/*document.addEventListener("hideChat", function (event) {
 		
 		$('.chat').hide();
 		
-	});
+	});*/
 	
 	
 	document.addEventListener("updateClick", function (event) {

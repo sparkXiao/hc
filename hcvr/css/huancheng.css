@@ -294,3 +294,18 @@ html {
     background-size: 100% 100%;
     background-image: url(../img/sentTxt.png);
 }
+
+.chatTxtVal {
+	
+	width: 98%; height: 98%;
+	
+}
+
+.chatUI {
+	
+	display: inline-block;
+	font-size: 1.5rem;
+	background-color: white;
+	color: black;
+	
+}

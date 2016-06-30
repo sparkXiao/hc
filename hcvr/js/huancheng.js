@@ -1,4 +1,4 @@
-var krpano; screen_nameStr = ''; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false; 
+var krpano; chatCanvas; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false; 
 
 //字体图片随窗体缩放
 function door() {
@@ -632,6 +632,36 @@ function krpanoReady(krpanObj)
 		
 	});
 
+	
+	$('#sentTxt').on('click', function () {
+		
+		if ($('.chatTxtVal').val() != '') {
+		    
+		    var chatTxt = $('.chatTxtVal').val();
+		    
+		    var element = '<div class="chatUI">'+ chatTxt +'</div>';
+		    
+		    html2canvas( element, {
+		    	
+	         onrendered: function (canvas) {
+	         	
+	                chatCanvas = canvas;
+	                
+	                var imgageData = chatCanvas.toDataURL("image/png");
+	                
+	                console.log('imgageData  '+imgageData);
+	                
+	                var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+	                
+	                console.log('newData  '+newData);
+	                
+	             }
+         });
+		    
+		    krpano.call("");
+		    
+		  }
+	})
 	
 	
 	var krpanoDiv = document.getElementById('krpanoSWFObject');

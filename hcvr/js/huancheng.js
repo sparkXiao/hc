@@ -662,7 +662,7 @@ function krpanoReady(krpanObj)
 	             }
          	});
 		    
-		    krpano.call("addhotspot(chatPng);set(hotspot[chatPng].url,http://hcvr.github.io/hc/hcvr/img/dialogbg.png);set(hotspot[chatPng].height,30);set(hotspot[chatPng].width,30);set(hotspot[chatPng].ath,300);set(hotspot[chatPng].atv,300);set(hotspot[chatPng].onhover,showtext('hovering the new chatPng'));set(hotspot[newspot].zoom,true);set(hotspot[chatPng].onclick, removelayer(chatPng) );");
+		    krpano.call("addhotspot(chatPng);set(hotspot[chatPng].url,http://hcvr.github.io/hc/hcvr/img/dialogbg.png);set(hotspot[chatPng].height,30);set(hotspot[chatPng].width,30);set(hotspot[chatPng].ath,0);set(hotspot[chatPng].atv,0);set(hotspot[chatPng].onhover,showtext('hovering the new chatPng'));set(hotspot[newspot].zoom,true);set(hotspot[chatPng].onclick, removelayer(chatPng) );");
 		    
 		    console.log('render chatPng');
 		  }

@@ -61,7 +61,7 @@ html {
 .friTit {
 	
     position: relative;
-    top: 1rem;
+    top: 7%;
     margin: auto;
     width: 45%;
     height: 20%;
@@ -82,10 +82,10 @@ html {
 }
 
 .clip-circle.user {
-	-webkit-clip-path: circle(1.3rem at center);
-	-moz-clip-path: circle(1.3rem at center);
-	-o-clip-path: circle(1.3rem at center);
-	clip-path: circle(1.3rem at center);
+	-webkit-clip-path: circle(5.5vw at center);
+	-moz-clip-path: circle(5.5vw at center);
+	-o-clip-path: circle(5.5vw at center);
+	clip-path: circle(5.5vw at center);
 }
 
 
@@ -243,8 +243,8 @@ html {
 .userPic {
 	
 	float: left;
-    width: 3rem;
-    height: 3rem;
+    width: 12vw;
+    height: 12vw;
     display: inline-block;
     background-size: 100% 100%;
     background-image: url(../img/friPic.png); no-repeat;

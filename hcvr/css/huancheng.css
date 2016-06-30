@@ -200,8 +200,10 @@ html {
 .packageInfo {
 	background-color: #FFFFFF;
     width: 20vw;
-    height: 5vh;
-	position: absolute; top: 2rem; right: 2rem;
+    height: 4.5vh;
+	position: absolute;
+	  top: 2%;
+    right: 3%;
 	border-radius: 7px 7px 20px 7px; 
 	-moz-border-radius: 7px 7px 20px 7px; 
 	-webkit-border-radius: 7px 7px 20px 7px; 
@@ -214,13 +216,13 @@ html {
 
 .packageInfo >p {
 	position: relative;
-    top: -2.6rem;
-    left: 3rem;
+    top: 2%;
+    left: 3%;
     color: black;
 }
 
 .packageInfo.trea {
-	right: 30vw;
+	right: 25%;
 }
 
 .userInfo {
@@ -241,11 +243,13 @@ html {
     display: inline-block;
     background-size: 100% 100%;
     background-image: url(../img/friPic.png); no-repeat;
-    margin-right: .7rem;
+    margin-right: 5%;
 }
 
 .userName {
 	
 	margin-top: 0;
+	position: relative;
+	top: 20%;
 	
 }

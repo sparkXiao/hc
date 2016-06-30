@@ -326,7 +326,7 @@
 	       />-->
        
 
-	<!-- skin_tooltip - style for the thumb, hotspot and mapspot tooltips -->
+	<!-- skin_tooltip - style for the thumb, hotspot and mapspot tooltips 
 	<style name="skin_tooltips"
 	       onover.mouse="copy(layer[skin_tooltip].html, tooltip);
 	                     set(layer[skin_tooltip].visible, true);
@@ -335,7 +335,7 @@
 	       onout.mouse="tween(layer[skin_tooltip].alpha, 0.0, 0.1, default, set(layer[skin_tooltip].visible,false), copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );"
 	       />
 
-
+-->
 	<!-- the tooltip textfield 
 	<layer name="skin_tooltip" keep="true"
 	       url="%SWFPATH%/plugins/textfield.swf"

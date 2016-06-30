@@ -658,9 +658,9 @@ function krpanoReady(krpanObj)
 	             }
          	});
 		    
-		    krpano.call("addlayer(chatPng);set(layer[chatPng].url,"+ imgageData +");set(layer[chatPng].x,300);set(layer[chatPng].y,300);set(layer[chatPng].onhover,showtext('hovering the new chatPng'));set(layer[chatPng].onclick, removelayer(chatPng) );");
+		    krpano.call("addlayer(chatPng);set(hotspot[chatPng].url,"+ imgageData +");set(hotspot[chatPng].ath,300);set(hotspot[chatPng].atv,300);set(hotspot[chatPng].onhover,showtext('hovering the new chatPng'));set(hotspot[newspot].zoom,true);set(hotspot[chatPng].onclick, removelayer(chatPng) );");
 		    
-		    console.log('render chatPng')
+		    console.log('render chatPng');
 		  }
 	})
 	

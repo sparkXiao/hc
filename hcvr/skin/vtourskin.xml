@@ -108,14 +108,14 @@
 	       shadow="0.01" shadowrange="9.0" shadowcolor="0xFFFFFF" shadowalpha="0.5"
 	       />
 
-	<!-- show a 'rotate the device' info when the mobile device is in portrait mode in VR mode -->
+	<!-- show a 'rotate the device' info when the mobile device is in portrait mode in VR mode 
 	<layer name="webvr_rotate_to_landscape_request" keep="true" vr="true" devices="mobile"
 	       url="rotate_device.png" scale="0.5"
 	       align="top" edge="center" y="28%"
 	       autoalpha="true" alpha="0.0"
 	       enabled="false"
 	       />
-
+-->
 	<events name="webvr_events" keep="true" devices="html5"
 	        onresize.mobile="webvr_act_as_gyro_in_portrait_mode();"
 	        onviewchange=""
@@ -336,7 +336,7 @@
 	       />
 
 
-	<!-- the tooltip textfield -->
+	<!-- the tooltip textfield 
 	<layer name="skin_tooltip" keep="true"
 	       url="%SWFPATH%/plugins/textfield.swf"
 	       parent="STAGE"
@@ -350,7 +350,7 @@
 	       html=""
 	       />
 
-
+-->
 
 	<!-- skin layout 
 	<layer name="skin_layer" keep="true" type="container" align="top" width="get:skin_settings.layout_width" maxwidth="get:skin_settings.layout_maxwidth" height="100%" maskchildren="true" visible="false">

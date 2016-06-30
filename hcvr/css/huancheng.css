@@ -75,10 +75,10 @@ html {
 	max-width: 100%;
     max-height: 100%;
     
-	-webkit-clip-path: circle(2.3rem at center);
-	-moz-clip-path: circle(2.3rem at center);
-	-o-clip-path: circle(2.3rem at center);
-	clip-path: circle(2.3rem at center);
+	-webkit-clip-path: circle(9vw at center);
+	-moz-clip-path: circle(9vw at center);
+	-o-clip-path: circle(9vw at center);
+	clip-path: circle(9vw at center);
 }
 
 .clip-circle.user {
@@ -111,19 +111,19 @@ html {
     display: inline-block;
     position: relative;
     margin: auto;
-    padding-top: 1.5rem;
+    padding-top: 10%;
 }
 
 
 .friendP {
 	
-    width: 5rem;
-    height: 5rem;
+    width: 20vw;
+    height: 20vw;
     display: inline-block;
     background-size: 100% 100%;
     background-image: url(../img/friPic.png);
-    margin-right: 1rem;
-    margin-left: 1rem;
+    margin-right: .5rem;
+    margin-left: .5rem;
 }
 
 
@@ -138,7 +138,7 @@ html {
 	
     margin: auto;
     position: relative;
-    top: 1rem;
+    top: 10%;
 }
 
 

@@ -360,7 +360,7 @@ function showTxt (ifTriggerInvite) {
 		
 		$('#clickShow').css('top', ( krpano.get('mouse.stagey') + 45 ) +'px');
 		
-		$('#clickShow').css('left', krpano.get('mouse.stagex') +'px');
+		$('#clickShow').css('left', ( krpano.get('mouse.stagex') - showHeight ) +'px');
 		
 		
 		console.log('clickShow top '+$('#clickShow').css('top') + '  stagey  ' +krpano.get('mouse.stagey') )

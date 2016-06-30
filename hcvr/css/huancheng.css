@@ -262,31 +262,35 @@ html {
 .chatDiv {
 	
 	position: absolute;
-	margin: auto; 
-	bottom: 3%; 
-    width: 90%;
-    height: 3rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: .5%;
+    width: 99%;
+    height: 6vh;
     background-size: 100% 100%;
-    background-image: url(../img/txtholder.png); no-repeat;
+    background-image: url(../img/txtholder.png);
 	
 }
 
 .chatBg {
 	
 	float: left;
-	position: absolute;
-	top: 2%;
-	width: 80%;
-	background-size: 100% 100%;
-    background-image: url(../img/txtbg.png); no-repeat;
+    position: absolute;
+    top: 3%;
+    left: 1%;
+    width: 81%;
+    height: 90%;
+    background-size: 100% 100%;
+    background-image: url(../img/txtbg.png);
 }
 
 #sentTxt {
 	
 	position: absolute;
-	top: 2%;
-	
-	/*width: 80%;*/
-	background-size: 100% 100%;
-    background-image: url(../img/sentTxt.png); no-repeat;
+	    max-height: 98%;
+    width: auto;
+    right: 1%;
+    background-size: 100% 100%;
+    background-image: url(../img/sentTxt.png);
 }

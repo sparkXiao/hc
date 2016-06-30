@@ -486,7 +486,7 @@ function krpanoReady(krpanObj)
 	$('#changeFir').on('click', getFri);
 	
 	
-	function getFri () {
+	function getFri() {
 		
 		if (IF_NET) {
 					
@@ -522,7 +522,7 @@ function krpanoReady(krpanObj)
 							
 							fritoken = result.data.token;
 							
-							$('.picCon').remove();
+							$('.picCon').empty();
 							
 							console.log('fritoken  '+fritoken);
 							

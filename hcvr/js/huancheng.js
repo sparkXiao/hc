@@ -725,8 +725,9 @@ function krpanoReady(krpanObj)
 							
 							$('.userInfo').children('p').text(result.data.screen_name);
 							
-							$('.userInfo').children('p').autoshrink();
-							
+//							$('.userInfo').children('p').autoshrink();
+
+							$(".userInfo").textfill();	
 							
 							totalCount = result.data.tickets;
 							

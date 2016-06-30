@@ -610,6 +610,15 @@ function krpanoReady(krpanObj)
 									    }
 									);
 									
+									
+									$('.friendsP').hide();
+									
+									
+									$('#overlay').hide();
+		
+									$('#overlay').fadeOut('fast');
+									
+									
 									krpano.call("loadscene('scene_____________2-ok');");
 									
 									

@@ -239,6 +239,9 @@ html {
 
 .packageInfo.trea {
 	
+	position: absolute;
+    left: 3%;
+    top: 85%;
 	width: 9vw;
     right: 27%;
     background-size: 100% 100%;

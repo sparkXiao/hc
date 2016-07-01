@@ -95,7 +95,7 @@ $('#begin').on('click', function () {
 
 $('.trea').on('click',function () {
 	
-	window.location.href = 'weibo.com';
+	window.location.href = 'http://www.weibo.com';
 	
 })
 

@@ -93,16 +93,9 @@ $('#begin').on('click', function () {
 })
 
 
-$('.trea').on('click',function () {
+$('#treaNum').on('click',function () {
 	
 	window.location.href = 'http://www.weibo.com';
-	
-})
-
-
-$('.treaNum').on('click',function () {
-	
-//	window.location.href = 'http://www.weibo.com';
 	
 })
 
@@ -509,6 +502,13 @@ function krpanoReady(krpanObj)
 			krpano.call("loadscene('scene__________');");
 			
 			
+			$('#treaNum').off('click',function () {
+	
+				window.location.href = 'http://www.weibo.com';
+				
+			})
+			
+			
 			$('#treaNum').removeClass('trea');
 							
 							
@@ -672,7 +672,16 @@ function krpanoReady(krpanObj)
 									
 									krpano.call("loadscene('scene_____________2-ok');");
 									
+									
 									$('.chatDiv').show();
+									
+									
+									$('#treaNum').on('click',function () {
+	
+										window.location.href = 'http://www.weibo.com';
+										
+									})
+									
 									
 									$('#treaNum').removeClass('treaNum');
 									
@@ -733,6 +742,13 @@ function krpanoReady(krpanObj)
 		
 		
 		$('.chatDiv').hide();
+		
+		
+		$('#treaNum').off('click',function () {
+	
+			window.location.href = 'http://www.weibo.com';
+			
+		})
 		
 		
 		$('#treaNum').removeClass('trea');

@@ -100,6 +100,13 @@ $('.trea').on('click',function () {
 })
 
 
+$('.treaNum').on('click',function () {
+	
+//	window.location.href = 'http://www.weibo.com';
+	
+})
+
+
 showGameInfo();
 
 

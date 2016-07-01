@@ -82,7 +82,7 @@ window.onresize = function() {
 //$(".userInfo").textfill();
 
 
-$('body').on('click', function () { 
+$('#pano').on('click', function () { 
 	
     $('.chatTxtVal').blur(); 
 
@@ -91,13 +91,19 @@ $('body').on('click', function () {
 
 $('#begin').on('click', function () {
 	
+	hideGameInfo();
+})
+
+
+function hideGameInfo () {
+	
 	$('.gameInfo').hide();
 	
 	$('#overlay').hide();
 		
 	$('#overlay').fadeOut('fast');
 	
-})
+}
 
 
 $('#treaNum').on('click',function () {
@@ -107,11 +113,10 @@ $('#treaNum').on('click',function () {
 })
 
 
-showGameInfo();
-
 
 function showGameInfo () {
 	
+	$('.gameInfo').show();
 	
 	$('#overlay').show();
 		
@@ -765,6 +770,9 @@ function krpanoReady(krpanObj)
 			
 		
 		$('#treaNum').children('p').show();
+		
+		
+		showGameInfo();
 		
 //		$('.chat').hide();
 		

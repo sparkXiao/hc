@@ -93,7 +93,7 @@ $('#begin').on('click', function () {
 })
 
 
-$('#treaNum').on('click',function () {
+$('.trea').on('click',function () {
 	
 	window.location.href = 'weibo.com';
 	
@@ -493,15 +493,23 @@ function krpanoReady(krpanObj)
 		
 		if ( $('#gobtn').text() == '再玩一次' ) {
 			
+			
 			$('#overlay').hide();
 		
 			$('#overlay').fadeOut('fast');
 			
+			
 			krpano.call("loadscene('scene__________');");
 			
-			$('#treaNum').css('background-image',"url(http://hcvr.github.io/hc/hcvr/img/baoXnum.png); no-repeat;");
+			
+			$('#treaNum').removeClass('trea');
+							
+							
+			$('#treaNum').addClass('treaNum');
+			
 			
 			$('#treaNum').children('p').show();
+			
 			
 			
 		} else if ( $('#gobtn').text() == '邀请好友' ) {
@@ -657,8 +665,11 @@ function krpanoReady(krpanObj)
 									
 									krpano.call("loadscene('scene_____________2-ok');");
 									
+									$('.chatDiv').show();
 									
-									$('#treaNum').css('background-image',"url(http://hcvr.github.io/hc/hcvr/img/baoX.png); no-repeat;");
+									$('#treaNum').removeClass('treaNum');
+									
+									$('#treaNum').addClass('trea');
 									
 									$('#treaNum').children('p').hide();
 									
@@ -713,7 +724,15 @@ function krpanoReady(krpanObj)
 	
 	document.addEventListener("hideChat", function (event) {
 		
-		$('#treaNum').css('background-image',"url(http://hcvr.github.io/hc/hcvr/img/baoXnum.png); no-repeat;");
+		
+		$('.chatDiv').hide();
+		
+		
+		$('#treaNum').removeClass('trea');
+							
+							
+		$('#treaNum').addClass('treaNum');
+			
 		
 		$('#treaNum').children('p').show();
 		

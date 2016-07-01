@@ -206,7 +206,7 @@ html {
 	
 	/*background-color: #FFFFFF;*/
 	
-    width: 22vw;
+    width: 20vw;
     height: 5.6vh;
 	position: absolute;
 	  top: 2%;
@@ -239,7 +239,7 @@ html {
 
 .packageInfo.trea {
 	
-	width: 10vw;
+	width: 9vw;
     right: 27%;
     background-size: 100% 100%;
     background-image: url(../img/baoX.png); no-repeat;

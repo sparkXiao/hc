@@ -204,8 +204,8 @@ html {
 
 .packageInfo {
 	/*background-color: #FFFFFF;*/
-    width: 20vw;
-    height: 4.5vh;
+    width: 22vw;
+    height: 5.6vh;
 	position: absolute;
 	  top: 2%;
     right: 3%;
@@ -242,7 +242,7 @@ html {
 }
 
 .packageInfo.trea {
-	right: 25%;
+	right: 27%;
 }
 
 .userInfo {
@@ -343,7 +343,7 @@ html {
 
 .gameInfo >p {
 	
-	font-size: 1.5rem; color: white;  margin-top: 20%;
+    font-size: 4.5vw; color: white;  margin-top: 20%;
 }
 
 #begin {
@@ -353,6 +353,6 @@ html {
     left: 0;
     right: 0;
     bottom: 10%;
-    max-width: 30%;
+    max-width: 20vw;
     height: auto;
 }

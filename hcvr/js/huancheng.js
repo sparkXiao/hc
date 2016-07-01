@@ -82,6 +82,29 @@ window.onresize = function() {
 //$(".userInfo").textfill();
 
 
+$('#begin').on('click', function () {
+	
+	$('.gameInfo').hide();
+	
+	$('#overlay').hide();
+		
+	$('#overlay').fadeOut('fast');
+	
+} )
+
+
+showGameInfo();
+
+
+function showGameInfo () {
+	
+	
+	$('#overlay').show();
+		
+	$('#overlay').fadeIn('fast');
+}
+
+
 function getClickLotus (prizeName) {
 	
 		console.log('总 采摘次数  totalCount  '+totalCount);
@@ -373,6 +396,7 @@ function showTxt (ifTriggerInvite) {
 		$('#clickShow').css('left', ( krpano.get('mouse.stagex') - showWidth )+'px');
 		
 		*/
+		
 		setTimeout(function () {
 			
 			

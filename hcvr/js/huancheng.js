@@ -90,7 +90,14 @@ $('#begin').on('click', function () {
 		
 	$('#overlay').fadeOut('fast');
 	
-} )
+})
+
+
+$('#treaNum').on('click',function () {
+	
+	window.location.href = 'weibo.com';
+	
+})
 
 
 showGameInfo();
@@ -492,6 +499,10 @@ function krpanoReady(krpanObj)
 			
 			krpano.call("loadscene('scene__________');");
 			
+			$('#treaNum').css('background-image',"url(../img/baoXnum.png) no-repeat;");
+			
+			$('#treaNum').children('p').show();
+			
 			
 		} else if ( $('#gobtn').text() == '邀请好友' ) {
 			
@@ -647,6 +658,9 @@ function krpanoReady(krpanObj)
 									krpano.call("loadscene('scene_____________2-ok');");
 									
 									
+									$('#treaNum').css('background-image',"url(../img/baoX.png) no-repeat;");
+									
+									$('#treaNum').children('p').hide();
 								}
 								
 						
@@ -696,11 +710,15 @@ function krpanoReady(krpanObj)
 	var krpanoDiv = document.getElementById('krpanoSWFObject');
 	
 	
-	/*document.addEventListener("hideChat", function (event) {
+	document.addEventListener("hideChat", function (event) {
 		
-		$('.chat').hide();
+		$('#treaNum').css('background-image',"url(../img/baoXnum.png) no-repeat;");
 		
-	});*/
+		$('#treaNum').children('p').show();
+		
+//		$('.chat').hide();
+		
+	});
 	
 	
 	document.addEventListener("updateClick", function (event) {

@@ -82,6 +82,13 @@ window.onresize = function() {
 //$(".userInfo").textfill();
 
 
+$('body').on('click', function () { 
+	
+    $('.chatTxtVal').blur(); 
+
+});
+
+
 $('#begin').on('click', function () {
 	
 	$('.gameInfo').hide();

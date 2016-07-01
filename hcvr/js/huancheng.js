@@ -499,7 +499,7 @@ function krpanoReady(krpanObj)
 			
 			krpano.call("loadscene('scene__________');");
 			
-			$('#treaNum').css('background-image',"url(../img/baoXnum.png) no-repeat;");
+			$('#treaNum').css('background-image',"url(http://hcvr.github.io/hc/hcvr/img/baoXnum.png); no-repeat;");
 			
 			$('#treaNum').children('p').show();
 			
@@ -658,9 +658,10 @@ function krpanoReady(krpanObj)
 									krpano.call("loadscene('scene_____________2-ok');");
 									
 									
-									$('#treaNum').css('background-image',"url(../img/baoX.png) no-repeat;");
+									$('#treaNum').css('background-image',"url(http://hcvr.github.io/hc/hcvr/img/baoX.png); no-repeat;");
 									
 									$('#treaNum').children('p').hide();
+									
 								}
 								
 						
@@ -712,7 +713,7 @@ function krpanoReady(krpanObj)
 	
 	document.addEventListener("hideChat", function (event) {
 		
-		$('#treaNum').css('background-image',"url(../img/baoXnum.png) no-repeat;");
+		$('#treaNum').css('background-image',"url(http://hcvr.github.io/hc/hcvr/img/baoXnum.png); no-repeat;");
 		
 		$('#treaNum').children('p').show();
 		

@@ -235,6 +235,7 @@ html {
 }*/
 
 .packageInfo >p {
+	
 	position: absolute;
     top: -50%;
     left: 50%;
@@ -242,7 +243,9 @@ html {
 }
 
 .packageInfo.trea {
-	margin-right: 7%;
+	
+	width: 10vw;
+    right: 27%;
 }
 
 .userInfo {

@@ -10,7 +10,6 @@ function door() {
 }
 
 
-
 /*
  * Too bad code
  * 
@@ -72,11 +71,22 @@ autoSizeText($('.userInfo'));*/
 
 /*
 door();
+*/
+
+// Listen for orientation changes      
+window.addEventListener("orientationchange", function() {
+    // Announce the new orientation number
+    alert(window.orientation);
+}, false);
 
 
 window.onresize = function() {
-	door();
-}*/
+	
+	console.log('onresize  window.clientWidth  '+ window.clientWidth);
+	
+	console.log('onresize  window.clientHeight  '+ window.clientHeight);
+	
+}
 
 
 //$(".userInfo").textfill();

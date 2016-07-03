@@ -74,30 +74,14 @@ door();
 */
 
 
-$(window).on("orientationchange",function() {
-	
-	alert('window.orientation  '+window.orientation);
-	
-	if(window.orientation==0){
-		
-		
-	} else {
-		
-		
-		
-	}
-	
-})
 
-
-/*
 // Listen for orientation changes      
 window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
     alert('window.orientation  '+window.orientation);
     
-}, false);*/
+}, false);
 
 
 window.onresize = function() {

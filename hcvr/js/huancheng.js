@@ -76,7 +76,7 @@ door();
 
 $(window).on("orientationchange",function() {
 	
-	console.log('window.orientation  '+window.orientation);
+	alert('window.orientation  '+window.orientation);
 	
 	if(window.orientation==0){
 		

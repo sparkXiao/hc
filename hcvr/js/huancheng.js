@@ -81,10 +81,13 @@ window.addEventListener("orientationchange", function() {
     // Announce the new orientation number
     alert('window.orientation  '+window.orientation);
     
+    alert('window.devicePixelRatio  '+window.devicePixelRatio); 
+    
 }, false);
 
 
 window.onresize = function() {
+	
 	
 	alert('onresize  screen.width   '+ window.screen.width + '  screen.height  '+ window.screen.height);
 	

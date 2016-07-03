@@ -86,11 +86,13 @@ window.addEventListener("orientationchange", function() {
 
 window.onresize = function() {
 	
-	alert('onresize  innerWidth  '+ window.innerWidth + '  innerHeight  '+ window.innerHeight);
+	alert('onresize  outerWidth  '+ window.outerWidth + '  outerHeight  '+ window.outerHeight);
 	
 	
 	alert('onresize  clientWidth  '+ document.documentElement.clientWidth + '  clientHeight  '+ document.documentElement.clientHeight);
 	
+	
+	alert('onresize  offsetWidth  '+ document.documentElement.offsetWidth + '  offsetHeight  '+ document.documentElement.offsetHeight);
 	
 }
 

@@ -73,18 +73,38 @@ autoSizeText($('.userInfo'));*/
 door();
 */
 
+
+$(window).on("orientationchange",function() {
+	
+	console.log('window.orientation  '+window.orientation);
+	
+	if(window.orientation==0){
+		
+		
+	} else {
+		
+		
+		
+	}
+	
+})
+
+
+/*
 // Listen for orientation changes      
 window.addEventListener("orientationchange", function() {
+	
     // Announce the new orientation number
-    alert(window.orientation);
-}, false);
+    alert('window.orientation  '+window.orientation);
+    
+}, false);*/
 
 
 window.onresize = function() {
 	
-	console.log('onresize  window.clientWidth  '+ window.clientWidth);
+	console.log('onresize  window.innerWidth  '+ window.innerWidth);
 	
-	console.log('onresize  window.clientHeight  '+ window.clientHeight);
+	console.log('onresize  window.innerHeight  '+ window.innerHeight);
 	
 }
 

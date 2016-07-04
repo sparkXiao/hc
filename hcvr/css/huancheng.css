@@ -328,7 +328,8 @@ html {
 	
 	position: absolute;
 	right: 5%; bottom: 10%;
-	width: 10%; height: 6%;
+	    width: 3rem;
+    height: 3rem;
 	background-size: 100% 100%;
 	background-image: url(../img/chatIcon.png); no-repeat;
 	
@@ -339,7 +340,8 @@ html {
 	
 	position: absolute;
 	right: 5%; bottom: 18%;
-	width: 10%; height: 6%;
+	    width: 3rem;
+    height: 3rem;
 	background-size: 100% 100%;
 	background-image: url(../img/VR.png); no-repeat;
 	

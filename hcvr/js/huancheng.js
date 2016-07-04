@@ -543,7 +543,7 @@ function showTxt (ifTriggerInvite) {
 			
 			$('#clickShow').css('width','15rem');
 		
-			$('#clickShow').css('height', '4rem');
+			$('#clickShow').css('height', '6rem');
 			
 			$('#clickShow').css('top', '0');
 		

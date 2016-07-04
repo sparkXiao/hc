@@ -134,12 +134,17 @@
 			  );
 		  ,
 			set(display.hotspotrenderer, auto);
+			
+			
+			
 			if(loadscene_flags_backup !== null, copy(skin_settings.loadscene_flags, loadscene_flags_backup));
 			tween(layer[webvr_rotate_to_landscape_request].alpha, 0.0, 0.0);
 			set(hotspot[webvr_prev_scene].visible, false);
 			set(hotspot[webvr_next_scene].visible, false);
 			set(events[webvr_events].onviewchange, null);
 		  );
+		  
+		  
 	</action>
 
 	<action name="webvr_act_as_gyro_in_portrait_mode">
@@ -486,12 +491,18 @@
 		if(skin_settings.littleplanetintro AND (device.webgl OR device.flash),
 			skin_setup_littleplanetintro();
 		  );
+		  
+		  
+		
 
 		skin_addthumbs();
 		skin_onresize();
 		skin_updatescroll();
 
 		set(layer[skin_layer].visible, true);
+		
+		
+		switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap(false));
 	</action>
 
 

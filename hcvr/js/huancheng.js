@@ -57,9 +57,19 @@ function calcWHratio () {
 				if ( $(this).css('width') != undefined && $(this).css('height') != undefined ) {
 					
 					
-					curElementWidth = $(this).width() * 100 / document.documentElement.clientWidth;
-					
-					curElementHeight = $(this).height() * 100 / document.documentElement.clientHeight;
+					if (document.documentElement.clientWidth < document.documentElement.clientHeight) {
+						
+						curElementWidth = $(this).width() * 100 / document.documentElement.clientWidth;
+						
+						curElementHeight = $(this).height() * 100 / document.documentElement.clientHeight;
+						
+					} else {
+						
+						curElementWidth = $(this).width() * 100 / document.documentElement.clientHeight;
+						
+						curElementHeight = $(this).height() * 100 / document.documentElement.clientWidth;
+						
+					}
 					
 					
 					console.log('curElementHeight  '+curElementHeight+' curElementWidth '+curElementWidth)

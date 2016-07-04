@@ -41,7 +41,7 @@ function calcWHratio () {
 	var curElementWidth, curElementHeight;
 	
 	
-	$('body').filter( function() {
+	$('[class]').filter( function() {
 		
 		
 		console.log(" filter  $(this).css('width')  "+$(this).css('width') );

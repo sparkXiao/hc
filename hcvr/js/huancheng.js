@@ -1,4 +1,4 @@
-var krpano, resizeTimer, WHRatio, chatData, whElementArr, chatCanvas; ifshowChat = false; resizeTriggerNum = 0; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
+var krpano, resizeTimer, WRatio, HRatio, chatData, whElementArr, chatCanvas; ifshowChat = false; resizeTriggerNum = 0; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
 
 //字体图片随窗体缩放
 function door() {
@@ -121,7 +121,10 @@ function calcWHratio () {
 	console.log('document.documentElement.clientHeight  '+document.documentElement.clientHeight + ' document.documentElement.clientWidth '+document.documentElement.clientWidth);
 	
 	
-	WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
+	WRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
+	
+	
+	HRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
 	
 	
 	/*if (orgDeg == 0) {
@@ -134,12 +137,14 @@ function calcWHratio () {
 	}*/
 	
 	
-	console.log('calcWHratio WHRatio '+WHRatio);
+	console.log('calcWHratio WRatio '+WRatio);
+	
+	console.log('calcWHratio HRatio '+HRatio);
 	
 	
 	for (var i = 0; i < whElementArr.length; i++) {
 		
-		$('.'+whElementArr[i]['className']).css('width', whElementArr[i]['curElementWidth'] * WHRatio+'vw').css('height', whElementArr[i]['curElementHeight'] * WHRatio+'vh'); 
+		$('.'+whElementArr[i]['className']).css('width', whElementArr[i]['curElementWidth'] * WRatio+'vw').css('height', whElementArr[i]['curElementHeight'] * HRatio+'vh'); 
 		
 	}
 	

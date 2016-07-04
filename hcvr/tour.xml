@@ -118,6 +118,14 @@
 		
 		 -->
 			
+		<events name="skin_start"
+ 
+		onpreviewcomplete="
+		 
+		set(plugin[skin_gyro].enabled, true);
+	"/>
+			
+	
 	</scene>
 	
 	
@@ -158,5 +166,7 @@
 
 	</scene>
 
-
+	
+	
+	
 </krpano>

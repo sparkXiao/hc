@@ -434,7 +434,7 @@
 -->
 
 	<!-- gyro plugin -->
-	<plugin name="skin_gyro" keep="true" url="" html5_url="%SWFPATH%/plugins/gyro2.js" devices="html5" enabled="false" onavailable="skin_arrange_buttons();" />
+	<plugin name="skin_gyro" keep="true" url="" html5_url="%SWFPATH%/plugins/gyro2.js" devices="html5" enabled="true" onavailable="skin_arrange_buttons();" friction="0.5" />
 
 
 
@@ -501,7 +501,7 @@
 
 		set(layer[skin_layer].visible, true);
 		
-		
+		switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap(false));
 		
 	</action>
 
@@ -624,7 +624,7 @@
 		  );
 		  
 		  
-		  switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap(false));
+		  
 	</action>
 
 

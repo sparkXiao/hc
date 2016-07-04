@@ -156,7 +156,7 @@
 		 -->
 		 
 		 
-		 <layer name="test" url="img/0.jpg" align="center"
+		 <layer name="test" url="img/1.jpg" align="center"
  
 			alpha="0" visible="false"
 			 
@@ -173,7 +173,7 @@
 				 
 				tween(layer[test].alpha,1);
 				 
-				delayedcall(5,tween(layer[test].alpha,0);delayedcall(0.5,set(layer[test].visible,false)));
+				delayedcall(3,tween(layer[test].alpha,0);delayedcall(0.3,set(layer[test].visible,false)));
 		"/>
 			
 		<events name="skin_start"
@@ -249,7 +249,7 @@
 		x="0"
 		y="-80"
 		align="center"
-		url="img/0.jpg"
+		url="img/1.jpg"
 		scale="1"
 		alpha="0"
 		onloaded="tween(alpha,1.0);tween(layer[skin_title_pr].alpha,1.0);"
@@ -280,7 +280,7 @@
 		autowidth="auto"
 		height="40"
 		url="%SWFPATH%/plugins/textfield.swf"
-		html=""
+		html="幻城"
 		css="text-align:center; color:#9B8179; font-family:SimHei; font-weight:bold; font-size:32px;"
 		x="0"
 		y="150"

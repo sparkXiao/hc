@@ -502,7 +502,7 @@
 		set(layer[skin_layer].visible, true);
 		
 		
-		switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap(false));
+		
 	</action>
 
 
@@ -622,6 +622,9 @@
 				  );
 			  );
 		  );
+		  
+		  
+		  switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap(false));
 	</action>
 
 

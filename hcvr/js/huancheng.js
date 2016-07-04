@@ -56,7 +56,10 @@ function storeEleWH () {
 //	  	return $(this).css('width').toLowerCase().indexOf('vw') > -1;
 	  	
 	  
-	} )
+	} );
+	
+	
+	console.log('whElementArr.length  '+ whElementArr.length)
 	
 }
 

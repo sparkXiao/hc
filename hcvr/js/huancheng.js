@@ -104,7 +104,7 @@ $(window).on('resizestop', 350, function() {
 	
 	console.log('resizestop');
 	
-//	calcWHratio(); 
+	calcWHratio(); 
 	
 });
 
@@ -165,7 +165,13 @@ window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
     
-    calcWHratio();
+    $(window).on('resizestop', 350, function() {
+	
+		console.log('resizestop');
+		
+		calcWHratio(); 
+		
+	});
     
     console.log('orientationchange  window.screen.orientation  '+window.screen.orientation);
     

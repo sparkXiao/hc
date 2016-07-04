@@ -15,8 +15,20 @@ function calcWHratio () {
 	
 	var orgDeg = window.orientation;
 	
+	if (window.screen.width > window.screen.height) {
+		
+		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
+		
+	} else {
+		
+		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
+	}
 	
-	if (orgDeg == 0) {
+	
+	console.log('calcWHratio WHRatio '+WHRatio);
+	
+	
+	/*if (orgDeg == 0) {
 				
 		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
 		
@@ -24,7 +36,7 @@ function calcWHratio () {
 		
 		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
 		
-	}
+	}*/
 	
 	var curElementWidth, curElementHeight;
 	
@@ -54,10 +66,10 @@ function calcWHratio () {
 }
 
 
-alert('window.orientation  '+window.orientation);
+/*alert('window.orientation  '+window.orientation);
 
 alert('window.devicePixelRatio  '+window.devicePixelRatio); 
-
+*/
 
 // Listen for orientation changes      
 window.addEventListener("orientationchange", function() {
@@ -78,13 +90,15 @@ window.onresize = function() {
 	alert('onresize  screen.width   '+ window.screen.width + '  screen.height  '+ window.screen.height);
 	
 	
-	alert('onresize  outerWidth  '+ window.outerWidth + '  outerHeight  '+ window.outerHeight);
+	/*alert('onresize  outerWidth  '+ window.outerWidth + '  outerHeight  '+ window.outerHeight);
 	
 	
 	alert('onresize  clientWidth  '+ document.documentElement.clientWidth + '  clientHeight  '+ document.documentElement.clientHeight);
 	
 	
 	alert('onresize  offsetWidth  '+ document.documentElement.offsetWidth + '  offsetHeight  '+ document.documentElement.offsetHeight);
+	*/
+	
 	
 }
 

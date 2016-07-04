@@ -97,7 +97,7 @@ $(window).on('resizestop', 350, function() {
 	
 	console.log('resizestop');
 	
-	calcWHratio(); 
+//	calcWHratio(); 
 	
 });
 
@@ -153,7 +153,7 @@ window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
     
-//  calcWHratio();
+    calcWHratio();
     
     console.log('orientationchange  window.screen.orientation  '+window.screen.orientation);
     
@@ -161,7 +161,7 @@ window.addEventListener("orientationchange", function() {
 }, false);
 
 
-
+/*
 window.onresize = function() {
 	
 	clearTimeout(resizeTimer);
@@ -174,7 +174,7 @@ window.onresize = function() {
     
 		console.log('onresize  resizeTimer  '+resizeTimer);
             
-  }, 350);
+  }, 350);*/
 	
 	
 	/*resizeTriggerNum++;

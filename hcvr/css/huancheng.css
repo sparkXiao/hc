@@ -295,7 +295,7 @@ html {
     width: 99%;
     height: 3rem;
     background-size: 100% 100%;
-    background-image: url(../img/txtholder.png); no-repeat;
+    background-image: url(../img/chat.png); no-repeat;
 	
 }
 
@@ -314,16 +314,20 @@ html {
 #sentTxt {
 	
 	position: absolute;
-	    max-height: 98%;
-    width: auto;
+	  height: 98%;
+    width: 10%;
     right: 1%;
-    background-size: 100% 100%;
-    background-image: url(../img/sentTxt.png); no-repeat;
+   /* background-size: 100% 100%;
+    background-image: url(../img/sentTxt.png); no-repeat;*/
 }
 
 .chatTxtVal {
 	
-	width: 98%; height: 98%;
+	float: left;
+    position: absolute;
+    top: 3%;
+    left: 1%;
+	width: 95%; height: 98%;
 	
 }
 

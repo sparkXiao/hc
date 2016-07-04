@@ -100,14 +100,6 @@ function toogleShowChat () {
 }
 
 
-$(window).on('resizestop', 350, function() {
-	
-	console.log('resizestop');
-	
-	calcWHratio(); 
-	
-});
-
 
 function calcWHratio () {
 	
@@ -165,7 +157,7 @@ window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
     
-    $(window).on('resizestop', 350, function() {
+    $(window).one('resizestop', 350, function() {
 	
 		console.log('resizestop');
 		

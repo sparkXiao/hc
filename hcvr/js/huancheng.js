@@ -91,7 +91,12 @@ window.onresize = function() {
 	resizeTriggerNum++;
 	
 	
-	calcWHratio();
+	if (resizeTriggerNum == 2) {
+		
+		resizeTriggerNum = 0;
+		
+		calcWHratio();
+	}
 	
 	
 	console.log('onresize  resizeTriggerNum  '+resizeTriggerNum);

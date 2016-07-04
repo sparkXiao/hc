@@ -249,7 +249,7 @@
 		x="0"
 		y="-80"
 		align="center"
-		url="360logo.png"
+		url="img/0.png"
 		scale="1"
 		alpha="0"
 		onloaded="tween(alpha,1.0);tween(layer[skin_title_pr].alpha,1.0);"

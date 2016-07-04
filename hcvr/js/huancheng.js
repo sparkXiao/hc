@@ -88,7 +88,13 @@ window.addEventListener("orientationchange", function() {
 window.onresize = function() {
 	
 	
+	resizeTriggerNum++;
+	
+	
 	calcWHratio();
+	
+	
+	console.log('onresize  resizeTriggerNum  '+resizeTriggerNum);
 	
 	
 	/*alert('onresize  screen.width   '+ window.screen.width + '  screen.height  '+ window.screen.height);

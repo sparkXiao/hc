@@ -157,7 +157,7 @@ window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
     
-    $(window).one('resizestop', 350, function() {
+    $(window).one('resizestop', 500, function() {
 	
 		console.log('resizestop');
 		

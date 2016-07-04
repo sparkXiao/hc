@@ -76,11 +76,11 @@ function toogleShowChat () {
 	
 	if (ifshowChat) {
 		
-		$('.chatDiv').animate({'top':100% },500);
+		$('.chatDiv').animate({'top': '100%' },500);
 		
 	} else {
 		
-		$('.chatDiv').animate({'top':95% },500);
+		$('.chatDiv').animate({'top': '95%' },500);
 	}
 		
 	

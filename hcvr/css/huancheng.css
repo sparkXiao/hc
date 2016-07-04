@@ -325,8 +325,8 @@ html {
 #chatIcon {
 	
 	position: absolute;
-	right: 5%; bottom: 15%;
-	width: 10%; height: 10%;
+	right: 5%; bottom: 10%;
+	width: 10%; height: 6%;
 	background-size: 100% 100%;
 	background-image: url(../img/chatIcon.png); no-repeat;
 	
@@ -336,8 +336,8 @@ html {
 #VR {
 	
 	position: absolute;
-	right: 5%; bottom: 25%;
-	width: 10%; height: 10%;
+	right: 5%; bottom: 18%;
+	width: 10%; height: 6%;
 	background-size: 100% 100%;
 	background-image: url(../img/VR.png); no-repeat;
 	

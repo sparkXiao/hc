@@ -853,9 +853,12 @@ function krpanoReady(krpanObj)
 										$('#overlay').hide();
 										
 										krpano.call("loadscene('scene_____________2-ok');");
+										
+										$('#VR').show();
+										
+										$('#chatIcon').show();
 									
 									},700);
-									
 									
 									
 									
@@ -935,6 +938,11 @@ function krpanoReady(krpanObj)
 			window.location.href = 'http://hcvr.github.io/hc/chest';
 			
 		})
+		
+		
+		$('#VR').hide();
+										
+		$('#chatIcon').hide();
 		
 		
 		$('#treaNum').removeClass('trea');

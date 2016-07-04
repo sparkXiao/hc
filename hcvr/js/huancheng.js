@@ -10,10 +10,13 @@ function door() {
 }
 
 
-function calcWHratioStart () {
+$(window).on('resizestart', function() {
 	
+	console.log('resizestart');
 	
-}
+	calcWHratio(); 
+	
+});
 
 
 function calcWHratio () {
@@ -110,7 +113,7 @@ window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
     
-    calcWHratio();
+//  calcWHratio();
     
     console.log('orientationchange  window.screen.orientation  '+window.screen.orientation);
     

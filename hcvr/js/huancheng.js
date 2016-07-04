@@ -246,7 +246,7 @@ function hideGameInfo () {
 
 $('#treaNum').on('click',function () {
 	
-	window.location.href = 'http://www.weibo.com';
+	window.location.href = 'http://hcvr.github.io/hc/chest';
 	
 })
 
@@ -538,14 +538,34 @@ function showTxt (ifTriggerInvite) {
 	if (!ifTriggerInvite) {
 		
 		
-		$('#clickShow').css('top', ( krpano.get('mouse.stagey') + 45 ) +'px');
+		if (respondTxt == '邀请成功，正在返回大厅') {
+			
+			
+			$('#clickShow').css('top', '0');
 		
-		$('#clickShow').css('left', ( krpano.get('mouse.stagex') - showWidth ) +'px');
+			$('#clickShow').css('left', '0');
+			
+			$('#clickShow').css('bottom', '0');
+			
+			$('#clickShow').css('right', '0');
+			
+			
+		} else {
+			
+			
+			$('#clickShow').css('top', ( krpano.get('mouse.stagey') + 45 ) +'px');
+			
+			$('#clickShow').css('left', ( krpano.get('mouse.stagex') - showWidth ) +'px');
+			
+			
+			console.log('clickShow top '+$('#clickShow').css('top') + '  stagey  ' +krpano.get('mouse.stagey') )
+			
+			console.log('clickShow left '+$('#clickShow').css('left') + '  stagex  ' +krpano.get('mouse.stagex') )
+			
+			
+			
+		}
 		
-		
-		console.log('clickShow top '+$('#clickShow').css('top') + '  stagey  ' +krpano.get('mouse.stagey') )
-		
-		console.log('clickShow left '+$('#clickShow').css('left') + '  stagex  ' +krpano.get('mouse.stagex') )
 		
 		
 		/*$('#clickShow').css('top', ( krpano.get('mouse.stagey') + showHeight )+'px');
@@ -572,9 +592,9 @@ function showTxt (ifTriggerInvite) {
 	} else {
 		
 		
-		$('#clickShow').css('width','70vw');
+		$('#clickShow').css('width','20rem');
 		
-		$('#clickShow').css('height', '10rem');
+		$('#clickShow').css('height', '13rem');
 		
 		$('#clickShow').css('top', '0');
 		
@@ -654,7 +674,7 @@ function krpanoReady(krpanObj)
 			
 			$('#treaNum').off('click',function () {
 	
-				window.location.href = 'http://www.weibo.com';
+				window.location.href = 'http://hcvr.github.io/hc/chest';
 				
 			})
 			
@@ -804,21 +824,16 @@ function krpanoReady(krpanObj)
 								} else {
 									
 									
-									Lobibox.alert(
+									/*Lobibox.alert(
 									    'success', // Any of the following
 									    {
 									        msg:'调取 发送邀请好友 接口 成功  '
 									    }
-									);
+									);*/
 									
 									
 									$('.friendsP').hide();
 									
-									
-									$('#overlay').fadeOut('fast');
-									
-									
-									$('#overlay').hide();
 									
 									
 									respondTxt = '邀请成功，正在返回大厅';
@@ -827,7 +842,17 @@ function krpanoReady(krpanObj)
 									showTxt(false);
 									
 									
-									krpano.call("loadscene('scene_____________2-ok');");
+									setTimeout(function () {
+										
+										$('#overlay').fadeOut('fast');
+									
+										$('#overlay').hide();
+										
+										krpano.call("loadscene('scene_____________2-ok');");
+									
+									},700);
+									
+									
 									
 									
 									$('.chatDiv').show();
@@ -835,7 +860,7 @@ function krpanoReady(krpanObj)
 									
 									$('#treaNum').on('click',function () {
 	
-										window.location.href = 'http://www.weibo.com';
+										window.location.href = 'http://hcvr.github.io/hc/chest';
 										
 									})
 									
@@ -903,7 +928,7 @@ function krpanoReady(krpanObj)
 		
 		$('#treaNum').off('click',function () {
 	
-			window.location.href = 'http://www.weibo.com';
+			window.location.href = 'http://hcvr.github.io/hc/chest';
 			
 		})
 		

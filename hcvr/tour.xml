@@ -74,7 +74,7 @@
 	<action name="startup" autorun="onstart">
 		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
 		
-		<!-- loadscene(get(startscene), null, MERGE); -->
+		loadscene(get(startscene), null, MERGE);
 		
 		if(startactions !== null, startactions() );
 		
@@ -156,7 +156,7 @@
 		 -->
 		 
 		 
-		 <layer name="test" url="img/0.png" align="center"
+		 <layer name="test" url="img/0.jpg" align="center"
  
 			alpha="0" visible="false"
 			 
@@ -173,7 +173,7 @@
 				 
 				tween(layer[test].alpha,1);
 				 
-				delayedcall(10,tween(layer[test].alpha,0);delayedcall(0.5,set(layer[test].visible,false)));
+				delayedcall(3,tween(layer[test].alpha,0);delayedcall(0.5,set(layer[test].visible,false)));
 		"/>
 			
 		<events name="skin_start"
@@ -225,7 +225,7 @@
 	</scene>
 
 
-	
+	<!-- load -->
 	<layer name="startpic_container"
 		preload="true"
 		alpha="1"
@@ -249,7 +249,7 @@
 		x="0"
 		y="-80"
 		align="center"
-		url="img/0.png"
+		url="img/0.jpg"
 		scale="1"
 		alpha="0"
 		onloaded="tween(alpha,1.0);tween(layer[skin_title_pr].alpha,1.0);"
@@ -304,13 +304,7 @@
 	"/>
  
 <!-- 启动画面结束 -->
-	<events name="startlogoevents" keep="true"
-		onloadcomplete="
-		ifnot(layer[skin_title_logo3].enabled,
-		set(layer[skin_title_logo3].enabled,true);
-		set(layer[skin_title_pr].enabled,true);
-		delayedcall(startpic1,4,tween(layer[startpic_container].ox,-2500,1));
-		delayedcall(startpic2,5,set(layer[startpic_container].enabled,false);set(layer[startpic_container].visible,false));)
-		"/>
+
+	
 	
 </krpano>

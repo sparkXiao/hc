@@ -1,4 +1,4 @@
-var krpano, WHRatio, chatData, chatCanvas; whElementArr = []; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
+var krpano, WHRatio, chatData, chatCanvas; resizeTriggerNum = 0; whElementArr = []; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
 
 //字体图片随窗体缩放
 function door() {
@@ -15,13 +15,13 @@ function calcWHratio () {
 	
 	var orgDeg = window.orientation;
 	
-	if (window.screen.width < window.screen.height) {
+	if (document.documentElement.clientWidth < document.documentElement.clientHeight) {
 		
-		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
+		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
 		
 	} else {
 		
-		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
+		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
 	}
 	
 	
@@ -41,7 +41,7 @@ function calcWHratio () {
 	var curElementWidth, curElementHeight;
 	
 	
-	$('[class]').filter(function() {
+	$('*').filter(function() {
 		
 		
 		if ( $(this).css('width').toLowerCase().indexOf('vw') > -1 ) {
@@ -77,9 +77,8 @@ window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
     
-    calcWHratio();
     
-//  alert('orientationchange  window.screen.orientation  '+window.screen.orientation);
+    console.log('orientationchange  window.screen.orientation  '+window.screen.orientation);
     
     
 }, false);
@@ -87,6 +86,9 @@ window.addEventListener("orientationchange", function() {
 
 
 window.onresize = function() {
+	
+	
+	calcWHratio();
 	
 	
 	/*alert('onresize  screen.width   '+ window.screen.width + '  screen.height  '+ window.screen.height);

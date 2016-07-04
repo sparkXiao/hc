@@ -15,7 +15,7 @@ function calcWHratio () {
 	
 	var orgDeg = window.orientation;
 	
-	if (window.screen.width > window.screen.height) {
+	if (window.screen.width < window.screen.height) {
 		
 		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
 		

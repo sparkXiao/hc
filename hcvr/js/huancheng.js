@@ -44,6 +44,9 @@ function calcWHratio () {
 	$('body').filter( function() {
 		
 		
+		console.log(" filter  $(this).css('width')  "+$(this).css('width') );
+		
+		
 		if ( $(this).css('width').toLowerCase().indexOf('vw') > -1 ) {
 			
 			curElementWidth = $(this).css('width');

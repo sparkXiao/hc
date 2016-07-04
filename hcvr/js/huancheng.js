@@ -540,7 +540,7 @@ function showTxt (ifTriggerInvite) {
 		
 		$('#clickShow').css('top', ( krpano.get('mouse.stagey') + 45 ) +'px');
 		
-		$('#clickShow').css('left', ( krpano.get('mouse.stagex') - showHeight ) +'px');
+		$('#clickShow').css('left', ( krpano.get('mouse.stagex') - showWidth ) +'px');
 		
 		
 		console.log('clickShow top '+$('#clickShow').css('top') + '  stagey  ' +krpano.get('mouse.stagey') )
@@ -815,9 +815,16 @@ function krpanoReady(krpanObj)
 									$('.friendsP').hide();
 									
 									
-									$('#overlay').hide();
-		
 									$('#overlay').fadeOut('fast');
+									
+									
+									$('#overlay').hide();
+									
+									
+									respondTxt = '邀请成功，正在返回大厅';
+									
+									
+									showTxt(false);
 									
 									
 									krpano.call("loadscene('scene_____________2-ok');");

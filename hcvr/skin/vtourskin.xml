@@ -291,7 +291,7 @@
 	                     tween(layer[skin_tooltip].alpha, 1.0, 0.1);
 	                     asyncloop(hovering, copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );"
 	       onout="tween(scale,0.5);tween(layer[skin_tooltip].alpha, 0.0, 0.1, default, set(layer[skin_tooltip].visible,false), copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );"
-	       onloaded="if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"
+	       onloaded="if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); webvr.exitVR(););"
 	       />
 	
 	<style name="skin_menstyle1" url="men1.png" scale="0.5" edge="top" distorted="true"

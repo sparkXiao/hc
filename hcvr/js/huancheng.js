@@ -28,11 +28,11 @@ function calcWHratio () {
 	
 	if (orgDeg == 0) {
 				
-		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
+		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
 		
 	} else {
 		
-		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
+		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
 		
 	}
 	

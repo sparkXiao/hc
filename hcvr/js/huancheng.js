@@ -1,4 +1,4 @@
-var krpano, resizeTimer, WHRatio, chatData, chatCanvas; resizeTriggerNum = 0; whElementArr = []; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
+var krpano, resizeTimer, WHRatio, chatData, whElementArr, chatCanvas; resizeTriggerNum = 0; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
 
 //字体图片随窗体缩放
 function door() {
@@ -10,46 +10,14 @@ function door() {
 }
 
 
-$(window).on('resizestart', 0, function() {
-	
-	console.log('resizestart');
-	
-	calcWHratio(); 
-	
-});
+storeEleWH();
 
 
-function calcWHratio () {
+function storeEleWH () {
 	
-	
-	var orgDeg = window.orientation;
-	
-	console.log('orgDeg  '+orgDeg);
-	
-	/*
-	if (document.documentElement.clientWidth < document.documentElement.clientHeight) {
-		
-		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
-		
-	} else {
-		
-		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
-	}*/
-	
-	
-	if (orgDeg == 0) {
-				
-		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
-		
-	} else {
-		
-		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
-		
-	}
-	
-	console.log('calcWHratio WHRatio '+WHRatio);
-	
-	
+	whElementArr = [];
+
+
 	var curElementWidth, curElementHeight;
 	
 	
@@ -68,37 +36,75 @@ function calcWHratio () {
 				if ( $(this).css('width') != undefined && $(this).css('height') != undefined ) {
 					
 					
-					
 					curElementWidth = $(this).width() * 100 / document.documentElement.clientWidth;
 					
 					curElementHeight = $(this).height() * 100 / document.documentElement.clientHeight;
 					
 					
-					curElementWidth = $(this).width() * 100 / document.documentElement.clientHeight;
-					
-					curElementHeight = $(this).height() * 100 / document.documentElement.clientWidth;
-					
+					whElementArr.push({className: $(this).attr('class') , curElementWidth: curElementWidth, curElementHeight: curElementHeight})
 					
 					
 					console.log('curElementHeight  '+curElementHeight+' curElementWidth '+curElementWidth)
 				
 				
-					return $(this);
-					
 				}
 				
 			}
 		}
 		
-		
 	
 //	  	return $(this).css('width').toLowerCase().indexOf('vw') > -1;
 	  	
 	  
-	} ).css('width', curElementWidth * WHRatio+'vw').css('height', curElementWidth * WHRatio+'vh');
+	} )
+	
+}
+
+
+$(window).on('resizestart', 0, function() {
+	
+	console.log('resizestart');
+	
+	calcWHratio(); 
+	
+});
+
+
+function calcWHratio () {
 	
 	
+	var orgDeg = window.orientation;
 	
+	
+	console.log('orgDeg from '+orgDeg);
+	
+	
+	WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
+	
+	
+	/*if (orgDeg == 0) {
+		
+		
+	} else {
+		
+		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
+		
+	}*/
+	
+	
+	console.log('calcWHratio WHRatio '+WHRatio);
+	
+	
+	for (var i = 0; i < whElementArrlength; i++) {
+		
+		$('.'+whElementArr[i]['className'])css('width', whElementArr[i]['curElementWidth'] * WHRatio+'vw').css('height', whElementArr[i]['curElementHeight'] * WHRatio+'vh'); 
+		
+	}
+	
+	
+	storeEleWH();
+	
+	  
 }
 
 

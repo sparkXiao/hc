@@ -243,14 +243,16 @@ html {
 	position: absolute;
     left: 3%;
     top: 85%;
-	width: 10vw;
+		width: 3rem;
+    height: 3rem;
     right: 27%;
     background-size: 100% 100%;
     background-image: url(../img/baoX.png); no-repeat;
 }
 
 .packageInfo.treaNum {
-	
+		
+		width: 10vw;
     right: 27%;
     background-size: 100% 100%;
     background-image: url(../img/baoXnum.png); no-repeat;
@@ -281,7 +283,7 @@ html {
 	
 	margin-top: 0;
 	position: relative;
-	top: 20%;
+	top: .8rem;
 	font-size: 1.7vh;
 	
 }

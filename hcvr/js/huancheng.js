@@ -79,23 +79,21 @@ function calcWHratio () {
 	console.log('orgDeg from '+orgDeg);
 	
 	
-	WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
-	
-	
-	/*if (orgDeg == 0) {
-		
-		
-	} else {
+	if (orgDeg == 0) {
 		
 		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
 		
-	}*/
+	} else {
+		
+		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
+		
+	}
 	
 	
 	console.log('calcWHratio WHRatio '+WHRatio);
 	
 	
-	for (var i = 0; i < whElementArrlength; i++) {
+	for (var i = 0; i < whElementArr.length; i++) {
 		
 		$('.'+whElementArr[i]['className']).css('width', whElementArr[i]['curElementWidth'] * WHRatio+'vw').css('height', whElementArr[i]['curElementHeight'] * WHRatio+'vh'); 
 		

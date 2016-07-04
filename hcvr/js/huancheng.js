@@ -15,6 +15,7 @@ storeEleWH();
 
 function storeEleWH () {
 	
+	
 	whElementArr = [];
 
 
@@ -82,15 +83,20 @@ function calcWHratio () {
 	console.log('orgDeg from '+orgDeg);
 	
 	
-	if (orgDeg == 0) {
+	console.log('document.documentElement.clientHeight  '+document.documentElement.clientHeight + ' document.documentElement.clientWidth '+document.documentElement.clientWidth);
+	
+	
+	WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
+	
+	
+	/*if (orgDeg == 0) {
 		
-		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
 		
 	} else {
 		
 		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
 		
-	}
+	}*/
 	
 	
 	console.log('calcWHratio WHRatio '+WHRatio);
@@ -104,7 +110,6 @@ function calcWHratio () {
 	
 	
 	storeEleWH();
-	
 	  
 }
 

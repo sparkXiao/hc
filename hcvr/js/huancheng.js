@@ -10,7 +10,7 @@ function door() {
 }
 
 
-$(window).on('resizestart', function() {
+$(window).on('resizestart', 0, function() {
 	
 	console.log('resizestart');
 	

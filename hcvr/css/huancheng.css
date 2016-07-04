@@ -232,7 +232,7 @@ html {
 .packageInfo >p {
 	
 	position: absolute;
-    top: -50%;
+    top: -.5rem;
     left: 50%;
     color: white;
 }

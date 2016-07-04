@@ -72,6 +72,13 @@ $('#chatIcon').on('click', function () {
 })
 
 
+$('#VR').on('click', function () {
+	
+	krpano.call("webvr.enterVR()");
+	
+})
+
+
 function toogleShowChat () {
 	
 	if (ifshowChat) {

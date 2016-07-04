@@ -1,4 +1,4 @@
-var krpano, resizeTimer, WHRatio, chatData, whElementArr, chatCanvas; resizeTriggerNum = 0; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
+var krpano, resizeTimer, WHRatio, chatData, whElementArr, chatCanvas; ifshowChat = false; resizeTriggerNum = 0; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
 
 //字体图片随窗体缩放
 function door() {
@@ -61,6 +61,30 @@ function storeEleWH () {
 	
 	
 	console.log('whElementArr.length  '+ whElementArr.length)
+	
+}
+
+
+$('#chatIcon').on('click', function () {
+	
+	toogleShowChat();
+	
+})
+
+
+function toogleShowChat () {
+	
+	if (ifshowChat) {
+		
+		$('.chatDiv').animate({'top':100% },500);
+		
+	} else {
+		
+		$('.chatDiv').animate({'top':95% },500);
+	}
+		
+	
+	ifshowChat = !ifshowChat;
 	
 }
 

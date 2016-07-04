@@ -287,11 +287,12 @@ html {
 
 .chatDiv {
 	
+	display: none;
 	position: absolute;
     margin: auto;
     left: 0;
     right: 0;
-    bottom: .5%;
+    top: 100%;
     width: 99%;
     height: 3rem;
     background-size: 100% 100%;
@@ -315,11 +316,33 @@ html {
 	
 	position: absolute;
 	  height: 98%;
-    width: 10%;
-    right: 1%;
+    width: 15%;
+    right: 0;
    /* background-size: 100% 100%;
     background-image: url(../img/sentTxt.png); no-repeat;*/
 }
+
+#chatIcon {
+	
+	position: absolute;
+	right: 5%; bottom: 15%;
+	width: 10%; height: 10%;
+	background-size: 100% 100%;
+	background-image: url(../img/chatIcon.png); no-repeat;
+	
+}
+
+
+#VR {
+	
+	position: absolute;
+	right: 5%; bottom: 25%;
+	width: 10%; height: 10%;
+	background-size: 100% 100%;
+	background-image: url(../img/VR.png); no-repeat;
+	
+}
+
 
 .chatTxtVal {
 	
@@ -327,7 +350,7 @@ html {
     position: absolute;
     top: 3%;
     left: 1%;
-	width: 95%; height: 98%;
+	width: 85%; height: 98%;
 	
 }
 

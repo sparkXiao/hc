@@ -10,10 +10,18 @@ function door() {
 }
 
 
+function calcWHratioStart () {
+	
+	
+}
+
+
 function calcWHratio () {
 	
 	
 	var orgDeg = window.orientation;
+	
+	console.log('orgDeg  '+orgDeg);
 	
 	/*
 	if (document.documentElement.clientWidth < document.documentElement.clientHeight) {
@@ -57,19 +65,16 @@ function calcWHratio () {
 				if ( $(this).css('width') != undefined && $(this).css('height') != undefined ) {
 					
 					
-					if (document.documentElement.clientWidth < document.documentElement.clientHeight) {
-						
-						curElementWidth = $(this).width() * 100 / document.documentElement.clientWidth;
-						
-						curElementHeight = $(this).height() * 100 / document.documentElement.clientHeight;
-						
-					} else {
-						
-						curElementWidth = $(this).width() * 100 / document.documentElement.clientHeight;
-						
-						curElementHeight = $(this).height() * 100 / document.documentElement.clientWidth;
-						
-					}
+					
+					curElementWidth = $(this).width() * 100 / document.documentElement.clientWidth;
+					
+					curElementHeight = $(this).height() * 100 / document.documentElement.clientHeight;
+					
+					
+					curElementWidth = $(this).width() * 100 / document.documentElement.clientHeight;
+					
+					curElementHeight = $(this).height() * 100 / document.documentElement.clientWidth;
+					
 					
 					
 					console.log('curElementHeight  '+curElementHeight+' curElementWidth '+curElementWidth)
@@ -105,6 +110,8 @@ window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
     
+    calcWHratio();
+    
     console.log('orientationchange  window.screen.orientation  '+window.screen.orientation);
     
     
@@ -120,7 +127,7 @@ window.onresize = function() {
 
     // Run code here, resizing has "stopped"
     
-		calcWHratio();
+//		calcWHratio();
     
 		console.log('onresize  resizeTimer  '+resizeTimer);
             

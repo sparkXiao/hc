@@ -208,9 +208,10 @@ html {
 	
     width: 20vw;
     height: 5.6vh;
-	position: absolute;
+		position: absolute;
 	  top: 2%;
     right: 3%;
+    
 	/*border-radius: 7px 7px 20px 7px; 
 	-moz-border-radius: 7px 7px 20px 7px; 
 	-webkit-border-radius: 7px 7px 20px 7px; 

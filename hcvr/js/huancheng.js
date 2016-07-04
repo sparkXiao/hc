@@ -22,13 +22,13 @@ function storeEleWH () {
 	var curElementWidth, curElementHeight;
 	
 	
-	$('*').filter( function() {
+	$('[class]').filter( function() {
 		
 		
 		console.log(" filter  " + $(this).attr('class')+ ' css width is ' +$(this).css('width') + '  width val is  '+$(this).width() );
 		
 		
-		if ( $(this).attr('class') != '') {
+		if ( $(this).attr('class') == 'userInfo' || $(this).attr('class') == 'packageInfo') {
 			
 			
 			if ( $(this).css('width').toLowerCase().indexOf('%') == -1 && $(this).css('height').toLowerCase().indexOf('%') == -1) {
@@ -1028,6 +1028,9 @@ function krpanoReady(krpanObj)
 //							$(".userInfo").textfill();	
 							
 							totalCount = result.data.tickets;
+							
+							
+							$('#yinlianNum').children('p').text(String( result.data.lotus ));
 							
 							
 							Lobibox.alert(

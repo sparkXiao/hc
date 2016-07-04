@@ -181,7 +181,7 @@ window.onresize = function() {
     
 		console.log('onresize  resizeTimer  '+resizeTimer);
             
-  }, 350);*/
+  }, 350);
 	
 	
 	/*resizeTriggerNum++;
@@ -192,7 +192,7 @@ window.onresize = function() {
 		resizeTriggerNum = 0;
 		
 	}
-	*/
+	
 	
 	
 	
@@ -206,10 +206,10 @@ window.onresize = function() {
 	
 	
 	alert('onresize  offsetWidth  '+ document.documentElement.offsetWidth + '  offsetHeight  '+ document.documentElement.offsetHeight);
-	*/
 	
 	
-}
+	
+}*/
 
 
 //$(".userInfo").textfill();

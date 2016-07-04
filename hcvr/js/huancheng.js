@@ -71,6 +71,7 @@ function calcWHratio () {
 alert('window.devicePixelRatio  '+window.devicePixelRatio); 
 */
 
+
 // Listen for orientation changes      
 window.addEventListener("orientationchange", function() {
 	
@@ -78,19 +79,20 @@ window.addEventListener("orientationchange", function() {
     
     calcWHratio();
     
-    alert('orientationchange  window.screen.orientation  '+window.screen.orientation);
+//  alert('orientationchange  window.screen.orientation  '+window.screen.orientation);
     
     
 }, false);
 
 
+
 window.onresize = function() {
 	
 	
-	alert('onresize  screen.width   '+ window.screen.width + '  screen.height  '+ window.screen.height);
+	/*alert('onresize  screen.width   '+ window.screen.width + '  screen.height  '+ window.screen.height);
 	
 	
-	/*alert('onresize  outerWidth  '+ window.outerWidth + '  outerHeight  '+ window.outerHeight);
+	alert('onresize  outerWidth  '+ window.outerWidth + '  outerHeight  '+ window.outerHeight);
 	
 	
 	alert('onresize  clientWidth  '+ document.documentElement.clientWidth + '  clientHeight  '+ document.documentElement.clientHeight);

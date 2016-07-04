@@ -97,7 +97,7 @@ function calcWHratio () {
 	
 	for (var i = 0; i < whElementArrlength; i++) {
 		
-		$('.'+whElementArr[i]['className'])css('width', whElementArr[i]['curElementWidth'] * WHRatio+'vw').css('height', whElementArr[i]['curElementHeight'] * WHRatio+'vh'); 
+		$('.'+whElementArr[i]['className']).css('width', whElementArr[i]['curElementWidth'] * WHRatio+'vw').css('height', whElementArr[i]['curElementHeight'] * WHRatio+'vh'); 
 		
 	}
 	

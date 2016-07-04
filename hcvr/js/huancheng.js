@@ -1,4 +1,4 @@
-var krpano, WHRatio, chatData, chatCanvas; resizeTriggerNum = 0; whElementArr = []; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
+var krpano, resizeTimer, WHRatio, chatData, chatCanvas; resizeTriggerNum = 0; whElementArr = []; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
 
 //字体图片随窗体缩放
 function door() {
@@ -14,6 +14,7 @@ function calcWHratio () {
 	
 	
 	var orgDeg = window.orientation;
+	
 	
 	if (document.documentElement.clientWidth < document.documentElement.clientHeight) {
 		
@@ -94,7 +95,6 @@ window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
     
-    
     console.log('orientationchange  window.screen.orientation  '+window.screen.orientation);
     
     
@@ -104,19 +104,29 @@ window.addEventListener("orientationchange", function() {
 
 window.onresize = function() {
 	
+	clearTimeout(resizeTimer);
 	
-	resizeTriggerNum++;
+  	resizeTimer = setTimeout(function() {
+
+    // Run code here, resizing has "stopped"
+    
+		calcWHratio();
+    
+		console.log('onresize  resizeTimer  '+resizeTimer);
+            
+  }, 350);
+	
+	
+	/*resizeTriggerNum++;
 	
 	
 	if (resizeTriggerNum == 2) {
 		
 		resizeTriggerNum = 0;
 		
-		calcWHratio();
 	}
+	*/
 	
-	
-	console.log('onresize  resizeTriggerNum  '+resizeTriggerNum);
 	
 	
 	/*alert('onresize  screen.width   '+ window.screen.width + '  screen.height  '+ window.screen.height);

@@ -44,28 +44,33 @@ function calcWHratio () {
 	$('[class]').filter( function() {
 		
 		
-		console.log(" filter  " + $(this).attr('class')+ ' css width is ' +$(this).css('width') );
+		console.log(" filter  " + $(this).attr('class')+ ' css width is ' +$(this).css('width') + '  width val is  '+$(this).width() );
 		
 		
-		if ( $(this).css('width').toLowerCase().indexOf('%') == -1 && $(this).css('height').toLowerCase().indexOf('%') == -1) {
+		if ( $(this).attr('class') != '') {
 			
 			
-			if ( $(this).css('width') != undefined && $(this).css('height') != undefined ) {
+			if ( $(this).css('width').toLowerCase().indexOf('%') == -1 && $(this).css('height').toLowerCase().indexOf('%') == -1) {
 				
 				
-				curElementWidth = $(this).css('width') * 100 / document.documentElement.clientWidth;
+				if ( $(this).css('width') != undefined && $(this).css('height') != undefined ) {
+					
+					
+					curElementWidth = $(this).width() * 100 / document.documentElement.clientWidth;
+					
+					curElementHeight = $(this).height() * 100 / document.documentElement.clientHeight;
+					
+					
+					console.log('curElementHeight  '+curElementHeight+' curElementWidth '+curElementWidth)
 				
-				curElementHeight = $(this).css('height') * 100 / document.documentElement.clientHeight;
 				
-				
-				console.log('curElementHeight  '+curElementHeight+' curElementWidth '+curElementWidth)
-			
-			
-				return $(this);
+					return $(this);
+					
+				}
 				
 			}
-			
 		}
+		
 		
 	
 //	  	return $(this).css('width').toLowerCase().indexOf('vw') > -1;

@@ -541,6 +541,10 @@ function showTxt (ifTriggerInvite) {
 		if (respondTxt == '邀请成功，正在返回大厅') {
 			
 			
+			$('#clickShow').css('width','15rem');
+		
+			$('#clickShow').css('height', '4rem');
+			
 			$('#clickShow').css('top', '0');
 		
 			$('#clickShow').css('left', '0');

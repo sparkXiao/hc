@@ -9,7 +9,7 @@
 	               maps_bing_api_key=""
 	               maps_zoombuttons="false"
 	               gyro="true"
-	               littleplanetintro="false"
+	               littleplanetintro="true"
 	               title="true"
 	               thumbs="true"
 	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
@@ -434,7 +434,7 @@
 -->
 
 	<!-- gyro plugin -->
-	<plugin name="skin_gyro" keep="true" url="" html5_url="%SWFPATH%/plugins/gyro2.js" devices="html5" enabled="true" onavailable="skin_arrange_buttons();"  />
+	<plugin name="skin_gyro" keep="true" url="" html5_url="%SWFPATH%/plugins/gyro2.js" devices="html5" enabled="false" onavailable="skin_arrange_buttons();"  />
 
 
 
@@ -502,11 +502,19 @@
 		set(layer[skin_layer].visible, true);
 		
 		
-		set(plugin[skin_gyro].enabled, true);
+		
 		
 		
 	</action>
-
+	
+	<events name="gyro2_start"
+ 
+		onpreviewcomplete="
+		 
+		set(plugin[skin_gyro].enabled, true);
+	"/>
+	
+	
 
 	<action name="skin_addthumbs">
 		if(skin_settings.thumbs == false,

@@ -47,15 +47,24 @@ function calcWHratio () {
 		console.log(" filter  " + $(this).attr('class')+ ' css width is ' +$(this).css('width') );
 		
 		
-		if ( $(this).css('width').toLowerCase().indexOf('vw') > -1 ) {
+		if ( $(this).css('width').toLowerCase().indexOf('%') == -1 && $(this).css('height').toLowerCase().indexOf('%') == -1) {
 			
-			curElementWidth = $(this).css('width');
 			
-			curElementHeight = $(this).css('height');
+			if ( $(this).css('width') != undefined && $(this).css('height') != undefined ) {
+				
+				
+				curElementWidth = $(this).css('width') * 100 / document.documentElement.clientWidth;
+				
+				curElementHeight = $(this).css('height') * 100 / document.documentElement.clientHeight;
+				
+				
+				console.log('curElementHeight  '+curElementHeight+' curElementWidth '+curElementWidth)
 			
-			console.log('curElementHeight  '+curElementHeight+' curElementWidth '+curElementWidth)
-		
-			return $(this);
+			
+				return $(this);
+				
+			}
+			
 		}
 		
 	

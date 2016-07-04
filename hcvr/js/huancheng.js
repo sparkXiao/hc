@@ -66,7 +66,7 @@ window.addEventListener("orientationchange", function() {
     
     calcWHratio();
     
-    alert('window.orientation  '+window.orientation);
+    alert('orientationchange  window.screen.orientation  '+window.screen.orientation);
     
     
 }, false);

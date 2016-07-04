@@ -22,7 +22,7 @@ function storeEleWH () {
 	var curElementWidth, curElementHeight;
 	
 	
-	$('[class]').filter( function() {
+	$('*').filter( function() {
 		
 		
 		console.log(" filter  " + $(this).attr('class')+ ' css width is ' +$(this).css('width') + '  width val is  '+$(this).width() );

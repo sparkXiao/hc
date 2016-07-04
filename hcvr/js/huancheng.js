@@ -41,7 +41,7 @@ function calcWHratio () {
 	var curElementWidth, curElementHeight;
 	
 	
-	$('*').filter(function() {
+	$('body').filter( function() {
 		
 		
 		if ( $(this).css('width').toLowerCase().indexOf('vw') > -1 ) {
@@ -59,7 +59,7 @@ function calcWHratio () {
 //	  	return $(this).css('width').toLowerCase().indexOf('vw') > -1;
 	  	
 	  
-	}).css('width', curElementWidth * WHRatio+'vw').css('height', curElementWidth * WHRatio+'vh');
+	} ).css('width', curElementWidth * WHRatio+'vw').css('height', curElementWidth * WHRatio+'vh');
 	
 	
 	

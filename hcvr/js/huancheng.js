@@ -1,4 +1,4 @@
-var krpano, chatData, chatCanvas; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false; 
+var krpano, WHRatio, chatData, chatCanvas; whElementArr = []; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
 
 //字体图片随窗体缩放
 function door() {
@@ -10,70 +10,49 @@ function door() {
 }
 
 
-/*
- * Too bad code
- * 
- * function autoSizeText (ele) {
-  
-  var el, elements, _i, _len, _results;
-  
-  elements = ele;
-  
-  console.log('elements  '+ elements);
-  
-  if (elements.length < 0) {
-    return;
-  }
-  
-  _results = [];
-  
-  for (_i = 0, _len = elements.length; _i < _len; _i++) {
-  	
-    el = elements[_i];
-    
-    _results.push( (function(el) {
-    	
-      var resizeText, _results1;
-      
-      resizeText = function() {
-      	
-        var elNewFontSize;
-        
-        elNewFontSize = (parseInt($(el).css('font-size').slice(0, -2)) - 1) + 'px';
-        
-        return $(el).css('font-size', elNewFontSize);
-      };
-      
-      _results1 = [];
-      
-      while (el.scrollHeight > el.offsetHeight) {
-      	
-        _results1.push(resizeText());
-        
-        console.log('el  '+ el);
-        
-        console.log('el  parent  '+ el.parent);
-        
-        console.log('while circling');
-      }
-      
-      return _results1;
-      
-    })(el) );
-    
-  }
-  
-  return _results;
-  
-};
-
-autoSizeText($('.userInfo'));*/
-
-/*
-door();
-*/
+function calcWHratio () {
+	
+	
+	var orgDeg = window.orientation;
+	
+	
+	if (orgDeg == 0) {
+				
+		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
+		
+	} else {
+		
+		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
+		
+	}
+	
+	var curElementWidth, curElementHeight;
+	
+	
+	$('[class]').filter(function() {
+		
+		
+		if ( $(this).css('width').toLowerCase().indexOf('vw') > -1 ) {
+			
+			curElementWidth = $(this).css('width');
+			
+			curElementHeight = $(this).css('height');
+			
+			console.log('curElementHeight  '+curElementHeight+' curElementWidth '+curElementWidth)
+		}
+		
+	
+	  	return $(this).css('width').toLowerCase().indexOf('vw') > -1;
+	  	
+	  
+	}).css('width', curElementWidth * WHRatio+'vw').css('height', curElementWidth * WHRatio+'vh');
+	
+	
+	
+}
 
 
+alert('window.orientation  '+window.orientation);
 
 // Listen for orientation changes      
 window.addEventListener("orientationchange", function() {

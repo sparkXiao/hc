@@ -44,7 +44,7 @@ function calcWHratio () {
 	$('[class]').filter( function() {
 		
 		
-		console.log(" filter  $(this).css('width')  "+$(this).css('width') );
+		console.log(" filter  " + $(this).attr('class')+ ' css width is ' +$(this).css('width') );
 		
 		
 		if ( $(this).css('width').toLowerCase().indexOf('vw') > -1 ) {

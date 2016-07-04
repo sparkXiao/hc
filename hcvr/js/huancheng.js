@@ -15,7 +15,7 @@ function calcWHratio () {
 	
 	var orgDeg = window.orientation;
 	
-	
+	/*
 	if (document.documentElement.clientWidth < document.documentElement.clientHeight) {
 		
 		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
@@ -23,13 +23,10 @@ function calcWHratio () {
 	} else {
 		
 		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
-	}
+	}*/
 	
 	
-	console.log('calcWHratio WHRatio '+WHRatio);
-	
-	
-	/*if (orgDeg == 0) {
+	if (orgDeg == 0) {
 				
 		WHRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
 		
@@ -37,7 +34,10 @@ function calcWHratio () {
 		
 		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
 		
-	}*/
+	}
+	
+	console.log('calcWHratio WHRatio '+WHRatio);
+	
 	
 	var curElementWidth, curElementHeight;
 	

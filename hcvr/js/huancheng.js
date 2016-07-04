@@ -64,9 +64,9 @@ function storeEleWH () {
 }
 
 
-$(window).on('resizestart', 0, function() {
+$(window).on('resizestop', 350, function() {
 	
-	console.log('resizestart');
+	console.log('resizestop');
 	
 	calcWHratio(); 
 	

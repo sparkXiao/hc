@@ -39,10 +39,12 @@ function calcWHratio () {
 			curElementHeight = $(this).css('height');
 			
 			console.log('curElementHeight  '+curElementHeight+' curElementWidth '+curElementWidth)
+		
+			return $(this);
 		}
 		
 	
-	  	return $(this).css('width').toLowerCase().indexOf('vw') > -1;
+//	  	return $(this).css('width').toLowerCase().indexOf('vw') > -1;
 	  	
 	  
 	}).css('width', curElementWidth * WHRatio+'vw').css('height', curElementWidth * WHRatio+'vh');
@@ -54,13 +56,18 @@ function calcWHratio () {
 
 alert('window.orientation  '+window.orientation);
 
+alert('window.devicePixelRatio  '+window.devicePixelRatio); 
+
+
 // Listen for orientation changes      
 window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
+    
+    calcWHratio();
+    
     alert('window.orientation  '+window.orientation);
     
-    alert('window.devicePixelRatio  '+window.devicePixelRatio); 
     
 }, false);
 

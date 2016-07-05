@@ -1,5 +1,6 @@
 var krpano, constantScreenWidth, constantScreenHeight, resizeTimer, 
-WRatio, HRatio, chatData, whPortraitArr = [], whLandscapeErr = [], chatCanvas, ifshowChat = false, 
+WRatio, HRatio, chatData, whPortraitArr = [], whLandscapeErr = [], chatCanvas, 
+ifshowChat = false,
 resizeTriggerNum = 0, screen_nameArr = [], uidArr = [], fritoken = '', 
 uidString = '', leftCount = 0, totalCount = 7, playCount = 0, respondTxt = '', 
 getPrizeCount = 0, simulateClickResult = 0, getFLowerCount = 0, ifGetNull = false, 
@@ -13,6 +14,8 @@ function door() {
 	$("html").css("fontSize", sreen / 32);
 	
 }
+
+door();
 
 constantScreenWidth = window.screen.width;
 

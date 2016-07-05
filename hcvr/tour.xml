@@ -78,7 +78,7 @@
 		
 		if(startactions !== null, startactions() );
 		
-		
+		set(plugin[skin_gyro].enabled, true);
 		<!--set(layer[skin_title_pr].html,get(title)); -->
 	</action>
 	
@@ -136,7 +136,7 @@
 		<!-- place your scene hotspots here -->
 		
 
-		<hotspot name="spot4" tooltip="暂未开放" style="skin_menstyle1" ath="-39.992" atv="-7.623" linkedscene="www" />
+		<hotspot name="spot4" tooltip="暂未开放" style="skin_menstyle1" ath="-39.992" atv="-7.623"  />
 		
 		<hotspot name="spot5" style="skin_menstyle" ath="6.014" atv="-9.462" linkedscene="scene__________" />
 		
@@ -264,7 +264,7 @@
 		border="true"
 		bordercolor="0x999999"
 		borderalpha="0"
-		borderwidth="4.0"
+		borderwidth="1.0"
 		glow="0"
 		glowcolor="0xCCCCCC"
 		visible="true"
@@ -277,7 +277,7 @@
 		autowidth="auto"
 		height="40"
 		url="%SWFPATH%/plugins/textfield.swf"
-		html="幻城"
+		html=" "
 		css="text-align:center; color:#9B8179; font-family:SimHei; font-weight:bold; font-size:32px;"
 		x="0"
 		y="150"

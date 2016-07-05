@@ -1,6 +1,6 @@
 var krpano, constantScreenWidth, constantScreenHeight, resizeTimer, 
 WRatio, HRatio, chatData, whPortraitArr = [], whLandscapeErr = [], chatCanvas, 
-ifshowChat = false, adoptRatio,
+ifshowChat = false, adoptRatio, devicefontSize,
 resizeTriggerNum = 0, screen_nameArr = [], uidArr = [], fritoken = '', 
 uidString = '', leftCount = 0, totalCount = 7, playCount = 0, respondTxt = '', 
 getPrizeCount = 0, simulateClickResult = 0, getFLowerCount = 0, ifGetNull = false, 
@@ -9,13 +9,31 @@ ifGetPrize = false;
 //字体图片随窗体缩放
 function door() {
 	
-	adoptRatio = window.innerHeight / ( window.screen.height * window.devicePixelRatio );
+	var orgDeg = window.orientation;
+	
+	console.log('orgDeg  door  '+orgDeg);
+	
+	if (orgDeg == 0) {
+		
+		adoptRatio = window.innerHeight / ( window.screen.height * window.devicePixelRatio );
+	
+		devicefontSize = Math.round( window.innerWidth * adoptRatio );
+
+		
+	} else if (orgDeg == 90 || orgDeg == -90) {
+		
+		
+		adoptRatio = window.innerWidth / ( window.screen.width * window.devicePixelRatio );
+	
+		devicefontSize = Math.round( window.innerHeight * adoptRatio );
+
+	}
+	
 	
 	console.log('adoptRatio '+adoptRatio + '  window.innerWidth  '+ window.innerWidth);
 	
-	var devicefontSize = Math.round( window.innerWidth * adoptRatio );
+	console.log('devicefontSize  '+devicefontSize);
 	
-	console.log('devicefontSize  '+devicefontSize)
 	
 	$("html").css("fontSize",  devicefontSize +'px');
 	

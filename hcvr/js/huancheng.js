@@ -19,6 +19,13 @@ function door() {
 
 door();
 
+window.onresize = function () {
+	
+	door();
+	
+	console.log('onresize door ');
+}
+
 
 alert('window.screen.width  '+window.screen.width+ '  window.screen.height  '+window.screen.height);
 

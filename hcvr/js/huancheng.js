@@ -46,7 +46,9 @@ function door() {
 	
 }
 
+
 door();
+
 
 window.onresize = function () {
 	
@@ -55,7 +57,7 @@ window.onresize = function () {
 	console.log('onresize door ');
 }
 
-
+/*
 alert(' $(this).width()  '+$(this).width()+ '  $(this).height()  '+$(this).height())
 
 
@@ -66,7 +68,7 @@ alert('window.innerWidth  '+window.innerWidth + '  window.innerHeight  '+window.
 
 
 alert('document.documentElement.clientWidth  '+ document.documentElement.clientWidth + '  document.documentElement.clientHeight  '+ document.documentElement.clientHeight);
-
+*/
 
 constantScreenWidth = window.innerWidth;
 
@@ -328,13 +330,13 @@ window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
     
-    $(window).one('resizestop', 0, function() {
+    /*$(window).one('resizestop', 0, function() {
 	
 		console.log('resizestop');
 		
 		calcWHratio(); 
 		
-	});
+	});*/
     
     console.log('orientationchange  window.screen.orientation  '+window.screen.orientation);
     
@@ -712,9 +714,9 @@ function showTxt (ifTriggerInvite) {
 		if (respondTxt == '邀请成功，正在返回大厅') {
 			
 			
-			$('#clickShow').css('width','15rem');
+			$('#clickShow').css('width','1.5rem');
 		
-			$('#clickShow').css('height', '6rem');
+			$('#clickShow').css('height', '.6rem');
 			
 			$('#clickShow').css('top', '0');
 		
@@ -767,9 +769,9 @@ function showTxt (ifTriggerInvite) {
 	} else {
 		
 		
-		$('#clickShow').css('width','20rem');
+		$('#clickShow').css('width','2rem');
 		
-		$('#clickShow').css('height', '13rem');
+		$('#clickShow').css('height', '1.3rem');
 		
 		$('#clickShow').css('top', '0');
 		

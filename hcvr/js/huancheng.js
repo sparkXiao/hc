@@ -1,4 +1,9 @@
-var krpano, constantScreenWidth, constantScreenHeight, resizeTimer, WRatio, HRatio, chatData, whElementArr, chatCanvas; ifshowChat = false; resizeTriggerNum = 0; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
+var krpano, constantScreenWidth, constantScreenHeight, resizeTimer, 
+WRatio, HRatio, chatData, whPortraitArr = [], whLandscapeErr = [], chatCanvas, ifshowChat = false, 
+resizeTriggerNum = 0, screen_nameArr = [], uidArr = [], fritoken = '', 
+uidString = '', leftCount = 0, totalCount = 7, playCount = 0, respondTxt = '', 
+getPrizeCount = 0, simulateClickResult = 0, getFLowerCount = 0, ifGetNull = false, 
+ifGetPrize = false;
 
 //字体图片随窗体缩放
 function door() {
@@ -17,15 +22,12 @@ constantScreenHeight = window.screen.height;
 console.log('constantScreenHeight  '+ constantScreenHeight + ' constantScreenWidth  '+constantScreenWidth)
 
 
-storeEleWH();
+storeEleWHPortrait();
 
 
-function storeEleWH () {
+function storeEleWHLandscape () {
 	
 	
-	whElementArr = [];
-
-
 	var curElementWidth, curElementHeight;
 	
 	
@@ -44,15 +46,15 @@ function storeEleWH () {
 				if ( $(this).css('width') != undefined && $(this).css('height') != undefined ) {
 					
 					
-					curElementWidth = $(this).width() * 100 / document.documentElement.clientWidth;
+					curElementWidth = $(this).width() * 100 / constantScreenHeight;
 					
-					curElementHeight = $(this).height() * 100 / document.documentElement.clientHeight;
-					
-					
-					whElementArr.push({className: $(this).attr('class') , curElementWidth: curElementWidth, curElementHeight: curElementHeight})
+					curElementHeight = $(this).height() * 100 / constantScreenWidth;
 					
 					
-					console.log('curElementHeight  '+curElementHeight+' curElementWidth '+curElementWidth)
+					whLandscapeErr.push({className: $(this).attr('class') , curElementWidth: curElementWidth, curElementHeight: curElementHeight})
+					
+					
+					console.log('whLandscapeErr curElementHeight  '+curElementHeight+' curElementWidth '+curElementWidth)
 				
 				
 				}
@@ -61,13 +63,53 @@ function storeEleWH () {
 		}
 		
 	
-//	  	return $(this).css('width').toLowerCase().indexOf('vw') > -1;
-	  	
-	  
+	} );
+	
+}
+
+
+function storeEleWHPortrait () {
+	
+	
+	var curElementWidth, curElementHeight;
+	
+	
+	$('[class]').filter( function() {
+		
+		
+//		console.log(" filter  " + $(this).attr('class')+ ' css width is ' +$(this).css('width') + '  width val is  '+$(this).width() );
+		
+		
+		if ( $(this).attr('class') == 'userInfo' || $(this).attr('class') == 'packageInfo') {
+			
+			
+			if ( $(this).css('width').toLowerCase().indexOf('%') == -1 && $(this).css('height').toLowerCase().indexOf('%') == -1) {
+				
+				
+				if ( $(this).css('width') != undefined && $(this).css('height') != undefined ) {
+					
+					
+					curElementWidth = $(this).width() * 100 / constantScreenWidth;
+					
+					curElementHeight = $(this).height() * 100 / constantScreenHeight;
+					
+					
+					whPortraitArr.push({className: $(this).attr('class') , curElementWidth: curElementWidth, curElementHeight: curElementHeight})
+					
+					
+					console.log('whPortraitArr  curElementHeight  '+curElementHeight+' curElementWidth '+curElementWidth)
+				
+				
+				}
+				
+			}
+		}
+		
+	
 	} );
 	
 	
-	console.log('whElementArr.length  '+ whElementArr.length)
+	console.log('whPortraitArr.length  '+ whPortraitArr.length)
 	
 }
 
@@ -117,6 +159,15 @@ function calcWHratio () {
 	console.log('orgDeg from '+orgDeg);
 	
 	
+	if (orgDeg == undefined) {
+		
+		alert('not support orientationchange event');
+		
+		return;
+		
+	}
+	
+	
 	console.log('document.documentElement.clientHeight  '+document.documentElement.clientHeight + ' document.documentElement.clientWidth '+document.documentElement.clientWidth);
 	
 	
@@ -135,7 +186,7 @@ function calcWHratio () {
 		HRatio = constantScreenHeight / constantScreenWidth;
 		
 		
-	} else {
+	} else if (orgDeg == 90 || orgDeg == -90) {
 		
 		 
 		WRatio = constantScreenHeight / constantScreenWidth;
@@ -151,14 +202,44 @@ function calcWHratio () {
 	console.log('calcWHratio HRatio '+HRatio);
 	
 	
-	for (var i = 0; i < whElementArr.length; i++) {
+	if ( whLandscapeErr.length > 0) {
 		
-		$('.'+whElementArr[i]['className']).css('width', whElementArr[i]['curElementWidth'] * WRatio+'vw').css('height', whElementArr[i]['curElementHeight'] * HRatio+'vh'); 
+		
+		if (orgDeg == 0) {
+		
+		
+			for (var i = 0; i < whPortraitArr.length; i++) {
+				
+				$('.'+whPortraitArr[i]['className']).css('width', whPortraitArr[i]['curElementWidth'] +'vw').css('height', whPortraitArr[i]['curElementHeight'] +'vh'); 
+				
+			}
+			
+		} else if (orgDeg == 90 || orgDeg == -90) {
+			
+			for (var i = 0; i < whLandscapeErr.length; i++) {
+			
+				$('.'+whLandscapeErr[i]['className']).css('width', whLandscapeErr[i]['curElementWidth'] +'vw').css('height', whLandscapeErr[i]['curElementHeight'] +'vh'); 
+				
+			}
+			
+		}
+		
+		
+	} else {
+		
+		
+		for (var i = 0; i < whPortraitArr.length; i++) {
+			
+			$('.'+whPortraitArr[i]['className']).css('width', whPortraitArr[i]['curElementWidth'] * WRatio+'vw').css('height', whPortraitArr[i]['curElementHeight'] * HRatio+'vh'); 
+			
+		}
+		
+		
+		storeEleWHLandscape();
 		
 	}
 	
 	
-	storeEleWH();
 	  
 }
 
@@ -174,7 +255,7 @@ window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
     
-    $(window).one('resizestop', 500, function() {
+    $(window).one('resizestop', 0, function() {
 	
 		console.log('resizestop');
 		

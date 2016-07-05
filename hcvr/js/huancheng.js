@@ -11,11 +11,17 @@ function door() {
 	
 	var orgDeg = window.orientation;
 	
-	
 	console.log('屏幕方向   '+orgDeg);
 	
+	var dePxRatio = window.devicePixelRatio;
 	
-	adoptRatio = window.innerHeight / ( window.screen.height * window.devicePixelRatio );
+	if ( dePxRatio < 3) {
+		
+		dePxRatio = 3;
+	}
+	
+	
+	adoptRatio = window.innerHeight / ( window.screen.height * dePxRatio );
 	
 	devicefontSize = Math.round( window.innerWidth * adoptRatio );
 		

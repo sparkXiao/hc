@@ -27,9 +27,9 @@ alert('window.innerWidth  '+window.innerWidth + '  window.innerHeight  '+window.
 alert('document.documentElement.clientWidth  '+ document.documentElement.clientWidth + '  document.documentElement.clientHeight  '+ document.documentElement.clientHeight);
 
 
-constantScreenWidth = window.screen.width;
+constantScreenWidth = window.innerWidth;
 
-constantScreenHeight = window.screen.height;
+constantScreenHeight = window.innerHeight;
 
 
 console.log('constantScreenHeight  '+ constantScreenHeight + ' constantScreenWidth  '+constantScreenWidth)

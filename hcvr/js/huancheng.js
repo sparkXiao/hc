@@ -11,9 +11,13 @@ function door() {
 	
 	adoptRatio = window.innerHeight / ( window.screen.height * window.devicePixelRatio );
 	
-	console.log('adoptRatio '+adoptRatio + '  fontSize  '+window.innerWidth * adoptRatio);
+	console.log('adoptRatio '+adoptRatio + '  window.innerWidth  '+ window.innerWidth);
 	
-	$("html").css("fontSize", window.innerWidth * adoptRatio);
+	var devicefontSize = Math.round( window.innerWidth * adoptRatio );
+	
+	console.log('devicefontSize  '+devicefontSize)
+	
+	$("html").css("fontSize",  devicefontSize +'px');
 	
 }
 

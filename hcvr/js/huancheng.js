@@ -49,6 +49,9 @@ window.onresize = function () {
 }
 
 
+alert(' $(this).width()  '+$(this).width()+ '  $(this).height()  '+$(this).height())
+
+
 alert('window.screen.width  '+window.screen.width+ '  window.screen.height  '+window.screen.height);
 
 
@@ -212,7 +215,45 @@ function calcWHratio () {
 	}
 	
 	
-	console.log('document.documentElement.clientHeight  '+document.documentElement.clientHeight + ' document.documentElement.clientWidth '+document.documentElement.clientWidth);
+	if (orgDeg == 0) {
+		
+		
+			for (var i = 0; i < whPortraitArr.length; i++) {
+				
+				if (whPortraitArr[i]['curElementWidth'] == whPortraitArr[i]['curElementHeight']) {
+					
+					$('.'+whPortraitArr[i]['className']).css('width', whPortraitArr[i]['curElementWidth'] +'vw').css('height', whPortraitArr[i]['curElementHeight'] +'vw');
+					
+				} else {
+					
+					$('.'+whPortraitArr[i]['className']).css('width', whPortraitArr[i]['curElementWidth'] +'vw').css('height', whPortraitArr[i]['curElementHeight'] +'vh'); 
+				}
+				
+				
+			}
+			
+		} else if (orgDeg == 90 || orgDeg == -90) {
+			
+			for (var i = 0; i < whPortraitArr.length; i++) {
+				
+				if (whPortraitArr[i]['curElementWidth'] == whPortraitArr[i]['curElementHeight']) {
+					
+					$('.'+whPortraitArr[i]['className']).css('width', whPortraitArr[i]['curElementWidth'] +'vh').css('height', whPortraitArr[i]['curElementHeight'] +'vh');
+					
+				} else {
+					
+					$('.'+whPortraitArr[i]['className']).css('width', whPortraitArr[i]['curElementWidth'] +'vh').css('height', whPortraitArr[i]['curElementHeight'] +'vw'); 
+					
+				}
+				
+				
+			}
+			
+		}
+	
+	
+	
+	/*console.log('document.documentElement.clientHeight  '+document.documentElement.clientHeight + ' document.documentElement.clientWidth '+document.documentElement.clientWidth);
 	
 	
 	WRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
@@ -220,25 +261,6 @@ function calcWHratio () {
 	
 	HRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
 	
-	
-	
-	/*if (orgDeg == 0) {
-		
-		
-		WRatio = constantScreenWidth / constantScreenHeight;
-		
-		HRatio = constantScreenHeight / constantScreenWidth;
-		
-		
-	} else if (orgDeg == 90 || orgDeg == -90) {
-		
-		 
-		WRatio = constantScreenHeight / constantScreenWidth;
-		
-		HRatio = constantScreenWidth / constantScreenHeight;
-		
-		
-	}*/
 	
 	
 	console.log('calcWHratio WRatio '+WRatio);
@@ -281,7 +303,7 @@ function calcWHratio () {
 		
 		storeEleWHLandscape();
 		
-	}
+	}*/
 	
 	
 	  

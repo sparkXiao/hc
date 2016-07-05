@@ -9,7 +9,7 @@ ifGetPrize = false;
 //字体图片随窗体缩放
 function door() {
 	
-	adoptRatio = window.innerHeight / window.screen.height * window.devicePixelRatio;
+	adoptRatio = window.innerHeight / ( window.screen.height * window.devicePixelRatio );
 	
 	console.log('adoptRatio '+adoptRatio + '  fontSize  '+window.innerWidth * adoptRatio);
 	

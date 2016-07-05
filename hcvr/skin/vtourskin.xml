@@ -464,10 +464,13 @@
 	        onexitfullscreen.fullscreensupport="set(layer[skin_btn_fs].crop, '0|576|64|64');"
 	        onkeydown="skin_keydown_event();"
 	        />
+	        
 			
-			
+	<events name="hideHotSpot" keep="true"
+	        onloadcomplete="hideHotSpots()"
+	        />		
 	
-
+	
 
 	<!-- skin actions -->
 

@@ -1042,7 +1042,7 @@ function krpanoReady(krpanObj)
 		})
 		
 		
-		krpano.call('hideHotSpots');
+//		krpano.call('hideHotSpots');
 		
 		
 		$('#VR').hide();

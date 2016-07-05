@@ -505,7 +505,7 @@
 		set(layer[skin_layer].visible, true);
 		
 		
-		
+		set(plugin[skin_gyro].enabled, true);
 		
 		
 	</action>

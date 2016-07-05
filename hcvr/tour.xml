@@ -78,7 +78,7 @@
 		
 		if(startactions !== null, startactions() );
 		
-	
+		set(plugin[skin_gyro].enabled, true);
 		<!--set(layer[skin_title_pr].html,get(title)); -->
 	</action>
 	
@@ -175,7 +175,7 @@
 				 
 				delayedcall(3,tween(layer[test].alpha,0);delayedcall(0.3,set(layer[test].visible,false)));
 				
-				set(plugin[skin_gyro].enabled, true);
+				
 		"/>
 			
 		

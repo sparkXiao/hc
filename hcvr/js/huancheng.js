@@ -127,9 +127,9 @@ function calcWHratio () {
 	*/
 	
 	
-	WRatio = constantScreenHeight / constantScreenWidth;
+	WRatio = constantScreenWidth / constantScreenHeight;
 	
-	HRatio = constantScreenWidth / constantScreenHeight;
+	HRatio = constantScreenHeight / constantScreenWidth;
 	
 	
 	/*if (orgDeg == 0) {

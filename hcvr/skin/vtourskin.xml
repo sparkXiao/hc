@@ -315,7 +315,7 @@
 	       onclick=""
 	       onover=""
 	       onout=""
-	       onloaded="if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"
+	       onloaded=""
 	       />
 		   
 	<style name="skin_yinlianstyle" url="yinlian.png" scale="0.3" edge="top" distorted="true"

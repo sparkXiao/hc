@@ -467,7 +467,7 @@
 	        
 			
 	<events name="hideHotSpot" keep="true"
-	        onloadcomplete="hideHotSpots()"
+	        onloadcomplete=""
 	        />		
 	
 	

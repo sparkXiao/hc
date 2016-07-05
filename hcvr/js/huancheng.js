@@ -127,19 +127,23 @@ function calcWHratio () {
 	*/
 	
 	
-	WRatio = constantScreenWidth / constantScreenHeight;
-	
-	HRatio = constantScreenHeight / constantScreenWidth;
-	
-	
-	/*if (orgDeg == 0) {
+	if (orgDeg == 0) {
+		
+		
+		WRatio = constantScreenWidth / constantScreenHeight;
+		
+		HRatio = constantScreenHeight / constantScreenWidth;
 		
 		
 	} else {
 		
-		WHRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
 		
-	}*/
+		WRatio = constantScreenHeight / constantScreenWidth;
+		
+		HRatio = constantScreenWidth / constantScreenHeight;
+		
+		
+	}
 	
 	
 	console.log('calcWHratio WRatio '+WRatio);

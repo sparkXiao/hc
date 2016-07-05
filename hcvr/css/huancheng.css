@@ -328,7 +328,7 @@ html {
 #chatIcon {
 	
 	position: absolute;
-	right: 5%; bottom: 10%;
+	right: 5%; top: 85%;
 	    width: .3rem;
     height: .3rem;
 	background-size: 100% 100%;

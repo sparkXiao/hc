@@ -1,6 +1,6 @@
 var krpano, constantScreenWidth, constantScreenHeight, resizeTimer, 
 WRatio, HRatio, chatData, whPortraitArr = [], whLandscapeErr = [], chatCanvas, 
-ifshowChat = false,
+ifshowChat = false, adoptRatio,
 resizeTriggerNum = 0, screen_nameArr = [], uidArr = [], fritoken = '', 
 uidString = '', leftCount = 0, totalCount = 7, playCount = 0, respondTxt = '', 
 getPrizeCount = 0, simulateClickResult = 0, getFLowerCount = 0, ifGetNull = false, 
@@ -9,9 +9,11 @@ ifGetPrize = false;
 //字体图片随窗体缩放
 function door() {
 	
-	var sreen = $(window).width();
+	adoptRatio = window.innerHeight / window.screen.height * window.devicePixelRatio;
 	
-	$("html").css("fontSize", sreen / 32);
+	console.log('adoptRatio '+adoptRatio + '  fontSize  '+window.innerWidth * adoptRatio);
+	
+	$("html").css("fontSize", window.innerWidth * adoptRatio);
 	
 }
 

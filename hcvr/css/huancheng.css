@@ -86,10 +86,10 @@ html {
 }
 
 .clip-circle.user {
-	-webkit-clip-path: circle(.18rem  at center);
-	-moz-clip-path: circle(.18rem  at center);
-	-o-clip-path: circle(.18rem  at center);
-	clip-path: circle(.18rem  at center);
+	-webkit-clip-path: circle(.15rem  at center);
+	-moz-clip-path: circle(.15rem  at center);
+	-o-clip-path: circle(.15rem  at center);
+	clip-path: circle(.15rem  at center);
 }
 
 
@@ -265,14 +265,13 @@ html {
 	
 	position: absolute; top: 3%; left: 3%;
 	color: white;
-    width: 1rem;
+    width: .9rem;
     height: .3rem;
     background-size: 100% 100%;
     background-image: url(../img/titile.png); no-repeat;
 }
 
 .userPic {
-    margin-top: -.05rem;
     margin-left: -.03rem;
 	float: left;
     width: .3rem;

@@ -11,9 +11,16 @@ function door() {
 	
 	var orgDeg = window.orientation;
 	
+	
 	console.log('orgDeg  door  '+orgDeg);
 	
-	if (orgDeg == 0) {
+	
+	adoptRatio = window.innerHeight / ( window.screen.height * window.devicePixelRatio );
+	
+	devicefontSize = Math.round( window.innerWidth * adoptRatio );
+		
+	
+	/*if (orgDeg == 0) {
 		
 		adoptRatio = window.innerHeight / ( window.screen.height * window.devicePixelRatio );
 	
@@ -27,7 +34,7 @@ function door() {
 	
 		devicefontSize = Math.round( window.innerHeight * adoptRatio );
 
-	}
+	}*/
 	
 	
 	console.log('adoptRatio '+adoptRatio + '  window.innerWidth  '+ window.innerWidth);

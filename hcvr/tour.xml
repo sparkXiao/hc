@@ -174,14 +174,11 @@
 				tween(layer[test].alpha,1);
 				 
 				delayedcall(3,tween(layer[test].alpha,0);delayedcall(0.3,set(layer[test].visible,false)));
+				
+				set(plugin[skin_gyro].enabled, true);
 		"/>
 			
-		<events name="skin_start"
- 
-		onpreviewcomplete="
-		 
-		set(plugin[skin_gyro].enabled, true);
-	"/>
+		
 			
 	
 	</scene>

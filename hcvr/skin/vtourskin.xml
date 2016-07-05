@@ -312,10 +312,13 @@
 	
 	<style name="skin_menstyle1" url="men1.png" scale="0.5" edge="top" distorted="true"
 	       tooltip="暂未开放"
-	       onclick=""
-	       onover=""
-	       onout=""
-	       onloaded=""
+	       onclick="webvr.exitVR();hideChat();if(linkedscene, set(enabled,false); skin_hidetooltips(); tween(depth|alpha|oy|rx, 4000|0.0|-50|-60, 0.5, default, loadscene(get(linkedscene),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend)); skin_updatescroll(); ); );"
+	       onover="tween(scale,0.55);copy(layer[skin_tooltip].html, tooltip);
+	                     set(layer[skin_tooltip].visible, true);
+	                     tween(layer[skin_tooltip].alpha, 1.0, 0.1);
+	                     asyncloop(hovering, copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );"
+	       onout="tween(scale,0.5);tween(layer[skin_tooltip].alpha, 0.0, 0.1, default, set(layer[skin_tooltip].visible,false), copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );"
+	       onloaded="if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"
 	       />
 		   
 	<style name="skin_yinlianstyle" url="yinlian.png" scale="0.3" edge="top" distorted="true"

@@ -236,8 +236,8 @@ html {
 
 .packageInfo >p {
 	
-	position: absolute;
-    top: -.05rem;
+		position: relative;
+    top: -.08rem;
     left: 50%;
     color: white;
 }

@@ -18,6 +18,15 @@ function door() {
 door();
 
 
+alert('window.screen.width  '+window.screen.width+ '  window.screen.height  '+window.screen.height);
+
+
+alert('window.innerWidth  '+window.innerWidth + '  window.innerHeight  '+window.innerHeight);
+
+
+alert('document.documentElement.clientWidth  '+ document.documentElement.clientWidth + '  document.documentElement.clientHeight  '+ document.documentElement.clientHeight);
+
+
 constantScreenWidth = window.screen.width;
 
 constantScreenHeight = window.screen.height;

@@ -233,7 +233,7 @@ html {
 .packageInfo >p {
 	
 	position: absolute;
-    top: -1.1rem;
+    top: -.5rem;
     left: 50%;
     color: white;
 }
@@ -269,6 +269,7 @@ html {
 
 .userPic {
 	margin-top: -5%;
+	margin-left: 0;
 	float: left;
     width: 12vw;
     height: 12vw;

@@ -17,6 +17,7 @@ function door() {
 
 door();
 
+
 constantScreenWidth = window.screen.width;
 
 constantScreenHeight = window.screen.height;
@@ -327,6 +328,8 @@ $('#pano').on('click', function () {
 
 
 $('#begin').on('click', function () {
+	
+	krpano.call('showHotSpots');
 	
 	hideGameInfo();
 })
@@ -1039,8 +1042,12 @@ function krpanoReady(krpanObj)
 		})
 		
 		
+		krpano.call('hideHotSpots');
+		
+		
 		$('#VR').hide();
-										
+			
+			
 		$('#chatIcon').hide();
 		
 		

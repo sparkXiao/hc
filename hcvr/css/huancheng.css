@@ -233,7 +233,7 @@ html {
 .packageInfo >p {
 	
 	position: absolute;
-    top: -.5rem;
+    top: -.05rem;
     left: 50%;
     color: white;
 }
@@ -243,8 +243,8 @@ html {
 	position: absolute;
     left: 3%;
     top: 85%;
-		width: 3rem;
-    height: 3rem;
+		width: .3rem;
+    height: .3rem;
     right: 27%;
     background-size: 100% 100%;
     background-image: url(../img/baoX.png); no-repeat;
@@ -269,7 +269,7 @@ html {
 
 .userPic {
 	margin-top: -5%;
-	margin-left: 0;
+	margin-left: -.03rem;
 	float: left;
     width: 12vw;
     height: 12vw;
@@ -283,7 +283,7 @@ html {
 	
 	margin-top: 0;
 	position: relative;
-	top: .8rem;
+	top: .08rem;
 	font-size: 1.7vh;
 	
 }
@@ -297,7 +297,7 @@ html {
     right: 0;
     top: 100%;
     width: 99%;
-    height: 3rem;
+    height: .3rem;
     background-size: 100% 100%;
     background-image: url(../img/chat.png); no-repeat;
 	
@@ -329,8 +329,8 @@ html {
 	
 	position: absolute;
 	right: 5%; bottom: 10%;
-	    width: 3rem;
-    height: 3rem;
+	    width: .3rem;
+    height: .3rem;
 	background-size: 100% 100%;
 	background-image: url(../img/chatIcon.png); no-repeat;
 	
@@ -341,8 +341,8 @@ html {
 	
 	position: absolute;
 	right: 5%; bottom: 18%;
-	    width: 3rem;
-    height: 3rem;
+	    width: .3rem;
+    height: .3rem;
 	background-size: 100% 100%;
 	background-image: url(../img/VR.png); no-repeat;
 	

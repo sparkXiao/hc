@@ -1,4 +1,4 @@
-var krpano, resizeTimer, WRatio, HRatio, chatData, whElementArr, chatCanvas; ifshowChat = false; resizeTriggerNum = 0; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
+var krpano, constantScreenWidth, constantScreenHeight, resizeTimer, WRatio, HRatio, chatData, whElementArr, chatCanvas; ifshowChat = false; resizeTriggerNum = 0; screen_nameArr = []; uidArr = []; fritoken = ''; uidString = ''; leftCount = 0; totalCount = 7; playCount = 0; respondTxt = ''; getPrizeCount = 0; simulateClickResult = 0; getFLowerCount = 0; ifGetNull = false; ifGetPrize = false;
 
 //字体图片随窗体缩放
 function door() {
@@ -8,6 +8,13 @@ function door() {
 	$("html").css("fontSize", sreen / 32);
 	
 }
+
+constantScreenWidth = window.screen.width;
+
+constantScreenHeight = window.screen.height;
+
+
+console.log('constantScreenHeight  '+ constantScreenHeight + ' constantScreenWidth  '+constantScreenWidth)
 
 
 storeEleWH();
@@ -113,10 +120,16 @@ function calcWHratio () {
 	console.log('document.documentElement.clientHeight  '+document.documentElement.clientHeight + ' document.documentElement.clientWidth '+document.documentElement.clientWidth);
 	
 	
-	WRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
+	/*WRatio = document.documentElement.clientHeight / document.documentElement.clientWidth;
 	
 	
 	HRatio = document.documentElement.clientWidth / document.documentElement.clientHeight;
+	*/
+	
+	
+	WRatio = constantScreenHeight / constantScreenWidth;
+	
+	HRatio = constantScreenWidth / constantScreenHeight;
 	
 	
 	/*if (orgDeg == 0) {

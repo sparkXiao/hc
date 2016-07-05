@@ -1032,7 +1032,7 @@ function krpanoReady(krpanObj)
 	document.addEventListener("hideChat", function (event) {
 		
 		
-		console.log("krpano.get('xml.scene')  "+krpano.get('xml.scene') );
+		console.log("krpano  scene[get(xml.scene)].index  "+krpano.call('scene[get(xml.scene)].index') );
 		
 		
 		

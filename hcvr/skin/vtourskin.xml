@@ -250,11 +250,16 @@
 	</action>
 	
 	<action name="hideHotSpots">
-	  for(set(i,0), i LT hotspot.count, inc(i), 
+	
+	if ( get(xml.scene) == 'scene__________' , for(set(i,0), i LT hotspot.count, inc(i), 
 	    
         set(hotspot[get(i)].visible,false); 
 	      
-	   );
+	   )
+	   
+    )	
+		
+	  
 	</action>
 	
 	<action name="showHotSpots">
@@ -470,7 +475,7 @@
 	        
 			
 	<events name="hideHotSpot" keep="true"
-	        onloadcomplete=""
+	        onloadcomplete="hideHotSpots()"
 	        />		
 	
 	

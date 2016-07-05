@@ -11,7 +11,7 @@ function door() {
 	
 	var orgDeg = window.orientation;
 	
-	console.log('屏幕方向   '+orgDeg);
+	alert('屏幕方向   '+orgDeg);
 	
 	var dePxRatio = window.devicePixelRatio;
 	
@@ -21,14 +21,14 @@ function door() {
 	}
 	
 	
-	adoptRatio = window.innerHeight / ( window.screen.height * dePxRatio );
+	/*adoptRatio = window.innerHeight / ( window.screen.height * dePxRatio );
 	
-	devicefontSize = Math.round( window.innerWidth * adoptRatio );
+	devicefontSize = Math.round( window.innerWidth * adoptRatio );*/
 		
 	
-	/*if (orgDeg == 0) {
+	if (orgDeg == 0) {
 		
-		adoptRatio = window.innerHeight / ( window.screen.height * window.devicePixelRatio );
+		adoptRatio = window.innerHeight / ( window.screen.height * dePxRatio);
 	
 		devicefontSize = Math.round( window.innerWidth * adoptRatio );
 
@@ -36,11 +36,11 @@ function door() {
 	} else if (orgDeg == 90 || orgDeg == -90) {
 		
 		
-		adoptRatio = window.innerWidth / ( window.screen.width * window.devicePixelRatio );
+		adoptRatio = window.innerWidth / ( window.screen.width * dePxRatio);
 	
 		devicefontSize = Math.round( window.innerHeight * adoptRatio );
 
-	}*/
+	}
 	
 	
 	console.log('adoptRatio '+adoptRatio + '  window.innerWidth  '+ window.innerWidth);

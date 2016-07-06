@@ -260,6 +260,8 @@
 		
 		trace( get(sceneNum) );
 		
+		trace('after set sceneNum val is');
+		
 		set(sceneNum,scene[get(xml.scene)].index);
 		
 		<!--if ( get(xml.scene) == 'scene__________' , trace( 'do showGameInfo' ); -->

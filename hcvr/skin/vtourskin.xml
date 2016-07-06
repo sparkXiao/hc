@@ -29,7 +29,7 @@
 	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
 	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
 	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
-	               loadingtext="loading..."
+	               loadingtext="正在加载场景..."
 	               layout_width="100%"
 	               layout_maxwidth.normal="900"
 	               layout_maxwidth.mobile=""
@@ -249,6 +249,13 @@
 		trace('hideChat');
 	</action>
 	
+	
+	<action name="showGameInfo">
+		jscall('var event = new Event("showGameInfo"); document.dispatchEvent(new Event("showGameInfo")); console.log(" showGameInfo  ");');
+		trace('showGameInfo');
+	</action>
+	
+	
 	<action name="hideHotSpots">
 	
 	if ( get(xml.scene) == 'scene__________' , for(set(i,0), i LT hotspot.count, inc(i), 
@@ -461,7 +468,7 @@
 	        onxmlcomplete="set(events[skin_events].onxmlcomplete,null); skin_startup();"
 	        onnewpano="skin_showloading(true); skin_update_scene_infos(); skin_deeplinking_update_url();"
 	        onremovepano="skin_showloading(true);"
-	        onloadcomplete="skin_showloading(false);"
+	        onloadcomplete="skin_showloading(false);showGameInfo();"
 	        onidle="skin_deeplinking_update_url();"
 	        onresize="skin_onresize();"
 	        onenterfullscreen.fullscreensupport="set(layer[skin_btn_fs].crop, '64|576|64|64');"
@@ -872,7 +879,7 @@
 
 	<action name="skin_showloading">
 		if(display.stereo == true,
-			set(layer[skin_loadingtext].visible, false);
+			set(layer[skin_loadingtext].visible, false); 
 		  ,
 			set(layer[skin_loadingtext].visible, %1);
 		  );

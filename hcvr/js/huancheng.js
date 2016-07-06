@@ -433,13 +433,19 @@ $('#treaNum').on('click',function () {
 
 function showGameInfo () {
 	
-	$('.gameInfo').show();
+//	$('.gameInfo').show();
 	
 	$('#overlay').show();
 		
 	$('#overlay').fadeIn('fast');
 }
 
+
+document.addEventListener("showGameInfo", function (event) {
+	
+	$('.gameInfo').show();
+	
+});
 
 function getClickLotus (prizeName) {
 	

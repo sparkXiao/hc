@@ -443,13 +443,24 @@ function onnewSceneLay() {
 
 document.addEventListener("showGameInfo", function (event) {
 	
-	if (event.sceneNum) {
+	
+	if (event.sceneNum == 0) {
 		
-	} else{
+		$('#VR').show();
+		
+		$('#chatIcon').show();
+		
+		$('.packageInfo').show();
+		
+		$('.userInfo').show();
+		
+		
+	} else {
+		
+		$('.gameInfo').show();
 		
 	}
 	
-	$('.gameInfo').show();
 	
 	console.log('showGameInfo  received')
 	
@@ -1245,6 +1256,8 @@ function krpanoReady(krpanObj)
 	
 	
  	krpano.set('clickTime', 0);
+ 	
+ 	krpano.set('sceneNum', 0);
 	
 	
 	console.log('krpano  '+krpano);

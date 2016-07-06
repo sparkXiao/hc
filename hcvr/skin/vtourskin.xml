@@ -256,9 +256,15 @@
 		
 		trace( scene[get(xml.scene)].index ); 
 		
+		sceneNum = scene[get(xml.scene)].index;
+		
+		trace('sceneNum val is');
+		
+		trace( sceneNum );
+		
 		<!--if ( get(xml.scene) == 'scene__________' , trace( 'do showGameInfo' ); -->
 		
-		jscall('var event = new Event("showGameInfo"); event.sceneNum = krpano.get(scene[get(xml.scene)].index); document.dispatchEvent(new Event("showGameInfo")); console.log(" js showGameInfo  ");')
+		jscall('var event = new Event("showGameInfo"); event.sceneNum = krpano.get("sceneNum"); document.dispatchEvent(new Event("showGameInfo")); console.log(" js showGameInfo  ");')
 		
 	</action>
 	

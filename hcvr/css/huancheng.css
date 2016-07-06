@@ -12,7 +12,7 @@ html {
     position: absolute;
     margin: auto;
     background-size: 100% 100%;
-    background-image: url(../img/dialogbg.png);
+    background-image: url(../img/dialogbg.png); no-repeat;
     padding-left: .15rem;
     padding-right: .15rem;
     
@@ -45,16 +45,18 @@ html {
 }
 
 .titbg {
-	color: #CFFEFE;
-	    margin: auto;
+	
+    color: #CFFEFE;
+    margin: auto;
     position: relative;
-    top: 70%;
+    top: 80%;
     text-align: center;
     width: 90%;
-    height: 50%;
+    height: 70%;
     padding-top: 10%;
-	background-size:100% 100%;
-	background-image: url(../img/yinlianbg.png); no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../img/yinlianbg.png); no-repeat;
+    font-size: .11rem;
 }
 
 .yinLNum {
@@ -77,8 +79,11 @@ html {
 
 .clip-circle {
 	
-	max-width: 100%;
+		max-width: 100%;
     max-height: 100%;
+    
+    position: relative;
+    top: -.32rem;
     
 	-webkit-clip-path: circle(.27rem at center);
 	-moz-clip-path: circle(.27rem at center);
@@ -87,10 +92,13 @@ html {
 }
 
 .clip-circle.user {
+	
+	    top: -.62rem;
 	-webkit-clip-path: circle(.15rem  at center);
 	-moz-clip-path: circle(.15rem  at center);
 	-o-clip-path: circle(.15rem  at center);
 	clip-path: circle(.15rem  at center);
+	
 }
 
 
@@ -126,7 +134,7 @@ html {
     height: .6rem;
     display: inline-block;
     background-size: 100% 100%;
-    background-image: url(../img/friPic.png);
+    background-image: url(../img/friPic.png); no-repeat;
     margin-right: .03rem;
     margin-left: .03rem;
 }
@@ -142,20 +150,30 @@ html {
 .btnCon {
 	
     margin: auto;
-    position: relative;
-    top: 10%;
+    position: absolute;
+    top: .8rem;
+    padding-left: .2rem;
+    padding-right: .2rem;
 }
 
 
 #changeFir {
 
-    width: 35%;
+    float: left;
+    max-width: 50%;
+    height: auto;
+    position: relative;
+    top: .6rem;
 }
 
 
 #invite {
 	
-    width: 35%;
+   float: right;
+    max-width: 50%;
+    height: auto;
+    position: relative;
+    top: .6rem;
 }
 
 
@@ -237,8 +255,9 @@ html {
 
 .packageInfo >p {
 	
-		position: relative;
-    top: -.08rem;
+    font-size: .15rem;
+    position: absolute;
+    top: -.13rem;
     left: 50%;
     color: white;
 }

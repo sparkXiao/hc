@@ -251,20 +251,31 @@
 	
 	
 	<action name="showGameInfo">
-		if ( get(xml.scene) == 'scene__________' ,
-			jscall('var event = new Event("showGameInfo"); document.dispatchEvent(new Event("showGameInfo")); console.log(" showGameInfo  ");');
-			trace('showGameInfo');
+		
+		trace ( 'showGameInfo  current scene name is ' );
+		
+		trace( get(xml.scene) ); 
+		
+		if ( get(xml.scene) == 'scene__________' , 
+		
+		 	jscall('var event = new Event("showGameInfo"); document.dispatchEvent(new Event("showGameInfo")); console.log(" showGameInfo  ");');
+		
 		)
+		
 	</action>
 	
 	
 	<action name="hideHotSpots">
-	
-	if ( get(xml.scene) == 'scene__________' , for(set(i,0), i LT hotspot.count, inc(i), 
+		
+		trace ( 'hideHotSpots  current scene name is ' );
+		
+		trace( get(xml.scene) ); 
+		
+		if ( get(xml.scene) == 'scene__________' , for(set(i,0), i LT hotspot.count, inc(i), 
 	    
-        set(hotspot[get(i)].visible,false); 
+        	set(hotspot[get(i)].visible,false); 
 	      
-	   )
+	    )
 	   
     )	
 		
@@ -470,7 +481,7 @@
 	        onxmlcomplete="set(events[skin_events].onxmlcomplete,null); skin_startup();"
 	        onnewpano="skin_showloading(true); skin_update_scene_infos(); skin_deeplinking_update_url();"
 	        onremovepano="skin_showloading(true);"
-	        onloadcomplete="skin_showloading(false);showGameInfo();"
+	        onloadcomplete="skin_showloading(false); showGameInfo();"
 	        onidle="skin_deeplinking_update_url();"
 	        onresize="skin_onresize();"
 	        onenterfullscreen.fullscreensupport="set(layer[skin_btn_fs].crop, '64|576|64|64');"

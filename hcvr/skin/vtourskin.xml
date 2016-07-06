@@ -252,9 +252,7 @@
 	
 	<action name="showGameInfo">
 		
-		trace('after set sceneNum val is');
-		
-		set(sceneNum,scene[get(xml.scene)].index);
+		trace('showGameInfo after set sceneNum val is');
 		
 		trace( get(sceneNum) );
 		
@@ -484,7 +482,7 @@
 	        onxmlcomplete="set(events[skin_events].onxmlcomplete,null); skin_startup();"
 	        onnewpano="skin_showloading(true); skin_update_scene_infos(); skin_deeplinking_update_url();"
 	        onremovepano="skin_showloading(true);"
-	        onloadcomplete="skin_showloading(false); showGameInfo();"
+	        onloadcomplete="skin_showloading(false); set(sceneNum,scene[get(xml.scene)].index); showGameInfo();"
 	        onidle="skin_deeplinking_update_url();"
 	        onresize="skin_onresize();"
 	        onenterfullscreen.fullscreensupport="set(layer[skin_btn_fs].crop, '64|576|64|64');"

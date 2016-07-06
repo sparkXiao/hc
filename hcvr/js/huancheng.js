@@ -462,7 +462,7 @@ document.addEventListener("showGameInfo", function (event) {
 	}
 	
 	
-	console.log('showGameInfo  received')
+	console.log('showGameInfo  received  event.sceneNum  '+event.sceneNum)
 	
 });
 

@@ -431,7 +431,7 @@ $('#treaNum').on('click',function () {
 
 
 
-function showGameInfo () {
+function onnewSceneLay() {
 	
 //	$('.gameInfo').show();
 	
@@ -444,6 +444,8 @@ function showGameInfo () {
 document.addEventListener("showGameInfo", function (event) {
 	
 	$('.gameInfo').show();
+	
+	console.log('showGameInfo  received')
 	
 });
 
@@ -1149,7 +1151,7 @@ function krpanoReady(krpanObj)
 		$('#treaNum').children('p').show();
 		
 		
-		showGameInfo();
+		onnewSceneLay();
 		
 //		$('.chat').hide();
 		

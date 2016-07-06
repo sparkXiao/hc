@@ -332,6 +332,7 @@ html {
 
 #chatIcon {
 	
+	display: none;
 	position: absolute;
 	right: 5%; top: 85%;
 	    width: .3rem;
@@ -344,6 +345,7 @@ html {
 
 #VR {
 	
+	display: none;
 	position: absolute;
 	right: 5%; bottom: 18%;
 	    width: .3rem;

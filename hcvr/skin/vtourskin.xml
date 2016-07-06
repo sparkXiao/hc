@@ -258,7 +258,7 @@
 		
 		<!--if ( get(xml.scene) == 'scene__________' , trace( 'do showGameInfo' ); -->
 		
-		jscall('var event = new Event("showGameInfo"); event.sceneNum = scene[get(xml.scene)].index; document.dispatchEvent(new Event("showGameInfo")); console.log(" js showGameInfo  ");')
+		jscall('var event = new Event("showGameInfo"); event.sceneNum = krpano.get(scene[get(xml.scene)].index); document.dispatchEvent(new Event("showGameInfo")); console.log(" js showGameInfo  ");')
 		
 	</action>
 	

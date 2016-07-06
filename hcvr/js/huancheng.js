@@ -443,6 +443,12 @@ function onnewSceneLay() {
 
 document.addEventListener("showGameInfo", function (event) {
 	
+	if (event.sceneNum) {
+		
+	} else{
+		
+	}
+	
 	$('.gameInfo').show();
 	
 	console.log('showGameInfo  received')

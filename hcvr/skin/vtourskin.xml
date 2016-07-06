@@ -240,7 +240,7 @@
 	</action>-->
 	
 	<action name="doneClick">
-		jscall('var event = new Event("updateClick");event.click = krpano.get("clickTime"); document.dispatchEvent(new Event("updateClick")); console.log("doneClick  "+krpano.get("clickTime"));');
+		jscall('var event = new Event("updateClick"); event.click = krpano.get("clickTime"); document.dispatchEvent(new Event("updateClick")); console.log("doneClick  "+krpano.get("clickTime"));');
 		trace('doneClick');
 	</action>
 
@@ -252,11 +252,13 @@
 	
 	<action name="showGameInfo">
 		
-		trace ( 'showGameInfo  current scene name is ' );
+		trace ( 'showGameInfo  current scene index is ' );
 		
-		trace( get(xml.scene) ); 
+		trace( scene[get(xml.scene)].index ); 
 		
-		if ( get(xml.scene) == 'scene__________' , trace( 'do showGameInfo' ); jscall('var event = new Event("showGameInfo"); document.dispatchEvent(new Event("showGameInfo")); console.log(" js showGameInfo  ");'); trace( 'done showGameInfo' ); )
+		<!--if ( get(xml.scene) == 'scene__________' , trace( 'do showGameInfo' ); -->
+		
+		jscall('var event = new Event("showGameInfo"); event.sceneNum = scene[get(xml.scene)].index; document.dispatchEvent(new Event("showGameInfo")); console.log(" js showGameInfo  ");')
 		
 	</action>
 	

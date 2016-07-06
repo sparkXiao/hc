@@ -11,7 +11,7 @@ function door() {
 	
 	var orgDeg = window.orientation;
 	
-	alert('屏幕方向   '+orgDeg);
+//	alert('屏幕方向   '+orgDeg);
 	
 	var dePxRatio = window.devicePixelRatio;
 	

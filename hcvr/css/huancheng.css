@@ -160,20 +160,20 @@ html {
 #changeFir {
 
     float: left;
-    max-width: 50%;
+    max-width: 40%;
     height: auto;
     position: relative;
-    top: .6rem;
+    top: .6rem;  left: .1rem;
 }
 
 
 #invite {
 	
    float: right;
-    max-width: 50%;
+    max-width: 40%;
     height: auto;
     position: relative;
-    top: .6rem;
+    top: .6rem;  right: .1rem;
 }
 
 

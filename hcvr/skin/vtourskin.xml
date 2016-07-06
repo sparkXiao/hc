@@ -252,13 +252,13 @@
 	
 	<action name="showGameInfo">
 		
-		trace('showGameInfo after set sceneNum val is');
+		trace('showGameInfo current scene index is');
 		
-		trace( get(sceneNum) );
+		trace( scene[get(xml.scene)].index );
 		
 		<!--if ( get(xml.scene) == 'scene__________' , trace( 'do showGameInfo' ); -->
 		
-		jscall('var event = new Event("showGameInfo"); event.sceneNum = krpano.get("sceneNum"); document.dispatchEvent(new Event("showGameInfo")); console.log(" js showGameInfo  ");')
+		jscall('var event = new Event("showGameInfo"); document.dispatchEvent(new Event("showGameInfo")); console.log(" js showGameInfo  ");')
 		
 	</action>
 	
@@ -482,7 +482,7 @@
 	        onxmlcomplete="set(events[skin_events].onxmlcomplete,null); skin_startup();"
 	        onnewpano="skin_showloading(true); skin_update_scene_infos(); skin_deeplinking_update_url();"
 	        onremovepano="skin_showloading(true);"
-	        onloadcomplete="skin_showloading(false); set(sceneNum,scene[get(xml.scene)].index); showGameInfo();"
+	        onloadcomplete="skin_showloading(false); showGameInfo();"
 	        onidle="skin_deeplinking_update_url();"
 	        onresize="skin_onresize();"
 	        onenterfullscreen.fullscreensupport="set(layer[skin_btn_fs].crop, '64|576|64|64');"

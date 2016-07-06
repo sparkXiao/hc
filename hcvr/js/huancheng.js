@@ -443,6 +443,7 @@ function onnewSceneLay() {
 
 document.addEventListener("showGameInfo", function (event) {
 	
+	console.log('current scene   '+ krpano.get('xml.scene'));
 	
 	if (event.sceneNum == 0) {
 		
@@ -462,7 +463,7 @@ document.addEventListener("showGameInfo", function (event) {
 	}
 	
 	
-	console.log('showGameInfo  received  event.sceneNum  '+event.sceneNum)
+	console.log('showGameInfo  received  event.sceneNum  ')
 	
 });
 

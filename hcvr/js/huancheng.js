@@ -21,12 +21,12 @@ function door() {
 	}
 	
 	
-	/*adoptRatio = window.innerHeight / ( window.screen.height * dePxRatio );
+	adoptRatio = window.innerHeight / ( window.screen.height * dePxRatio );
 	
-	devicefontSize = Math.round( window.innerWidth * adoptRatio );*/
+	devicefontSize = Math.round( window.innerWidth * adoptRatio );
 		
 	
-	if (orgDeg == 0) {
+	/*if (orgDeg == 0) {
 		
 		adoptRatio = window.innerHeight / ( window.screen.height * dePxRatio);
 	
@@ -40,9 +40,9 @@ function door() {
 	
 		devicefontSize = Math.round( window.innerHeight * adoptRatio );
 
-	}
+	}*/
 	
-	
+	 
 	console.log('adoptRatio '+adoptRatio + '  window.innerWidth  '+ window.innerWidth);
 	
 	console.log('devicefontSize  '+devicefontSize);

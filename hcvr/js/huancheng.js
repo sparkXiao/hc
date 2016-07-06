@@ -443,9 +443,9 @@ function onnewSceneLay() {
 
 document.addEventListener("showGameInfo", function (event) {
 	
-	console.log('current scene   '+ krpano.get('xml.scene'));
+	var curSce = krpano.get('xml.scene');
 	
-	if (event.sceneNum == 0) {
+	if (curSce == 'scene_____________2-ok') {
 		
 		$('#VR').show();
 		

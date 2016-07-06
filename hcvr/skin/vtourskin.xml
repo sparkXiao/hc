@@ -252,17 +252,11 @@
 	
 	<action name="showGameInfo">
 		
-		trace ( 'showGameInfo  current scene index is ' );
-		
-		trace( scene[get(xml.scene)].index ); 
-		
-		trace('get sceneNum val is');
-		
-		trace( get(sceneNum) );
-		
 		trace('after set sceneNum val is');
 		
 		set(sceneNum,scene[get(xml.scene)].index);
+		
+		trace( get(sceneNum) );
 		
 		<!--if ( get(xml.scene) == 'scene__________' , trace( 'do showGameInfo' ); -->
 		

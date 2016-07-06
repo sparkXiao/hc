@@ -251,8 +251,10 @@
 	
 	
 	<action name="showGameInfo">
-		jscall('var event = new Event("showGameInfo"); document.dispatchEvent(new Event("showGameInfo")); console.log(" showGameInfo  ");');
-		trace('showGameInfo');
+		if ( get(xml.scene) == 'scene__________' ,
+			jscall('var event = new Event("showGameInfo"); document.dispatchEvent(new Event("showGameInfo")); console.log(" showGameInfo  ");');
+			trace('showGameInfo');
+		)
 	</action>
 	
 	

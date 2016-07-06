@@ -256,7 +256,7 @@
 		
 		trace( get(xml.scene) ); 
 		
-		if ( get(xml.scene) == 'scene__________' , jscall('var event = new Event("showGameInfo"); document.dispatchEvent(new Event("showGameInfo")); console.log(" showGameInfo  ");') )
+		if ( get(xml.scene) == 'scene__________' , trace( 'do showGameInfo' ); jscall('var event = new Event("showGameInfo"); document.dispatchEvent(new Event("showGameInfo")); console.log(" showGameInfo  ");') )
 		
 	</action>
 	

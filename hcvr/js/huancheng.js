@@ -1271,7 +1271,8 @@ function krpanoReady(krpanObj)
 		
 		onnewSceneLay();
 		
-//		$('.chat').hide();
+		
+		$('.chat').hide();
 		
 	});
 	

@@ -10,11 +10,6 @@ Body
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 /*body {
   background: -webkit-linear-gradient(315deg, #044f48, #2a7561);
   background: linear-gradient(135deg, #044f48, #2a7561);
@@ -42,14 +37,15 @@ body {
 Chat
 --------------------*/
 .chat {
+	
 	display: none;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 70vw;
-  height: 70vh;
+      width: 2rem;
+    height: 4rem;
   max-height: 500px;
   z-index: 2;
   overflow: hidden;
@@ -288,16 +284,17 @@ Message Box
   position: relative;
 }
 .message-box .message-input {
-  background: none;
-  border: none;
-  outline: none !important;
-  resize: none;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 11px;
-  height: 17px;
-  margin: 0;
-  padding-right: 20px;
-  width: 60vw;
+  position: absolute;
+    background: none;
+    border: none;
+    outline: none !important;
+    resize: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+    height: 90%;
+    margin: 0;
+    padding-right: 20px;
+    width: 80%;
 }
 .message-box textarea:focus:-webkit-placeholder {
   color: transparent;

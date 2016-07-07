@@ -403,7 +403,8 @@ html {
 	
 	display: inline-block;
 	font-size: 1.5rem;
-	background-color: white;
+	/*background-color: white;*/
+	background:rgba(255,255,255,.5);
 	color: black;
 	
 }

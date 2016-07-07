@@ -1191,7 +1191,7 @@ function krpanoReady(krpanObj)
 		    
 		    $('.chatUI').html(chatTxt);
 		    
-		    html2canvas( chatTxt, {
+		    html2canvas( $('.chatUI'), {
 		    	
 	         onrendered: function (canvas) {
 	         	

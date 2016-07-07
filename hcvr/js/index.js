@@ -121,9 +121,9 @@ var Fake = [
 // 调取 获取留言接口
 function fakeMessage() {
 	
-	/*$('<div class="message loading new"><figure class="avatar"><img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80_4.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+	$('<div class="message loading new"><figure class="avatar"><img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80_4.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
 							  
-  	updateScrollbar();*/
+  	updateScrollbar();
 							
   	if (IF_NET) {
 											
@@ -156,17 +156,13 @@ function fakeMessage() {
 							    return false;
 							  }*/
 							 
-						    
 						    $('.message.loading').remove();
 							 
-							
 							for (var i = 0; i < result.data.length; i++) {
 								
+							    $('<div class="message new"><figure class="avatar"><img src="'+ result.data[i].avatar_large +'" /></figure>' + result.data[i].msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
 							    
-							    $('<div class="message new"><figure class="avatar"><img src="'+ result.data[i].avatar_large +'" /></figure>' + result.data[i].msg + '</div>').addClass('new');
-							    
-							    
-							    html2canvas( $('.message new'), {
+							    /*html2canvas( $('.message new'), {
 		    	
 						         onrendered: function (canvas) {
 						                
@@ -190,11 +186,11 @@ function fakeMessage() {
 						                console.log('chatData  '+chatData);
 						                
 						             }
-					         	});
+					         	});*/
 							    
-							    /*setDate();
+							    setDate();
 							    
-							    updateScrollbar();*/
+							    updateScrollbar();
 								
 							} 
 						    

@@ -279,20 +279,30 @@ $('#VR').on('click', function () {
 function toogleShowChat () {
 	
 	if (ifshowChat) {
+		
+		$('.chat').hide();
 				
-		$('.chatDiv').animate({'top': '100%' },500);
+		/*$('.chatDiv').animate({'top': '100%' },500);
 		
 		$('.chatDiv').css('position','absolute');
 		
-		$('.chatDiv').hide();
+		$('.chatDiv').hide();*/
 		
 	} else {
+		
+		$('.chat').show();
+	
+		$messages.mCustomScrollbar();
+		
+		setTimeout(function() {
+	    	fakeMessage();
+	  	}, 100);
 				
-		$('.chatDiv').show();
+		/*$('.chatDiv').show();
 		
 		$('.chatDiv').animate({'top': '94%' },500);
 		
-		$('.chatDiv').css('position','fixed');
+		$('.chatDiv').css('position','fixed');*/
 	}
 		
 	
@@ -929,13 +939,13 @@ function krpanoReady(krpanObj)
 	console.log('vlookat  '+krpano.get('view.vlookat'));
 	
 	
-	$('.chat').show();
+	/*$('.chat').show();
 	
-//	$messages.mCustomScrollbar();
+	$messages.mCustomScrollbar();
 	
 	setTimeout(function() {
     	fakeMessage();
-  	}, 100);
+  	}, 100);*/
   
   
 	$('#gobtn').on('click', function(e) {

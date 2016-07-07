@@ -947,6 +947,9 @@ function krpanoReady(krpanObj)
 	setTimeout(function() {
     	fakeMessage();
   	}, 100);*/
+  	
+  	
+  	$('.chat').hide();
   
   
 	$('#gobtn').on('click', function(e) {

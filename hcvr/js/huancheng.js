@@ -297,6 +297,7 @@ function toogleShowChat () {
 		setTimeout(function() {
 	    	fakeMessage();
 	  	}, 100);
+	  	
 				
 		/*$('.chatDiv').show();
 		

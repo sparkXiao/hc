@@ -77,7 +77,7 @@ function insertMessage() {
 						  
 						  updateScrollbar();
 						  
-						  fakeMessage();
+//						  fakeMessage();
 						    
 							  
 						}

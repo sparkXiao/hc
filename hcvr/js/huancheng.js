@@ -6,7 +6,7 @@ uidString = '', leftCount = 0, totalCount = 7, playCount = 0, respondTxt = '',
 getPrizeCount = 0, simulateClickResult = 0, getFLowerCount = 0, ifGetNull = false, 
 ifGetPrize = false;
 
-$('.chat').hide();
+//$('.chat').hide();
 
 //字体图片随窗体缩放
 function door() {
@@ -82,14 +82,14 @@ window.onresize = function () {
 	door();
 	
 	
-	alert('window.screen.width  '+window.screen.width+ '  window.screen.height  '+window.screen.height);
+	/*alert('window.screen.width  '+window.screen.width+ '  window.screen.height  '+window.screen.height);
 
 
 	alert('window.innerWidth  '+window.innerWidth + '  window.innerHeight  '+window.innerHeight);
 	
 	
 	alert('document.documentElement.clientWidth  '+ document.documentElement.clientWidth + '  document.documentElement.clientHeight  '+ document.documentElement.clientHeight);
-
+*/
 	
 	console.log('onresize door ');
 }
@@ -552,7 +552,7 @@ document.addEventListener("showGameInfo", function (event) {
 		
 		$('#VR').show();
 		
-		$('#chatIcon').show();
+//		$('#chatIcon').show();
 		
 		$('.packageInfo').show();
 		

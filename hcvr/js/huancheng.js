@@ -253,7 +253,7 @@ function toogleShowChat () {
 				
 		$('.chatDiv').show();
 		
-		$('.chatDiv').animate({'top': '95%' },500);
+		$('.chatDiv').animate({'top': '92%' },500);
 		
 		$('.chatDiv').css('position','fixed');
 	}

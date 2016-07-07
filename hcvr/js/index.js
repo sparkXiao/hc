@@ -9,6 +9,8 @@ var $messages = $('.messages-content'),
   }, 100);
 });
 */
+
+
 function updateScrollbar() {
   $messages.mCustomScrollbar("update").mCustomScrollbar('scrollTo', 'bottom', {
     scrollInertia: 10,
@@ -119,9 +121,9 @@ var Fake = [
 // 调取 获取留言接口
 function fakeMessage() {
 	
-	$('<div class="message loading new"><figure class="avatar"><img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80_4.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+	/*$('<div class="message loading new"><figure class="avatar"><img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80_4.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
 							  
-  	updateScrollbar();
+  	updateScrollbar();*/
 							
   	if (IF_NET) {
 											
@@ -158,9 +160,37 @@ function fakeMessage() {
 							 
 							for (var i = 0; i < result.data.length; i++) {
 								
-							    $('<div class="message new"><figure class="avatar"><img src="'+ result.data[i].avatar_large +'" /></figure>' + result.data[i].msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
-							    setDate();
-							    updateScrollbar();
+							    $('<div class="message new"><figure class="avatar"><img src="'+ result.data[i].avatar_large +'" /></figure>' + result.data[i].msg + '</div>').addClass('new');
+							    
+							    html2canvas( $('.message new'), {
+		    	
+						         onrendered: function (canvas) {
+						                
+						                
+						                var imgageData = canvas.toDataURL("image/png");
+
+									    krpano.call("addhotspot(chatPng"+i+");set(hotspot[chatPng"+i+"].url,'"+ imgageData + "');set(hotspot[chatPng"+i+"].height,40);set(hotspot[chatPng"+i+"].width,40);");
+						                
+						                krpano.call("set(hotspot[chatPng"+i+"].ath, "+ i/360 +");set(hotspot[chatPng"+i+"].atv,'"+ i/90 +"');");
+						                
+						                
+								    	console.log('render chatPng');
+								    	
+						                console.log('imgageData  '+imgageData);
+						                
+						                
+						                var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+						                
+						                console.log('newData  '+newData);
+						                
+						                console.log('chatData  '+chatData);
+						                
+						             }
+					         	});
+							    
+							    /*setDate();
+							    
+							    updateScrollbar();*/
 								
 							} 
 						    

@@ -1041,12 +1041,12 @@ function krpanoReady(krpanObj)
 						} else {
 							
 							
-							Lobibox.alert(
+							/*Lobibox.alert(
 							    'success', // Any of the following
 							    {
 							        msg:'调取 获取随机邀请好友 接口 成功  '
 							    }
-							);
+							);*/
 							
 							uidString = '';
 							
@@ -1404,12 +1404,12 @@ function krpanoReady(krpanObj)
 							$('#yinlianNum').children('p').text(String( result.data.lotus ));
 							
 							
-							Lobibox.alert(
+							/*Lobibox.alert(
 							    'success', // Any of the following
 							    {
 							        msg:'获取 登录用户的基本信息和隐莲信息 成功   当前用户 剩余可玩次数   '+totalCount
 							    }
-							);
+							);*/
 							
 							console.log('当前用户 剩余可玩次数   '+totalCount)
 						}

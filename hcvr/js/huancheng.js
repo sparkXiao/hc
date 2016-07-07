@@ -792,7 +792,7 @@ function showTxt (ifTriggerInvite) {
 	if (!ifTriggerInvite) {
 		
 		
-		if (respondTxt == '邀请成功，正在返回大厅') {
+		if (respondTxt == '邀请成功，正在返回大厅' || respondTxt == '正在返回大厅...') {
 			
 			
 			$('#clickShow').css('width','1.5rem');

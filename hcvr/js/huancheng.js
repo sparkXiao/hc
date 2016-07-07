@@ -135,7 +135,7 @@ $('#clofri').on('click',function () {
 										
 										$('#VR').show();
 										
-										$('#chatIcon').show();
+//										$('#chatIcon').show();
 									
 									},700);
 									
@@ -1030,13 +1030,13 @@ function krpanoReady(krpanObj)
 						if (result.code != 10000) {
 							
 							
-							Lobibox.alert(
+							/*Lobibox.alert(
 							    'error', // Any of the following
 							    {
 							        msg:result.msg
 							    }
 							);
-						
+						    */
 						
 						} else {
 							
@@ -1126,13 +1126,13 @@ function krpanoReady(krpanObj)
 								if (result.code != 10000) {
 									
 									
-									Lobibox.alert(
+									/*Lobibox.alert(
 									    'error', // Any of the following
 									    {
 									        msg:result.msg
 									    }
 									);
-								
+								*/
 								
 								} else {
 									
@@ -1165,7 +1165,7 @@ function krpanoReady(krpanObj)
 										
 										$('#VR').show();
 										
-										$('#chatIcon').show();
+//										$('#chatIcon').show();
 									
 									},700);
 									
@@ -1292,12 +1292,12 @@ function krpanoReady(krpanObj)
 						if (result.code != 10000) {
 							
 							
-							Lobibox.alert(
+							/*Lobibox.alert(
 							    'error', // Any of the following
 							    {
 							        msg:result.msg
 							    }
-							);
+							);*/
 							
 							respondTxt = ' OMG! 您的采摘次数已经没有了，'+'\n'+'邀请好友参与游戏，'+'\n'+'就可获得新的采摘次数哦！';
 				
@@ -1380,12 +1380,12 @@ function krpanoReady(krpanObj)
 						if (result.code != 10000) {
 							
 							
-							Lobibox.alert(
+							/*Lobibox.alert(
 							    'error', // Any of the following
 							    {
 							        msg:result.msg
 							    }
-							);
+							);*/
 						
 						
 						} else {

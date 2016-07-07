@@ -6,6 +6,8 @@ uidString = '', leftCount = 0, totalCount = 7, playCount = 0, respondTxt = '',
 getPrizeCount = 0, simulateClickResult = 0, getFLowerCount = 0, ifGetNull = false, 
 ifGetPrize = false;
 
+$('.chat').hide();
+
 //字体图片随窗体缩放
 function door() {
 	
@@ -949,8 +951,6 @@ function krpanoReady(krpanObj)
   	}, 100);*/
   	
   	
-  	$('.chat').hide();
-  
   
 	$('#gobtn').on('click', function(e) {
 		

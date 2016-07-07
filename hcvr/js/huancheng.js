@@ -81,6 +81,55 @@ constantScreenWidth = window.innerWidth;
 constantScreenHeight = window.innerHeight;
 
 
+
+$('#clofri').on('click',function () {
+	
+	$('.friendsP').hide();
+									
+									
+									
+									respondTxt = '正在返回大厅...';
+									
+									
+									showTxt(false);
+									
+									
+									setTimeout(function () {
+										
+										$('#overlay').fadeOut('fast');
+									
+										$('#overlay').hide();
+										
+										krpano.call("loadscene('scene_____________2-ok');");
+										
+										$('#VR').show();
+										
+										$('#chatIcon').show();
+									
+									},700);
+									
+									
+									
+									$('.chatDiv').show();
+									
+									
+									$('#treaNum').on('click',function () {
+	
+										window.location.href = 'http://hcvr.github.io/hc/chest';
+										
+									})
+									
+									
+									$('#treaNum').removeClass('treaNum');
+									
+									$('#treaNum').addClass('trea');
+									
+									$('#treaNum').children('p').hide();
+	
+})
+
+
+
 console.log('constantScreenHeight  '+ constantScreenHeight + ' constantScreenWidth  '+constantScreenWidth)
 
 

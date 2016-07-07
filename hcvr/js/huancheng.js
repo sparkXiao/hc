@@ -242,16 +242,20 @@ $('#VR').on('click', function () {
 function toogleShowChat () {
 	
 	if (ifshowChat) {
-		
+				
 		$('.chatDiv').animate({'top': '100%' },500);
+		
+		$('.chatDiv').css('position','absolute');
 		
 		$('.chatDiv').hide();
 		
 	} else {
-		
+				
 		$('.chatDiv').show();
 		
 		$('.chatDiv').animate({'top': '95%' },500);
+		
+		$('.chatDiv').css('position','fixed');
 	}
 		
 	

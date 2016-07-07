@@ -928,16 +928,14 @@ function krpanoReady(krpanObj)
 	
 	console.log('vlookat  '+krpano.get('view.vlookat'));
 	
-	fakeMessage();
 	
-	
-	/*
 	$('.chat').show();
 	
-	$messages.mCustomScrollbar();
-  		setTimeout(function() {
+//	$messages.mCustomScrollbar();
+	
+	setTimeout(function() {
     	fakeMessage();
-  	}, 100);*/
+  	}, 100);
   
   
 	$('#gobtn').on('click', function(e) {

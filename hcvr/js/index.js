@@ -156,11 +156,15 @@ function fakeMessage() {
 							    return false;
 							  }*/
 							 
+						    
 						    $('.message.loading').remove();
 							 
+							
 							for (var i = 0; i < result.data.length; i++) {
 								
+							    
 							    $('<div class="message new"><figure class="avatar"><img src="'+ result.data[i].avatar_large +'" /></figure>' + result.data[i].msg + '</div>').addClass('new');
+							    
 							    
 							    html2canvas( $('.message new'), {
 		    	

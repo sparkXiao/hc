@@ -334,7 +334,7 @@ html {
     right: 0;
     top: 100%;
     width: 99%;
-    height: 5%;
+    height: .3rem;
     background-size: 100% 100%;
     background-image: url(../img/chat.png); no-repeat;
 	
@@ -358,6 +358,7 @@ html {
 	  height: 98%;
     width: 15%;
     right: 0;
+    
    /* background-size: 100% 100%;
     background-image: url(../img/sentTxt.png); no-repeat;*/
 }
@@ -395,7 +396,7 @@ html {
     top: 3%;
     left: 1%;
 	width: 85%; height: 98%;
-	
+	    font-size: .17rem;
 }
 
 .chatUI {

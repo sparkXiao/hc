@@ -21,9 +21,27 @@ function door() {
 	}
 	
 	
-	adoptRatio = window.innerHeight / ( window.screen.height * dePxRatio );
+	/*adoptRatio = window.innerHeight / ( window.screen.height * dePxRatio );
 	
-	devicefontSize = Math.round( window.innerWidth * adoptRatio );
+	devicefontSize = Math.round( window.innerWidth * adoptRatio );*/
+	
+	
+	if (window.innerHeight > window.innerWidth) {
+		
+		
+		adoptRatio = window.innerHeight / ( window.screen.height * dePxRatio);
+	
+		devicefontSize = Math.round( window.innerWidth * adoptRatio );
+
+		
+	} else {
+		
+		
+		adoptRatio = window.innerWidth / ( window.screen.width * dePxRatio);
+	
+		devicefontSize = Math.round( window.innerHeight * adoptRatio );
+
+	}
 		
 	
 	/*if (orgDeg == 0) {
@@ -58,7 +76,18 @@ door();
 
 window.onresize = function () {
 	
+	
 	door();
+	
+	
+	alert('window.screen.width  '+window.screen.width+ '  window.screen.height  '+window.screen.height);
+
+
+	alert('window.innerWidth  '+window.innerWidth + '  window.innerHeight  '+window.innerHeight);
+	
+	
+	alert('document.documentElement.clientWidth  '+ document.documentElement.clientWidth + '  document.documentElement.clientHeight  '+ document.documentElement.clientHeight);
+
 	
 	console.log('onresize door ');
 }
@@ -229,7 +258,15 @@ $('#chatIcon').on('click', function () {
 	
 	toogleShowChat();
 	
-})
+});
+
+
+$('.chatTxtVal').on('click', function () {
+	
+	
+	
+});
+
 
 
 $('#VR').on('click', function () {
@@ -253,7 +290,7 @@ function toogleShowChat () {
 				
 		$('.chatDiv').show();
 		
-		$('.chatDiv').animate({'top': '92%' },500);
+		$('.chatDiv').animate({'top': '94%' },500);
 		
 		$('.chatDiv').css('position','fixed');
 	}

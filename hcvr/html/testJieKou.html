@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>接口测试</title>
+		<link rel="stylesheet" href="../css/lobibox.css" />
+		<script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script>
+		<script type="text/javascript" src="../js/lobibox.js" ></script>
+		<script type="text/javascript" src="../js/api.js" ></script>
+		<script type="text/javascript" src="../js/GlobalConstant.js" ></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+		accessData('getfriend');
+		
+		function accessData (funName) {
+			
+			if (IF_NET) {
+					
+					ajaxRequest(false, "get", funName, '', function(result) {
+					
+					
+								if (result.code != 10000) {
+									
+									
+									Lobibox.alert(
+									    'error', // Any of the following
+									    {
+									        msg:result.msg
+									    }
+									);
+								
+								
+								} else {
+									
+									
+									Lobibox.alert(
+									    'success', // Any of the following
+									    {
+									        msg:'调取 '+funName+' 接口 成功  '
+									    }
+									);
+									
+									
+									
+								}
+								
+						
+							}, errorReturn);
+					
+				}
+		}
+		
+			
+		</script>
+	</body>
+</html>

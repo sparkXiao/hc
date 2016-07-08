@@ -29,7 +29,7 @@
 	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
 	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
 	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
-	               loadingtext="loading..."
+	               loadingtext="正在加载场景..."
 	               layout_width="100%"
 	               layout_maxwidth.normal="900"
 	               layout_maxwidth.mobile=""
@@ -108,14 +108,14 @@
 	       shadow="0.01" shadowrange="9.0" shadowcolor="0xFFFFFF" shadowalpha="0.5"
 	       />
 
-	<!-- show a 'rotate the device' info when the mobile device is in portrait mode in VR mode -->
+	<!-- show a 'rotate the device' info when the mobile device is in portrait mode in VR mode 
 	<layer name="webvr_rotate_to_landscape_request" keep="true" vr="true" devices="mobile"
 	       url="rotate_device.png" scale="0.5"
 	       align="top" edge="center" y="28%"
 	       autoalpha="true" alpha="0.0"
 	       enabled="false"
 	       />
-
+-->
 	<events name="webvr_events" keep="true" devices="html5"
 	        onresize.mobile="webvr_act_as_gyro_in_portrait_mode();"
 	        onviewchange=""
@@ -134,12 +134,17 @@
 			  );
 		  ,
 			set(display.hotspotrenderer, auto);
+			
+			
+			
 			if(loadscene_flags_backup !== null, copy(skin_settings.loadscene_flags, loadscene_flags_backup));
 			tween(layer[webvr_rotate_to_landscape_request].alpha, 0.0, 0.0);
 			set(hotspot[webvr_prev_scene].visible, false);
 			set(hotspot[webvr_next_scene].visible, false);
 			set(events[webvr_events].onviewchange, null);
 		  );
+		  
+		  
 	</action>
 
 	<action name="webvr_act_as_gyro_in_portrait_mode">
@@ -235,10 +240,57 @@
 	</action>-->
 	
 	<action name="doneClick">
-		jscall('var event = new Event("updateClick");event.click = krpano.get("clickTime"); document.dispatchEvent(new Event("updateClick")); console.log("doneClick  "+krpano.get("clickTime"));');
+		jscall('var event = new Event("updateClick"); event.click = krpano.get("clickTime"); document.dispatchEvent(new Event("updateClick")); console.log("doneClick  "+krpano.get("clickTime"));');
 		trace('doneClick');
 	</action>
 
+	<action name="hideChat">
+		jscall('var event = new Event("hideChat"); document.dispatchEvent(new Event("hideChat")); console.log(" hideChat  ");');
+		trace('hideChat');
+	</action>
+	
+	
+	<action name="showGameInfo">
+		
+		trace('showGameInfo current scene index is');
+		
+		trace( scene[get(xml.scene)].index );
+		
+		<!--if ( get(xml.scene) == 'scene__________' , trace( 'do showGameInfo' ); -->
+		
+		jscall('var event = new Event("showGameInfo"); document.dispatchEvent(new Event("showGameInfo")); console.log(" js showGameInfo  ");')
+		
+	</action>
+	
+	
+	<action name="hideHotSpots">
+		
+		trace ( 'hideHotSpots  current scene name is ' );
+		
+		trace( get(xml.scene) ); 
+		
+		if ( get(xml.scene) == 'scene__________' , for(set(i,0), i LT hotspot.count, inc(i), 
+	    
+        	set(hotspot[get(i)].visible,false); 
+	      
+	    )
+	   
+    )	
+		
+	  
+	</action>
+	
+	
+	<action name="showHotSpots">
+		
+	  for(set(i,0), i LT hotspot.count, inc(i), 
+	    
+        set(hotspot[get(i)].visible,true); 
+	      
+	   );
+	   
+	</action>
+	
 	
 	<!-- skin styles -->
 
@@ -272,15 +324,22 @@
 	       onloaded="do_crop_animation(100,100, 60)"
 	       />
 	              
-	<style name="skin_menstyle" url="men.png" scale="0.15" edge="top" distorted="true"
+	<style name="skin_menstyle" url="men.png" scale="0.5" edge="top" distorted="true"
 	       tooltip="采集隐莲
 	       	        传说中的隐莲圣地"
-	       onclick="if(linkedscene, set(enabled,false); skin_hidetooltips(); tween(depth|alpha|oy|rx, 4000|0.0|-50|-60, 0.5, default, loadscene(get(linkedscene),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend)); skin_updatescroll(); ); );"
-	       onover="tween(scale,0.2);copy(layer[skin_tooltip].html, tooltip);
+	       onclick="webvr.exitVR();hideChat();if(linkedscene, set(enabled,false); skin_hidetooltips(); tween(depth|alpha|oy|rx, 4000|0.0|-50|-60, 0.5, default, loadscene(get(linkedscene),null,get(skin_settings.loadscene_flags),get(skin_settings.loadscene_blend)); skin_updatescroll(); ); );"
+	       onover="tween(scale,0.55);copy(layer[skin_tooltip].html, tooltip);
 	                     set(layer[skin_tooltip].visible, true);
 	                     tween(layer[skin_tooltip].alpha, 1.0, 0.1);
 	                     asyncloop(hovering, copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );"
-	       onout="tween(scale,0.15);tween(layer[skin_tooltip].alpha, 0.0, 0.1, default, set(layer[skin_tooltip].visible,false), copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );"
+	       onout="tween(scale,0.5);tween(layer[skin_tooltip].alpha, 0.0, 0.1, default, set(layer[skin_tooltip].visible,false), copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );"
+	       onloaded="if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"
+	       />
+	
+	<style name="skin_menstyle1" url="men1.png" scale="0.5" edge="top" distorted="true"
+	       tooltip="暂未开放"
+	       onclick=""
+	       onout="tween(scale,0.5);tween(layer[skin_tooltip].alpha, 0.0, 0.1, default, set(layer[skin_tooltip].visible,false), copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );"
 	       onloaded="if(linkedscene AND skin_settings.tooltips_hotspots, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); );"
 	       />
 		   
@@ -320,7 +379,7 @@
 	       />
 
 
-	<!-- the tooltip textfield -->
+	<!-- the tooltip textfield 
 	<layer name="skin_tooltip" keep="true"
 	       url="%SWFPATH%/plugins/textfield.swf"
 	       parent="STAGE"
@@ -334,13 +393,20 @@
 	       html=""
 	       />
 
-
+-->
 
 	<!-- skin layout -->
 	<layer name="skin_layer" keep="true" type="container" align="top" width="get:skin_settings.layout_width" maxwidth="get:skin_settings.layout_maxwidth" height="100%" maskchildren="true" visible="false">
+	
+	
 		<layer name="skin_scroll_window" type="container" align="bottom" width="100%" height="100%" x="0" y="calc:skin_settings.controlbar_offset + skin_settings.controlbar_height - skin_settings.controlbar_overlap" maskchildren="true" onloaded="skin_calc_opened_closed();" zorder="1">
+		
+		<!--
 			<layer name="skin_scroll_layer" type="container" align="bottom" width="get:skin_settings.controlbar_width" height="100%" x="0" y="200" y_offset="get:skin_settings.controlbar_overlap" accuracy="1" bgalpha="get:skin_settings.design_bgalpha" bgcolor="get:skin_settings.design_bgcolor" bgborder="get:skin_settings.design_bgborder" bgroundedge="get:skin_settings.design_bgroundedge" bgshadow="get:skin_settings.design_bgshadow">
+			 
 				<layer name="skin_title" url="%SWFPATH%/plugins/textfield.swf" align="lefttop" edge="leftbottom" width="95%" height="32" autoheight="true" x.normal="5" x.mobile="2" y.normal="-2" y.mobile="0" zorder="4" enabled="false" background="false" border="false" css="calc:skin_settings.design_text_css + ' text-align:left; font-size:' + (device.mobile ? 12 : 16) + 'px;'" textshadow="get:skin_settings.design_text_shadow" visible="false" />
+				-->
+				
 				<layer name="skin_scroll_container" type="container" align="lefttop" width="100%" height="100%" x="0" y="0" bgroundedge="get:skin_settings.design_bgroundedge" maskchildren="true">
 					<layer name="skin_thumbs_container" type="container" align="lefttop" width="100%" height="100%" visible="false">
 						<layer name="skin_thumbs_scrollleft"  style="skin_base|skin_glow" crop="0|64|64|64"  align="lefttop"  edge="left"  x="5" y="50" scale="0.5" zorder="2" alpha="1.0" ondown2="asyncloop(pressed, layer[skin_thumbs].scrollby(+2,0));" visible="false" />
@@ -358,13 +424,15 @@
 						</layer>
 					</layer>
 				</layer>
-			</layer>
+			<!-- </layer> -->
 		</layer>
-
+		 
+		<!--
 		<layer name="skin_splitter_bottom" type="container" align="bottom" width="100%" height="calc:skin_settings.controlbar_offset + skin_settings.controlbar_height - skin_settings.controlbar_overlap" y="0" maskchildren="true" onloaded="skin_calc_opened_closed();" zorder="2">
 			<layer name="skin_control_bar_bg" type="container" align="bottom" width="get:skin_settings.controlbar_width" height="calc:skin_settings.controlbar_height + skin_settings.controlbar_overlap" x="0" y="get:skin_settings.controlbar_offset" bgcolor="get:skin_settings.design_bgcolor" bgalpha="get:skin_settings.design_bgalpha" bgborder="get:skin_settings.design_bgborder" bgroundedge="get:skin_settings.design_bgroundedge" bgshadow="get:skin_settings.design_bgshadow" />
 		</layer>
-
+		
+		
 		<layer name="skin_control_bar" type="container" align="bottom" width="get:skin_settings.controlbar_width" height="calc:skin_settings.controlbar_height" x="0" y="get:skin_settings.controlbar_offset" onloaded="skin_calc_opened_closed();" zorder="3">
 			<layer name="skin_control_bar_buttons" type="container" align="leftbottom" width="100%" height="get:skin_settings.controlbar_height">
 				<layer name="skin_btn_prev"      style="skin_base|skin_glow" crop="0|64|64|64"   align="left"        x="5"    y="0"  scale="0.5" alpha="0.5"  onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(-1), skin_nextscene(-1) );" />
@@ -388,23 +456,23 @@
 				<layer name="skin_btn_next"      style="skin_base|skin_glow" crop="64|64|64|64"  align="right"       x="5"    y="0"   scale="0.5" alpha="0.5"  onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1) );" />
 				</layer>
 			</layer>
-
+		-->
 		<layer name="skin_loadingtext" url="%SWFPATH%/plugins/textfield.swf" align="center" x="5" y="-5" html="get:skin_settings.loadingtext" visible="false" autoheight="true" background="false" border="false" enabled="false" css="calc:skin_settings.design_text_css + ' text-align:center; font-style:italic; font-size:22px;'" textshadow="get:skin_settings.design_text_shadow" />
 		<layer name="skin_buttonglow"  style="skin_base" crop="64|384|64|64" align="center" x="0" y="1" scale="1.0" alpha="0.0" visible="false" enabled="false" />
 		<layer name="skin_thumbborder" type="container" x="get:skin_settings.design_thumbborder_padding" y="get:skin_settings.design_thumbborder_padding" width="calc:skin_settings.thumbs_width - 2*skin_settings.design_thumbborder_padding" height="calc:skin_settings.thumbs_height - 2*skin_settings.design_thumbborder_padding" visible="false" enabled="false" align="lefttop" bgborder="get:skin_settings.design_thumbborder_bgborder" bgroundedge="get:skin_settings.design_thumbborder_bgroundedge" />
 	</layer>
 
-	<!-- previous/next scene buttons for the hidden skin mode -->
+	<!-- previous/next scene buttons for the hidden skin mode 
 	<layer name="skin_btn_prev_fs" keep="true" type="container" align="lefttop"  x="-50" width="40" height="100%" bgcapture="true" alpha="0.25" onclick="skin_nextscene_loop(-1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_prev_fs_icon" style="skin_base" crop="0|64|64|64"  align="center" scale="0.5" enabled="false" />
 	</layer>
 	<layer name="skin_btn_next_fs" keep="true" type="container" align="righttop" x="-50" width="40" height="100%" bgcapture="true" alpha="0.25" onclick="skin_nextscene_loop(+1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
 		<layer name="skin_btn_next_fs_icon" style="skin_base" crop="64|64|64|64" align="center" scale="0.5" enabled="false" />
 	</layer>
-
+-->
 
 	<!-- gyro plugin -->
-	<plugin name="skin_gyro" keep="true" url="" html5_url="%SWFPATH%/plugins/gyro2.js" devices="html5" enabled="false" onavailable="skin_arrange_buttons();" />
+	<plugin name="skin_gyro" keep="true" url="" html5_url="%SWFPATH%/plugins/gyro2.js" devices="html5" enabled="true" onavailable="skin_arrange_buttons();"  />
 
 
 
@@ -414,14 +482,20 @@
 	        onxmlcomplete="set(events[skin_events].onxmlcomplete,null); skin_startup();"
 	        onnewpano="skin_showloading(true); skin_update_scene_infos(); skin_deeplinking_update_url();"
 	        onremovepano="skin_showloading(true);"
-	        onloadcomplete="skin_showloading(false);"
+	        onloadcomplete="skin_showloading(false); showGameInfo();"
 	        onidle="skin_deeplinking_update_url();"
 	        onresize="skin_onresize();"
 	        onenterfullscreen.fullscreensupport="set(layer[skin_btn_fs].crop, '64|576|64|64');"
 	        onexitfullscreen.fullscreensupport="set(layer[skin_btn_fs].crop, '0|576|64|64');"
 	        onkeydown="skin_keydown_event();"
 	        />
-
+	        
+			
+	<events name="hideHotSpot" keep="true"
+	        onnewscene="hideHotSpots()"
+	        />		
+	
+	
 
 	<!-- skin actions -->
 
@@ -461,14 +535,25 @@
 		if(skin_settings.littleplanetintro AND (device.webgl OR device.flash),
 			skin_setup_littleplanetintro();
 		  );
+		  
+		  
+		
 
 		skin_addthumbs();
 		skin_onresize();
 		skin_updatescroll();
 
 		set(layer[skin_layer].visible, true);
+		
+		
+		set(plugin[skin_gyro].enabled, true);
+		
+		
 	</action>
-
+	
+	
+	
+	
 
 	<action name="skin_addthumbs">
 		if(skin_settings.thumbs == false,
@@ -586,6 +671,9 @@
 				  );
 			  );
 		  );
+		  
+		  
+		  
 	</action>
 
 
@@ -805,7 +893,7 @@
 
 	<action name="skin_showloading">
 		if(display.stereo == true,
-			set(layer[skin_loadingtext].visible, false);
+			set(layer[skin_loadingtext].visible, false); 
 		  ,
 			set(layer[skin_loadingtext].visible, %1);
 		  );

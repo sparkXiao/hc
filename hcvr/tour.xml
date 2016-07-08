@@ -73,35 +73,72 @@
 	<!-- startup action - load the first pano/scene -->
 	<action name="startup" autorun="onstart">
 		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		
 		loadscene(get(startscene), null, MERGE);
+		
 		if(startactions !== null, startactions() );
+		
+		
+		<!--set(layer[skin_title_pr].html,get(title)); -->
 	</action>
 	
 	
-	<scene name="scene_____________2-ok" title="冰国宫殿" onstart="" thumburl="panos/____________2-ok.tiles/thumb.jpg" lat="" lng="" heading="">
+	<action name="picture_resize">
+ 
+	<!-- 使用屏幕宽度或高度的百分之九十 -->
+	 
+		div(aspect, layer[%1].imagewidth, layer[%1].imageheight);
+		 
+		mul(new_width, stagewidth, 0.90);
+		 
+		div(new_height, new_width, aspect);
+		 
+		mul(max_height, stageheight, 0.90);
+		 
+		if(new_height GT max_height,
+		 
+		copy(new_height, max_height);
+		 
+		mul(new_width, new_height, aspect);
+		 
+		);
+		 
+		roundval(new_width);
+		 
+		roundval(new_height);
+		 
+		copy(layer[%1].width, new_width);
+		 
+		copy(layer[%1].height, new_height);
+	 
+	</action>
+	
+	
+	
+	<scene name="scene_____________2-ok" title="冰国宫殿" onstart="" thumburl="panos/tiles2/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="126.914" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/____________2-ok.tiles/preview.jpg" />
+		<preview url="panos/tiles2/preview.jpg" />
 
 		<image type="CUBE" multires="true" tilesize="512">
 			<level tiledimagewidth="2560" tiledimageheight="2560">
-				<cube url="panos/____________2-ok.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+				<cube url="panos/tiles2/%s/l3/%v/l3_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="1280" tiledimageheight="1280">
-				<cube url="panos/____________2-ok.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				<cube url="panos/tiles2/%s/l2/%v/l2_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="640" tiledimageheight="640">
-				<cube url="panos/____________2-ok.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				<cube url="panos/tiles2/%s/l1/%v/l1_%s_%v_%h.jpg" />
 			</level>
 		</image>
 
 		<!-- place your scene hotspots here -->
 		
 
-		<hotspot name="spot4" tooltip="暂未开放" style="skin_menstyle" ath="-39.508" atv="0.183" linkedscene="www" />
+		<hotspot name="spot4" tooltip="暂未开放" style="skin_menstyle1" ath="-39.992" atv="-7.623"  />
 		
-		<hotspot name="spot5" style="skin_menstyle" ath="0.162" atv="-3.0" linkedscene="scene__________" />
+		<hotspot name="spot5" style="skin_menstyle" ath="6.014" atv="-9.462" linkedscene="scene__________" />
 		
 		
 		<!-- 
@@ -117,43 +154,152 @@
 		<hotspot name="spot8" style="skin_menstyle" ath="-130.079" atv="1.976" linkedscene="scene_____________2-ok" />
 		
 		 -->
+		 
+		 
+		 <layer name="test" url="img/1.jpg" align="center"
+ 
+			alpha="0" visible="false"
+			 
+			onclick="tween(alpha,0);delayedcall(0.5,set(visible,false));"
+			 
+			onloaded="picture_resize(get(name));" />
+			 
+			 
+			<events name="picture_period"
+			 
+				onpreviewcomplete="
+				 
+				set(layer[test].visible,true);
+				 
+				tween(layer[test].alpha,1);
+				 
+				delayedcall(3,tween(layer[test].alpha,0);delayedcall(0.3,set(layer[test].visible,false)));
+				
+				"/>
 			
+		
+	
 	</scene>
 	
 	
-	<scene name="scene__________" title="人间" onstart="" thumburl="panos/_________.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene__________" title="人间" onstart="" thumburl="panos/tiles/thumb.jpg" lat="" lng="" heading="">
 
 		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/_________.tiles/preview.jpg" />
+		<preview url="panos/tiles/preview.jpg" />
 
 		<image type="CUBE" multires="true" tilesize="512">
 			<level tiledimagewidth="2560" tiledimageheight="2560">
-				<cube url="panos/_________.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+				<cube url="panos/tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="1280" tiledimageheight="1280">
-				<cube url="panos/_________.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+				<cube url="panos/tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
 			</level>
 			<level tiledimagewidth="640" tiledimageheight="640">
-				<cube url="panos/_________.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+				<cube url="panos/tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
 			</level>
 		</image>
 
 		<!-- place your scene hotspots here -->
-		<hotspot name="spot1" style="skin_yinlianstyle" ath="90.070" atv="15.687"  linkedscene = "www" />
-		<hotspot name="spot2" style="skin_yinlianstyle" ath="125.002" atv="23.456" linkedscene = "www" />
-		<hotspot name="spot3" style="skin_yinlianstyle" ath="-103.807" atv="21.519" linkedscene = "www" />
+		<hotspot visible='flase' name="spot1" style="skin_yinlianstyle" ath="90.070" atv="15.687"  linkedscene = "www" />
+		<hotspot visible='flase' name="spot2" style="skin_yinlianstyle" ath="125.002" atv="23.456" linkedscene = "www" />
+		<hotspot visible='flase' name="spot3" style="skin_yinlianstyle" ath="-101.320" atv="7.184" linkedscene = "www" />
 		
-		<hotspot name="spot4" style="skin_yinlianstyle" ath="-62.652" atv="23.586" linkedscene="www" />
-		<hotspot name="spot5" style="skin_yinlianstyle" ath="-141.266" atv="18.301" linkedscene="www" />
-		<hotspot name="spot6" style="skin_yinlianstyle" ath="178.658" atv="19.481" linkedscene="www" />
-		<hotspot name="spot7" style="skin_yinlianstyle" ath="163.622" atv="5.638" linkedscene="www" />
-		<hotspot name="spot8" style="skin_yinlianstyle" ath="131.381" atv="5.695" linkedscene="www" />
-		<hotspot name="spot9" style="skin_yinlianstyle" ath="71.675" atv="5.684" linkedscene="www" />
-		<hotspot name="spot10" style="skin_yinlianstyle" ath="0.790" atv="13.302" linkedscene="www" />
-		<hotspot name="spot11" style="skin_yinlianstyle" ath="107.829" atv="1.183" linkedscene="www" />
+		<hotspot visible='flase' name="spot4" style="skin_yinlianstyle" ath="-53.847" atv="14.230" linkedscene="www" />
+		<hotspot visible='flase' name="spot5" style="skin_yinlianstyle" ath="-125.858" atv="11.256" linkedscene="www" />
+		<hotspot visible='flase' name="spot6" style="skin_yinlianstyle" ath="177.590" atv="19.866" linkedscene="www" />
+		
+		<hotspot visible='flase' name="spot7" style="skin_yinlianstyle" ath="163.622" atv="5.638" linkedscene="www" />
+		<hotspot visible='flase' name="spot8" style="skin_yinlianstyle" ath="-161.381" atv="7.666" linkedscene="www" />
+		<hotspot visible='flase' name="spot9" style="skin_yinlianstyle" ath="70.323" atv="9.365" linkedscene="www" />
+		
+		<hotspot visible='flase' name="spot10" style="skin_yinlianstyle" ath="-12.519" atv="13.931" linkedscene="www" />
+		<hotspot visible='flase' name="spot11" style="skin_yinlianstyle" ath="107.829" atv="1.183" linkedscene="www" />
+		<hotspot visible='flase' name="spot12" style="skin_yinlianstyle" ath="-67.268" atv="4.752" linkedscene="www" />
 
 	</scene>
 
 
+	<!-- load -->
+	<layer name="startpic_container"
+		preload="true"
+		alpha="1"
+		onloaded="tween(alpha,1.0);delayedcall(0,loadscene(get(startscene), null, MERGE));"
+		handcursor="true"
+		enabled="true"
+		children="true"
+		visible="true"
+		zorder="90"
+		type="container"
+		maskchildren="true"
+		keep="true"
+		width="100%"
+		height="100%"
+		bgcolor="0x000000"
+		bgalpha="1" >
+	 
+	<layer name="skin_title_logo3"
+		zorder="100"
+		keep="true"
+		x="0"
+		y="-80"
+		align="center"
+		url="img/1.jpg"
+		scale="1"
+		alpha="0"
+		onloaded="tween(alpha,1.0);tween(layer[skin_title_pr].alpha,1.0);"
+		onclick="tween(layer[startpic_container].ox,-2500,1);
+		delayedcall(2,set(layer[startpic_container].enabled,false);
+		set(layer[startpic_container].visible,false);
+		stopdelayedcall(startpic1);stopdelayedcall(startpic2);"
+		enabled="false" />
+	 
+	<layer name="skin_title_pr"
+		background="true"
+		backgroundcolor="0x999999"
+		roundedge="10"
+		backgroundalpha="0"
+		border="true"
+		bordercolor="0x999999"
+		borderalpha="0"
+		borderwidth="1.0"
+		glow="0"
+		glowcolor="0xCCCCCC"
+		visible="true"
+		keep="true"
+		alpha="0"
+		onloaded=""
+		children="false"
+		align="center"
+		zorder="100"
+		autowidth="auto"
+		height="40"
+		url="%SWFPATH%/plugins/textfield.swf"
+		html=" "
+		css="text-align:center; color:#9B8179; font-family:SimHei; font-weight:bold; font-size:32px;"
+		x="0"
+		y="150"
+		onclick="tween(layer[startpic_container].ox,-2500,1);
+		delayedcall(2,set(layer[startpic_container].enabled,false);
+		set(layer[startpic_container].visible,false);
+		stopdelayedcall(startpic1);stopdelayedcall(startpic2);"
+		enabled="false"
+	 
+	/>
+	 
+	</layer>
+	 
+	<events name="startlogoevents" keep="true"
+		onloadcomplete="
+		ifnot(layer[skin_title_logo3].enabled,
+		set(layer[skin_title_logo3].enabled,true);
+		set(layer[skin_title_pr].enabled,true);
+		delayedcall(startpic1,4,tween(layer[startpic_container].ox,-2500,1));
+		delayedcall(startpic2,5,set(layer[startpic_container].enabled,false);set(layer[startpic_container].visible,false));)
+	"/>
+ 
+<!-- 启动画面结束 -->
+
+	
+	
 </krpano>

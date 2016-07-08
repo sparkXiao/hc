@@ -50,8 +50,7 @@ var reqObj = {
 	
 //	appTestAddress:'http://*.weibo.cn/hc/aj/',
 	
-	//appTestAddress:'/hc/aj/',
-	appTestAddress:'/hc/aj/',
+	appTestAddress:'/hc/aj/'
 	
 //	activityTestAddress:'http://h5.api.test.miaomore.com:801/v1/'
 

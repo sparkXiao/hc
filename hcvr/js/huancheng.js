@@ -94,7 +94,7 @@ window.onresize = function () {
 	console.log('onresize door ');
 }
 
-/*
+
 alert(' $(this).width()  '+$(this).width()+ '  $(this).height()  '+$(this).height())
 
 
@@ -105,7 +105,7 @@ alert('window.innerWidth  '+window.innerWidth + '  window.innerHeight  '+window.
 
 
 alert('document.documentElement.clientWidth  '+ document.documentElement.clientWidth + '  document.documentElement.clientHeight  '+ document.documentElement.clientHeight);
-*/
+
 
 constantScreenWidth = window.innerWidth;
 

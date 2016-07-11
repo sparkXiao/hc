@@ -160,7 +160,10 @@ function fakeMessage() {
 							 
 							for (var i = 0; i < result.data.length; i++) {
 								
-							    $('<div class="message new"><figure class="avatar"><img src="'+ result.data[i].avatar_large +'" /></figure>' + result.data[i].msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
+								var chatShow = '<div class="chatShow"><div class="userPic"><img id="atvPic" class="clip-circle user" /></div><div class="chatContent">asdfsdfdf</div></div>'
+								
+								
+//							    $('<div class="message new"><figure class="avatar"><img src="'+ result.data[i].avatar_large +'" /></figure>' + result.data[i].msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
 							    
 							    /*html2canvas( $('.message new'), {
 		    	

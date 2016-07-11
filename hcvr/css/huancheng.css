@@ -294,6 +294,7 @@ html {
     background-image: url(../img/baoXnum.png); no-repeat;
 }
 
+
 .userInfo {
 	
 	display: none;
@@ -407,6 +408,33 @@ html {
 	background:rgba(255,255,255,.8);
 	color: black;
 	
+}
+
+.chatContent {
+	
+	    margin-right: .1rem;
+    position: relative;
+    top: -.23rem;
+    left: .3rem;
+    float: left;
+	
+		
+}
+
+.chatShow {
+	
+	  display: inline-block;
+	  border: 2px outset #1E865C;
+    font-size: .15rem;
+    /* background-color: white; */
+    background: rgba(255,255,255,.8);
+    color: black;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    color: black;
+    width: auto;
+    height: .3rem;
 }
 
 .gameInfo {

@@ -50,7 +50,9 @@ var reqObj = {
 	
 //	appTestAddress:'http://*.weibo.cn/hc/aj/',
 	
+
 	appTestAddress:'/hc/aj/'
+
 	
 //	activityTestAddress:'http://h5.api.test.miaomore.com:801/v1/'
 
@@ -99,7 +101,10 @@ function ajaxRequest(ifacv, reqType, reqName, arg, succCallback, errorCallback) 
         type: reqType,
         url: requrl,
         dataType: "json",
-        //jsonpCallback:"jsoncallback",
+//      jsonpCallback:"jsoncallback",
+        /*dataType: "jsonp",
+        jsonp:"callback",
+        jsonpCallback:"success_jsonpCallback",*/
         data :arg,
         timeout : set_Timeout,
         crossDomain: true,

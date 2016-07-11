@@ -549,6 +549,8 @@ document.addEventListener("showGameInfo", function (event) {
 	
 	var curSce = krpano.get('xml.scene');
 	
+	console.log('showGameInfo  curSce  '+curSce);
+	
 	if (curSce == 'scene_____________2-ok') {
 		
 		$('#VR').show();

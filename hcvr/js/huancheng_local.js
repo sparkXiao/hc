@@ -115,47 +115,47 @@ constantScreenHeight = window.innerHeight;
 
 $('#clofri').on('click',function () {
 	
-	
 	$('.friendsP').hide();
 									
 									
-		respondTxt = '正在返回大厅...';
-		
-		
-		showTxt(false);
-		
-		
-		setTimeout(function () {
-			
-			$('#overlay').fadeOut('fast');
-		
-			$('#overlay').hide();
-			
-			krpano.call("loadscene('scene_____________2-ok');");
-			
-			$('#VR').show();
-			
+									
+									respondTxt = '正在返回大厅...';
+									
+									
+									showTxt(false);
+									
+									
+									setTimeout(function () {
+										
+										$('#overlay').fadeOut('fast');
+									
+										$('#overlay').hide();
+										
+										krpano.call("loadscene('scene_____________2-ok');");
+										
+										$('#VR').show();
+										
 //										$('#chatIcon').show();
-		
-		},700);
-		
-		
-		
-		$('.chatDiv').show();
-		
-		
-		$('#treaNum').on('click',function () {
-
-			window.location.href = 'http://hcvr.github.io/hc/chest';
-			
-		})
-		
-		
-		$('#treaNum').removeClass('treaNum');
-		
-		$('#treaNum').addClass('trea');
-		
-		$('#treaNum').children('p').hide();
+									
+									},700);
+									
+									
+									
+									$('.chatDiv').show();
+									
+									
+									$('#treaNum').on('click',function () {
+	
+										window.location.href = 'http://hcvr.github.io/hc/chest';
+										
+									})
+									
+									
+									$('#treaNum').removeClass('treaNum');
+									
+									$('#treaNum').addClass('trea');
+									
+									$('#treaNum').children('p').hide();
 	
 })
 
@@ -558,31 +558,6 @@ document.addEventListener("showGameInfo", function (event) {
 		
 		$('.userInfo').show();
 		
-		
-		html2canvas( $('.chatShow'), {
-		
-			    	
-	     	onrendered: function (canvas) {
-	     	
-	     	
-	            var imgageData = canvas.toDataURL("image/png");
-	            
-			    krpano.call("addhotspot(chatPng1);set(hotspot[chatPng1].url,'"+ imgageData + "');set(hotspot[chatPng1].ath,0);set(hotspot[chatPng1].atv,0);");
-	            
-		    	console.log('render chatPng1');
-		    	
-	            console.log('imgageData  '+imgageData);
-	            
-	            var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
-	            
-	            console.log('newData  '+newData);
-	            
-	            
-         	}
-	     	
- 		});
-  	
-//		$('.chatShow').hide();
 		
 	} else {
 		
@@ -1399,7 +1374,7 @@ function krpanoReady(krpanObj)
 	if (IF_NET) {
 		
 	
-			/*ajaxRequest(false, "get", "getvruser", '', function(result) {
+			ajaxRequest(false, "get", "getvruser", '', function(result) {
 			
 			
 						if (result.code != 10000) {
@@ -1410,7 +1385,7 @@ function krpanoReady(krpanObj)
 							    {
 							        msg:result.msg
 							    }
-							);
+							);*/
 						
 						
 						} else {
@@ -1434,15 +1409,14 @@ function krpanoReady(krpanObj)
 							    {
 							        msg:'获取 登录用户的基本信息和隐莲信息 成功   当前用户 剩余可玩次数   '+totalCount
 							    }
-							);
+							);*/
 							
 							console.log('当前用户 剩余可玩次数   '+totalCount)
 						}
 						
 						
 				
-					}, errorReturn);*/
-					
+					}, errorReturn);
 					
 			} else {
 				

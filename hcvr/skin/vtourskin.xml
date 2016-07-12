@@ -272,7 +272,7 @@
 		for(set(i,0), i LT hotspot.count, inc(i), 
 	    
         	set(hotspot[get(i)].visible,false); 
-	      
+	      	trace( 'done hideHotSpots' ); 
 	   );
 	   
     )	

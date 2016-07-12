@@ -298,9 +298,10 @@ html {
 .userInfo {
 	
 	display: none;
+    padding-right: .2rem;
 	position: absolute; top: 3%; left: 3%;
 	color: white;
-    width: 1rem;
+    width: auto;
     height: .3rem;
     background-size: 100% 100%;
     background-image: url(../img/titile.png); no-repeat;
@@ -320,9 +321,11 @@ html {
 .userName {
 	
 	margin-top: 0;
-	position: relative;
-	top: .08rem;
-	font-size: .1rem;
+    position: relative;
+    top: -.22rem;
+    left: .32rem;
+    font-size: .1rem;
+    float: left;
 	
 }
 

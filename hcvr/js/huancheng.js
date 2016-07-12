@@ -153,7 +153,7 @@ $('#clofri').on('click',function () {
 		
 		$('#treaNum').on('click',function () {
 
-			window.location.href = 'http://hcvr.github.io/hc/chest';
+			window.location.href = 'hc/chest';
 			
 		})
 		
@@ -532,7 +532,7 @@ function hideGameInfo () {
 
 $('#treaNum').on('click',function () {
 	
-	window.location.href = 'http://hcvr.github.io/hc/chest';
+	window.location.href = 'hc/chest';
 	
 })
 
@@ -561,6 +561,8 @@ document.addEventListener("showGameInfo", function (event) {
 //		$('#chatIcon').show();
 		
 		$('.packageInfo').show();
+		
+		$('.userInfo').css('display','inline-block');
 		
 		$('.userInfo').show();
 		 
@@ -1021,7 +1023,7 @@ function krpanoReady(krpanObj)
 			
 			$('#treaNum').off('click',function () {
 	
-				window.location.href = 'http://hcvr.github.io/hc/chest';
+				window.location.href = 'hc/chest';
 				
 			})
 			
@@ -1221,7 +1223,7 @@ function krpanoReady(krpanObj)
 									
 									$('#treaNum').on('click',function () {
 	
-										window.location.href = 'http://hcvr.github.io/hc/chest';
+										window.location.href = 'hc/chest';
 										
 									})
 									
@@ -1299,7 +1301,7 @@ function krpanoReady(krpanObj)
 		
 		$('#treaNum').off('click',function () {
 	
-			window.location.href = 'http://hcvr.github.io/hc/chest';
+			window.location.href = 'hc/chest';
 			
 		})
 		

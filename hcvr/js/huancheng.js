@@ -624,21 +624,21 @@ function getClickLotus (prizeName) {
 		playCount++;
 		
 		
-		if (playCount == 5) {
+		if (playCount == 6) {
 			
 			
 			if (leftCount == 0) {
 				
 				
-				leftCount = totalCount - playCount;
+				leftCount = totalCount - ( playCount - 1);
 				
 			} else {
 				
-				leftCount = leftCount - playCount;
+				leftCount = leftCount - ( playCount - 1 );
 				
 			}
 			
-			console.log('剩余 采摘次数  leftCount  '+leftCount)
+			console.log('剩余 采摘次数  leftCount  '+leftCount);
 			
 			
 			if (leftCount < 5) {

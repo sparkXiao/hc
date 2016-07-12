@@ -429,16 +429,13 @@ function calcWHratio() {
 }
 
 
-/*alert('window.orientation  '+window.orientation);
-
-alert('window.devicePixelRatio  '+window.devicePixelRatio); 
-*/
-
 
 // Listen for orientation changes      
 window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
+    
+	alert('window.orientation  '+window.orientation);
     
     /*$(window).one('resizestop', 0, function() {
 	

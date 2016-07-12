@@ -441,7 +441,7 @@ window.addEventListener("orientationchange", function() {
 	
     // Announce the new orientation number
     
-	alert('window.orientation  '+window.orientation);
+//	alert('window.orientation  '+window.orientation);
     
     /*$(window).one('resizestop', 0, function() {
 	

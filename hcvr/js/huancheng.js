@@ -931,6 +931,8 @@ function showTxt (ifTriggerInvite) {
 		
 	} else {
 		
+		krpano.call('hideHotSpots');
+		
 		
 		$('#clickShow').css('width','2rem');
 		
@@ -1277,7 +1279,6 @@ function krpanoReady(krpanObj)
 		console.log("krpano.get('xml.scene')  "+krpano.get('xml.scene') );
 		
 		
-		
 		$('.chatDiv').hide();
 		
 		
@@ -1309,7 +1310,7 @@ function krpanoReady(krpanObj)
 		onnewSceneLay();
 		
 		
-		$('.chat').hide();
+//		$('.chat').hide();
 		
 	});
 	

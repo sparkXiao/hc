@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>11 Weibo - DreamVR</title>
+
+	<title>幻城 VR 11</title>
+
 	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -11,29 +13,39 @@
 		@-ms-viewport { width:device-width; }
 		@media only screen and (min-device-width:800px) { html { overflow:hidden; } }
 		html { height:100%; }
-		body { height:100%; overflow:hidden; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; background-color:#000000; }
+		body { height:100%; overflow:hidden; margin:0; padding:0; color:#FFFFFF; background-color:#000000; }
 	</style>
 	
-	<link rel="stylesheet" href="css/huancheng.css" />
+	<link rel="stylesheet" href="http://hcvr2.github.io/hc/hcvr/css/huancheng.css" />
 	
-	<link rel="stylesheet" href="css/lobibox.css" />
+	<link rel="stylesheet" href="http://hcvr2.github.io/hc/hcvr/css/lobibox.css" />
 	
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="http://hcvr2.github.io/hc/hcvr/css/normalize.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://hcvr2.github.io/hc/hcvr/css/style.css">
     
-	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" href="http://hcvr2.github.io/hc/hcvr/css/jquery.mCustomScrollbar.min.css" />
 	
 	
-	<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
+	<script type="text/javascript" src="http://hcvr2.github.io/hc/hcvr/js/jquery-1.12.1.min.js" ></script>
 	
-	<script type="text/javascript" src="js/lobibox.js" ></script>
+	<script type="text/javascript" src="http://hcvr2.github.io/hc/hcvr/js/lobibox.js" ></script>
 	
-	<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
+	<script type="text/javascript" src="http://hcvr2.github.io/hc/hcvr/js/html2canvas.js" ></script>
 	
-	<script type="text/javascript" src="js/api.js" ></script>
+	<script type="text/javascript" src="http://hcvr2.github.io/hc/hcvr/js/jquery.resizestop.js" ></script>
 	
-	<script type="text/javascript" src="js/GlobalConstant.js" ></script>
+	<!--<script type="text/javascript" src="http://hcvr2.github.io/hc/hcvr/js/jquery.plugin.html2canvas.js" ></script>-->
+	
+	<script type="text/javascript" src="http://hcvr2.github.io/hc/hcvr/js/jquery.mCustomScrollbar.concat.min.js" ></script>
+	
+	<script type="text/javascript" src="http://hcvr2.github.io/hc/hcvr/js/txtAutoShrink.js" ></script>
+	
+	<script type="text/javascript" src="http://hcvr2.github.io/hc/hcvr/js/textAutoSize.js" ></script>
+	
+	<script type="text/javascript" src="http://hcvr2.github.io/hc/hcvr/js/api.js" ></script>
+	
+	<script type="text/javascript" src="http://hcvr2.github.io/hc/hcvr/js/GlobalConstant.js" ></script>
 
 </head>
 
@@ -43,7 +55,8 @@
 	<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
 </div>
 
-<div class="chat">
+	
+<!--<div class="chat">
 		
   <div class="chat-title">
     
@@ -68,6 +81,20 @@
     <button type="submit" class="message-submit">Send</button>
   </div>
 
+</div>-->
+
+
+
+<div class="chatUI"></div>
+
+<div class="chatDiv">
+	<!--<div class="chatBg">-->
+	<input class="chatTxtVal" type="text" />
+	
+	<div id="sentTxt"></div>
+	
+	<!--</div>-->
+	<!--<img id="sentTxt" src="http://hcvr2.github.io/hc/hcvr/img/sentTxt.png" />-->
 </div>
 
 <div class="yinL">
@@ -76,17 +103,27 @@
 	</div>
 </div>
 
-<img id="trea" src="img/treasure.png" />
+<img id="trea" src="http://hcvr2.github.io/hc/hcvr/img/treasure.png" />
+
 
 <div id="yinlianNum" class="packageInfo">
-	<img src="skin/yinlian.png" />
+	
+	<!--<img src="http://hcvr2.github.io/hc/hcvr/skin/yinlian.png" />-->
 	<p></p>
+	
 </div>
 
 <div id="treaNum" class="packageInfo trea">
-	<img src="img/treasure.png" />
+	
+	<!--<img src="http://hcvr2.github.io/hc/hcvr/img/treasure.png" />-->
 	<p></p>
+	
 </div>
+
+<div id="chatIcon"></div>
+
+<div id="VR"></div>
+
 
 <div class="userInfo">
 	<div class="userPic">
@@ -98,11 +135,12 @@
 <div id="overlay"></div>
 
 <div class="friendsP">
+	<div id="clofri"></div>
 	<div class="friTit"></div>
 	<div class="picCon"></div>
 	<div class="btnCon">
-		<img id="changeFir" src="img/changeF.png" />
-		<img id="invite" src="img/confirmF.png" />
+		<img id="changeFir" src="http://hcvr2.github.io/hc/hcvr/img/changeF.png" />
+		<img id="invite" src="http://hcvr2.github.io/hc/hcvr/img/confirmF.png" />
 	</div>
 </div>
 
@@ -111,11 +149,26 @@
 	<div id="gobtn"></div>
 </div>
 
-<script src="tour.js"></script>
 
-<script type="text/javascript" src="js/index.js" ></script>
+<div class="gameInfo">
+	<p>用手指滑动，欣赏VR场景。点击隐莲进行采摘。</p>
+	<img id="begin" src="http://hcvr2.github.io/hc/hcvr/img/begin.png" />
+</div>
 
-<script type="text/javascript" src="js/huancheng.js" ></script>
+
+<div class="chatShow">
+	<div class="userPic">
+		<img id="atvPic" class="clip-circle user" />
+	</div>
+	<div class="chatContent">asdfsdfdf</div>
+</div>
+
+
+<script src="http://hcvr2.github.io/hc/hcvr/tour.js"></script>
+
+<script type="text/javascript" src="http://hcvr2.github.io/hc/hcvr/js/index.js" ></script>
+
+<script type="text/javascript" src="http://hcvr2.github.io/hc/hcvr/js/huancheng.js" ></script>
 	
 </body>
 

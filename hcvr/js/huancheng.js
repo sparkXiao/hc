@@ -1107,31 +1107,65 @@ function krpanoReady(krpanObj)
 							
 							console.log('fritoken  '+fritoken);
 							
-							for (var i = 0; i < result.data.user.length; i++) {
+							if (result.data.user.length > 0) {
 								
-								uidArr.push(String(result.data.user[i].uid))
 								
-								screen_nameArr.push(String(result.data.user[i].screen_name))
+								for (var i = 0; i < result.data.user.length; i++) {
+									
+									uidArr.push(String(result.data.user[i].uid))
+									
+									screen_nameArr.push(String(result.data.user[i].screen_name))
+									
+	//										uidString += String(result.data.user[i].uid)+',';
+									
+									var content = '<div class="friendP"><img src="'+ result.data.user[i].avatar_large +'" class="clip-circle" /></div>'
+									
+									$('.picCon').append(content);
+								}
 								
-//										uidString += String(result.data.user[i].uid)+',';
-								
-								var content = '<div class="friendP"><img src="'+ result.data.user[i].avatar_large +'" class="clip-circle" /></div>'
-								
-								$('.picCon').append(content);
 							}
 							
 							
-							uidString = uidArr[0]+','+uidArr[1]+','+uidArr[2];
+							if (uidArr.length < 3) {
+								
+								
+								if (uidArr.length == 2) {
+									
+									
+									uidString = uidArr[0]+','+uidArr[1];
+									
+									screen_nameStr = screen_nameArr[0]+','+screen_nameArr[1];
+									
+									
+								} else {
+									
+									
+									uidString = uidArr[0];
+									
+									screen_nameStr = screen_nameArr[0];
+									
+								}
+								
+								
+							} else {
+								
+								uidString = uidArr[0]+','+uidArr[1]+','+uidArr[2];
+								
+								screen_nameStr = screen_nameArr[0]+','+screen_nameArr[1]+','+screen_nameArr[2];
+								
+							}
 							
-							screen_nameStr = screen_nameArr[0]+','+screen_nameArr[1]+','+screen_nameArr[2];
+							
 							
 							console.log('if uidString is string '+ typeof uidString);
 							
 							console.log('uidString.length  '+uidString.length)
 
+
 //									uidString.substring(0, uidString.length - 1);
 //									
 //									uidString.slice(1, - 1);
+							
 							
 							console.log('uidString  '+uidString);
 							

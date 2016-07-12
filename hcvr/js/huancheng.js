@@ -1,12 +1,18 @@
 var krpano, constantScreenWidth, constantScreenHeight, resizeTimer, 
 WRatio, HRatio, chatData, whPortraitArr = [], whLandscapeErr = [], chatCanvas, 
-ifshowChat = false, adoptRatio, devicefontSize,
+ifshowChat = false, adoptRatio, devicefontSize, friPage = 1,
 resizeTriggerNum = 0, screen_nameArr = [], uidArr = [], fritoken = '', 
 uidString = '', leftCount = 0, totalCount = 7, playCount = 0, respondTxt = '', 
 getPrizeCount = 0, simulateClickResult = 0, getFLowerCount = 0, ifGetNull = false, 
 ifGetPrize = false;
 
 //$('.chat').hide();
+
+$(document).on("touchmove", function(evt) {
+				
+				evt.preventDefault();
+				
+			}, false);
 
 //字体图片随窗体缩放
 function door() {
@@ -1045,14 +1051,25 @@ function krpanoReady(krpanObj)
 	});
 	
 	
-	$('#changeFir').on('click', getFri);
+	$('#changeFir').on('click', function () {
+		
+		friPage++;
+		
+		getFri();
+		
+	});
 	
 	
 	function getFri() {
 		
+		var postFri = {
+			
+			page: friPage
+		}
+		
 		if (IF_NET) {
 					
-			ajaxRequest(false, "get", 'getfriend', '', function(result) {
+			ajaxRequest(false, "post", 'getfriend', postFri, function(result) {
 			
 			
 						if (result.code != 10000) {

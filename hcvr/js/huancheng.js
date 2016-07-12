@@ -560,9 +560,9 @@ document.addEventListener("showGameInfo", function (event) {
 		$('.packageInfo').show();
 		
 		$('.userInfo').show();
+		 
 		
-		
-		html2canvas( $('.chatShow'), {
+/*		html2canvas( $('.chatShow'), {
 		
 			    	
 	     	onrendered: function (canvas) {
@@ -583,7 +583,7 @@ document.addEventListener("showGameInfo", function (event) {
 	            
          	}
 	     	
- 		});
+ 		});*/
   	
 //		$('.chatShow').hide();
 		
